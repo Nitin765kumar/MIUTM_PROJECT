@@ -1,0 +1,2175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official Student Intake Portal, Application Screening Matrices, and Document Verification Registry of Maurya International University of Technology & Management (MIUTM).">
+    <meta name="author" content="MIUTM Directorate of Admissions">
+    <title>Online Admission Intake Desk & Verification | MIUTM Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --miutm-primary: #003366;
+            --miutm-dark-blue: #001F4D;
+            --miutm-gold: #D4AF37;
+            --miutm-light-bg: #F8F9FA;
+            --miutm-text-dark: #212529;
+            --miutm-success: #198754;
+            --miutm-card-border: rgba(0, 51, 102, 0.08);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--miutm-text-dark);
+            overflow-x: hidden;
+            line-height: 1.65;
+            background-color: #f4f6f9;
+        }
+        .text-justify {
+            text-align: justify;
+        }
+        .tracking-wide {
+            letter-spacing: 0.5px;
+        }
+        .tracking-wider {
+            letter-spacing: 1px;
+        }
+        .tracking-widest {
+            letter-spacing: 2px;
+        }
+        .hover-gold:hover {
+            color: var(--miutm-gold) !important;
+            transition: color 0.3s ease;
+        }
+        .step-node {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: var(--miutm-primary);
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-family: monospace;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .form-section-header { 
+            border-bottom: 2px solid var(--miutm-primary); 
+            padding-bottom: 10px; 
+            margin-bottom: 25px; 
+            color: var(--miutm-primary); 
+            font-family: 'Georgia', serif; 
+            font-weight: 700; 
+            text-transform: uppercase; /* FIXED: Used standard CSS property */
+        }
+        
+        .form-label-custom { 
+            font-family: monospace; 
+            font-size: 0.85rem; 
+            font-weight: 700; 
+            color: var(--miutm-dark-blue); 
+            text-transform: uppercase; /* FIXED: Used standard CSS property */
+        }
+        .input-focus-custom:focus {
+            border-color: var(--miutm-primary) !important;
+            box-shadow: 0 0 0 0.25rem rgba(0, 51, 102, 0.15) !important;
+            background-color: #fff !important;
+        }
+        .onboarding-container {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            border: 1px solid var(--miutm-card-border);
+        }
+        .requirement-badge {
+            font-size: 0.7rem;
+            font-weight: bold;
+            font-family: monospace;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+        .info-sidebar-block {
+            background-color: #fdfcf7;
+            border-left: 4px solid var(--miutm-gold);
+        }
+        .ticker-text-span {
+            display: inline-block;
+            margin-right: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-utility-bar py-2 bg-dark text-white text-opacity-75" style="font-size: 0.85rem; border-bottom: 2px solid var(--miutm-gold);">
+        <div class="container-fluid px-5 d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-3">
+                <span><i class="bi bi-shield-fill-check text-warning"></i> Secure SSL Enrollment Node: TLS 1.3 Encryption Verified</span>
+                <span class="d-none d-lg-inline">|</span>
+                <span class="d-none d-lg-inline"><i class="bi bi-hdd-network-fill text-warning"></i> Main Database Cluster: Connected to Local sqlite3 Engine</span>
+            </div>
+            <div class="d-flex align-items-center gap-4 mt-2 mt-md-0">
+                <a href="/courses" class="text-white text-decoration-none hover-gold"><i class="bi bi-book-half text-warning"></i> Review Course Requirements Matrix</a>
+                <a href="/admin" class="text-warning text-decoration-none fw-bold hover-gold"><i class="bi bi-speedometer2"></i> Administrative Control Board</a>
+                <span class="text-white-50">Localization: Global EN-IN</span>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg" style="background-color: var(--miutm-primary); border-bottom: 4px solid var(--miutm-gold); padding: 18px 0;">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img src="/static/images/logo.png" alt="MIUTM Official Logo Seal" class="img-fluid rounded-circle border border-2 border-warning" style="height: 65px; width: 65px; object-fit: cover; margin-right: 20px; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.3));">
+                <div>
+                    <span class="d-block fw-bold text-white tracking-wide h4 mb-0" style="font-family: 'Georgia', serif;">MAURYA INTERNATIONAL UNIVERSITY</span>
+                    <small class="d-block text-uppercase fw-bold text-warning" style="font-size: 0.8rem; letter-spacing: 2px;">Of Technology & Management • MIUTM</small>
+                </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#miutmAdmissionNavigationEngine" aria-controls="miutmAdmissionNavigationEngine" aria-expanded="false" aria-label="Toggle Navigation Engine">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="miutmAdmissionNavigationEngine">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+                    <li class="nav-item"><a class="nav-link px-3 py-2 text-uppercase font-monospace fw-bold tracking-wider text-white hover-gold" href="/">Home Portal</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 py-2 text-uppercase font-monospace fw-bold tracking-wider text-white hover-gold" href="/about">About MIUTM</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 py-2 text-uppercase font-monospace fw-bold tracking-wider text-white hover-gold" href="/courses">Academic Courses</a></li>
+                    <li class="nav-item"><a class="nav-link active px-3 py-2 text-uppercase font-monospace fw-bold tracking-wider text-warning" href="/admission">Admissions Desk</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 py-2 text-uppercase font-monospace fw-bold tracking-wider text-white hover-gold" href="/contact">Contact Board</a></li>
+                    <li class="nav-item ms-lg-3"><a class="nav-link btn btn-warning text-dark px-4 py-2 text-uppercase fw-bold shadow-sm" href="/admin" style="border-radius: 4px; border: 1px solid var(--miutm-gold);"><i class="bi bi-speedometer2"></i> Controller Panel</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-wrapper position-relative text-white d-flex align-items-center" style="background-image: url('/static/images/admission.png'); background-size: cover; background-position: center right; min-height: 480px;">
+        <div class="hero-overlay position-absolute top-0 start-0 end-0 bottom-0" style="background: linear-gradient(to right, #001f4d 0%, #002244 38%, rgba(0, 31, 77, 0.65) 68%, rgba(0, 31, 77, 0) 100%); z-index: 1;"></div>
+        <div class="container-fluid px-5 position-relative py-5" style="z-index: 2;">
+            <div class="row align-items-center">
+                <div class="col-xl-8 col-lg-10 text-start">
+                    <span class="badge bg-warning text-dark mb-3 px-3 py-2 text-uppercase font-monospace fw-bold tracking-wider shadow-sm" style="font-size:0.85rem;">Admissions Processing Terminal</span>
+                    <h1 class="display-4 fw-bold text-white lh-tight mb-3" style="font-family: 'Georgia', serif; font-weight: 900; text-shadow: 2px 4px 12px rgba(0,0,0,0.6);">Online Student Intake Portal & Data Submittal</h1>
+                    <p class="lead text-light text-opacity-90 fs-5 mb-0" style="line-height: 1.65; max-width: 800px;">Initialize your structural student profile within our centralized enrollment validation engine. Ensure all required input coordinates are filled in absolute alignment with your official transcripts to secure allocation sequencing.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="ticker-wrap w-100 bg-light py-3 border-bottom shadow-sm">
+        <div class="container-fluid px-5 d-flex align-items-center">
+            <span class="badge bg-danger text-uppercase px-3 py-2 me-4 font-monospace fw-bold tracking-wider"><i class="bi bi-broadcast me-2"></i> INTAKE LEDGER:</span>
+            <marquee class="text-dark fw-bold font-monospace" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+                <span class="ticker-text-span">🚨 [SEAT MONITOR] All engineering and computer applications allocations stream dynamically based on submission timestamps.</span>
+                <span class="ticker-text-span">📝 [DOCUMENT POLICY] All candidates must retain legal original transcripts for subsequent Phase II physical verification reviews.</span>
+                <span class="ticker-text-span">⚙️ [ROUTING SYSTEM] The local sqlite3 storage engine performs automated normalization parameters check upon execution.</span>
+            </marquee>
+        </div>
+    </div>
+
+    <section class="py-5 container-fluid px-5 bg-white text-start">
+        <div class="row">
+            <div class="col-12">
+                <span class="text-primary text-uppercase font-monospace tracking-widest d-block mb-2" style="font-size:0.85rem; font-weight:700;">Onboarding Framework</span>
+                <h2 class="fw-bold mb-4" style="color: var(--miutm-primary); font-family: 'Georgia', serif; font-size: 2rem;">Statutory Selection Criteria & Data Normalization Protocol</h2>
+                <p class="text-secondary text-justify mb-3" style="line-height: 1.85;">Entering the student body at Maurya International University of Technology & Management requires rigorous verification of individual academic parameters. Our central onboarding engine is architected to systematically process and match input values against specific course seat metrics, credit boundaries, and geographic distributions. This setup minimizes processing errors, guarantees operational transparency, and provides immediate indexing for qualified candidates.</p>
+                <p class="text-muted text-justify mb-0" style="line-height: 1.8;">All form submissions handled via this secure gateway execute backend logic to construct a custom application string format (`MIUTM-YYYY-XXXXXX`). This system tracking token remains bound to the candidate's data file throughout downstream documentation cross-checks, qualification evaluations, and final cohort positioning. Applicants are strictly urged to cross-verify all phone logs, email channels, and credit indices before triggering final submission.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light border-top border-bottom container-fluid px-5 text-start">
+        <h4 class="text-primary fw-bold mb-5 text-center" style="font-family:'Georgia', serif;">The Automated Academic Intake Pipeline Steps</h4>
+        <div class="row g-4 justify-content-center">
+            <div class="col-xl-3 col-md-6">
+                <div class="p-4 bg-white rounded shadow-sm border h-100 text-center text-md-start">
+                    <div class="mb-3"><span class="step-node">01</span></div>
+                    <h5 class="fw-bold text-dark">Data Injection</h5>
+                    <p class="small text-muted mt-2 mb-0" style="line-height:1.6;">Applicants populate required coordinates. Input parameters feed directly into the runtime query buffers.</p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="p-4 bg-white rounded shadow-sm border h-100 text-center text-md-start">
+                    <div class="mb-3"><span class="step-node">02</span></div>
+                    <h5 class="fw-bold text-dark">Unique Hash Generation</h5>
+                    <p class="small text-muted mt-2 mb-0" style="line-height:1.6;">The Python engine triggers randomized sequence mapping to compile an explicit legal registration file ID.</p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="p-4 bg-white rounded shadow-sm border h-100 text-center text-md-start">
+                    <div class="mb-3"><span class="step-node">03</span></div>
+                    <h5 class="fw-bold text-dark">Commit & Normalization</h5>
+                    <p class="small text-muted mt-2 mb-0" style="line-height:1.6;">The row insertion commands lock variables inside relational columns, protecting table integrity schemas.</p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="p-4 bg-white rounded shadow-sm border h-100 text-center text-md-start">
+                    <div class="mb-3"><span class="step-node">04</span></div>
+                    <h5 class="fw-bold text-dark">Cohort Placement</h5>
+                    <p class="small text-muted mt-2 mb-0" style="line-height:1.6;">Verified application profiles route onto the administrative panels for seat assignment execution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid px-5 mt-4 bg-transparent">
+        <div class="mx-auto" style="max-width: 1200px;">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, msg in messages %}
+                        <div class="alert alert-{{ category }} border-start border-4 border-{{ category }} shadow-md p-4 mb-4" role="alert">
+                            <div class="d-flex align-items-center gap-3">
+                                {% if category == 'success' %}
+                                    <i class="bi bi-shield-check-fill text-success display-5"></i>
+                                {% else %}
+                                    <i class="bi bi-exclamation-triangle-fill text-danger display-5"></i>
+                                {% endif %}
+                                <div>
+                                    <h5 class="fw-bold mb-1 text-capitalize text-dark" style="font-size: 1.1rem;">System Execution Alert</h5>
+                                    <p class="mb-0 small font-monospace text-secondary" style="font-size: 0.9rem;">{{ msg }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+    </section>
+
+    <!-- ===========================
+     ADMISSION SESSION OVERVIEW
+=========================== -->
+
+<section class="py-5 bg-white border-top">
+    <div class="container-fluid px-5">
+
+        <div class="row align-items-center g-5">
+
+            <!-- LEFT -->
+            <div class="col-lg-8">
+
+                <span class="badge bg-primary px-3 py-2 mb-3">
+                    Admissions 2026-27
+                </span>
+
+                <h2 class="fw-bold mb-3"
+                    style="font-family:Georgia,serif;color:var(--miutm-primary);">
+
+                    Begin Your Academic Journey at
+                    Maurya International University
+                </h2>
+
+                <p class="text-muted mb-4" style="line-height:1.9;">
+
+                    Complete the online admission application by providing
+                    accurate academic and personal information. Every
+                    application is securely stored in the university database
+                    and assigned a unique Application Number for future
+                    tracking and verification.
+
+                </p>
+
+                <div class="row g-4">
+
+                    <div class="col-md-6">
+
+                        <div class="border rounded p-4 h-100">
+
+                            <h5 class="fw-bold text-primary">
+                                <i class="bi bi-check2-circle me-2"></i>
+                                Why Apply Online?
+                            </h5>
+
+                            <ul class="small text-muted mt-3 mb-0">
+
+                                <li>Instant Application Number</li>
+
+                                <li>Secure Database Storage</li>
+
+                                <li>Easy Status Tracking</li>
+
+                                <li>Fast Verification Process</li>
+
+                                <li>Transparent Admission Workflow</li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="border rounded p-4 h-100">
+
+                            <h5 class="fw-bold text-success">
+
+                                <i class="bi bi-award-fill me-2"></i>
+
+                                Admission Highlights
+
+                            </h5>
+
+                            <ul class="small text-muted mt-3 mb-0">
+
+                                <li>UG & PG Programmes</li>
+
+                                <li>Industry Curriculum</li>
+
+                                <li>Scholarship Opportunities</li>
+
+                                <li>Placement Assistance</li>
+
+                                <li>Experienced Faculty Members</li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="col-lg-4">
+
+                <div class="card shadow border-0">
+
+                    <div class="card-header bg-primary text-white">
+
+                        <h5 class="mb-0">
+
+                            <i class="bi bi-calendar-event-fill me-2"></i>
+
+                            Admission Schedule
+
+                        </h5>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="d-flex justify-content-between border-bottom py-2">
+
+                            <span>Applications Open</span>
+
+                            <strong class="text-success">
+                                Open
+                            </strong>
+
+                        </div>
+
+                        <div class="d-flex justify-content-between border-bottom py-2">
+
+                            <span>Document Verification</span>
+
+                            <strong>
+                                After Submission
+                            </strong>
+
+                        </div>
+
+                        <div class="d-flex justify-content-between border-bottom py-2">
+
+                            <span>Merit Preparation</span>
+
+                            <strong>
+                                July 2026
+                            </strong>
+
+                        </div>
+
+                        <div class="d-flex justify-content-between border-bottom py-2">
+
+                            <span>Fee Confirmation</span>
+
+                            <strong>
+                                After Selection
+                            </strong>
+
+                        </div>
+
+                        <div class="d-flex justify-content-between py-2">
+
+                            <span>Session Begins</span>
+
+                            <strong>
+                                August 2026
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ===========================
+     ADMISSION PROGRESS
+=========================== -->
+
+<section class="py-5 bg-light border-top border-bottom">
+
+    <div class="container-fluid px-5">
+
+        <div class="text-center mb-5">
+
+            <h3 class="fw-bold"
+                style="font-family:Georgia,serif;color:var(--miutm-primary);">
+
+                Admission Process
+
+            </h3>
+
+            <p class="text-muted">
+
+                Complete all stages to successfully submit your application.
+
+            </p>
+
+        </div>
+
+        <div class="row text-center g-4">
+
+            <div class="col">
+
+                <div class="step-node mb-3">
+
+                    <i class="bi bi-person-fill"></i>
+
+                </div>
+
+                <h6 class="fw-bold">
+
+                    Personal Details
+
+                </h6>
+
+            </div>
+
+            <div class="col">
+
+                <div class="step-node mb-3">
+
+                    <i class="bi bi-envelope-fill"></i>
+
+                </div>
+
+                <h6 class="fw-bold">
+
+                    Contact
+
+                </h6>
+
+            </div>
+
+            <div class="col">
+
+                <div class="step-node mb-3">
+
+                    <i class="bi bi-mortarboard-fill"></i>
+
+                </div>
+
+                <h6 class="fw-bold">
+
+                    Academic
+
+                </h6>
+
+            </div>
+
+            <div class="col">
+
+                <div class="step-node mb-3">
+
+                    <i class="bi bi-book-fill"></i>
+
+                </div>
+
+                <h6 class="fw-bold">
+
+                    Course
+
+                </h6>
+
+            </div>
+
+            <div class="col">
+
+                <div class="step-node mb-3">
+
+                    <i class="bi bi-geo-alt-fill"></i>
+
+                </div>
+
+                <h6 class="fw-bold">
+
+                    Address
+
+                </h6>
+
+            </div>
+
+            <div class="col">
+
+                <div class="step-node mb-3 bg-success">
+
+                    <i class="bi bi-check2-circle"></i>
+
+                </div>
+
+                <h6 class="fw-bold text-success">
+
+                    Submit
+
+                </h6>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <main class="py-4 container-fluid px-5">
+        <div class="mx-auto onboarding-container p-4 p-md-5" style="max-width: 1200px;">
+            <div class="row g-5">
+                
+                <div class="col-xl-8 col-lg-12">
+                    <form action="/admission" method="POST" autocomplete="off">
+                        
+                        <fieldset class="mb-5">
+
+    <h4 class="form-section-header">
+        <i class="bi bi-person-vcard-fill me-2"></i>
+        Step 1 : Personal Information
+    </h4>
+
+    <div class="row g-4">
+
+        <!-- Full Name -->
+
+        <div class="col-lg-6">
+
+            <label class="form-label form-label-custom">
+                Full Name
+                <span class="text-danger">*</span>
+            </label>
+
+            <div class="input-group">
+
+                <span class="input-group-text bg-light">
+                    <i class="bi bi-person-fill"></i>
+                </span>
+
+                <input
+                    type="text"
+                    name="full_name"
+                    class="form-control form-control-lg input-focus-custom"
+                    placeholder="Enter Full Name"
+                    required>
+
+            </div>
+
+        </div>
+
+        <!-- Father's Name -->
+
+        <div class="col-lg-6">
+
+            <label class="form-label form-label-custom">
+                Father's Name
+                <span class="text-danger">*</span>
+            </label>
+
+            <div class="input-group">
+
+                <span class="input-group-text bg-light">
+                    <i class="bi bi-person-workspace"></i>
+                </span>
+
+                <input
+                    type="text"
+                    name="father_name"
+                    class="form-control form-control-lg input-focus-custom"
+                    placeholder="Enter Father's Name"
+                    required>
+
+            </div>
+
+        </div>
+
+        <!-- Mother's Name -->
+
+        <div class="col-lg-6">
+
+            <label class="form-label form-label-custom">
+                Mother's Name
+                <span class="text-danger">*</span>
+            </label>
+
+            <div class="input-group">
+
+                <span class="input-group-text bg-light">
+                    <i class="bi bi-person-heart"></i>
+                </span>
+
+                <input
+                    type="text"
+                    name="mother_name"
+                    class="form-control form-control-lg input-focus-custom"
+                    placeholder="Enter Mother's Name"
+                    required>
+
+            </div>
+
+        </div>
+
+        <!-- Date Of Birth -->
+
+        <div class="col-lg-3">
+
+            <label class="form-label form-label-custom">
+                Date of Birth
+                <span class="text-danger">*</span>
+            </label>
+
+            <input
+                type="date"
+                name="dob"
+                class="form-control form-control-lg input-focus-custom"
+                required>
+
+        </div>
+
+        <!-- Gender -->
+
+        <div class="col-lg-3">
+
+            <label class="form-label form-label-custom">
+                Gender
+                <span class="text-danger">*</span>
+            </label>
+
+            <select
+                name="gender"
+                class="form-select form-select-lg input-focus-custom"
+                required>
+
+                <option value="">Select</option>
+
+                <option>Male</option>
+
+                <option>Female</option>
+
+                <option>Other</option>
+
+            </select>
+
+        </div>
+
+        <!-- Category -->
+
+        <div class="col-lg-4">
+
+            <label class="form-label form-label-custom">
+                Category
+            </label>
+
+            <select
+                name="category"
+                class="form-select form-select-lg input-focus-custom">
+
+                <option value="">Select Category</option>
+
+                <option>General</option>
+
+                <option>OBC</option>
+
+                <option>SC</option>
+
+                <option>ST</option>
+
+                <option>EWS</option>
+
+            </select>
+
+        </div>
+
+        <!-- Nationality -->
+
+        <div class="col-lg-4">
+
+            <label class="form-label form-label-custom">
+                Nationality
+            </label>
+
+            <input
+                type="text"
+                name="nationality"
+                value="Indian"
+                class="form-control form-control-lg input-focus-custom">
+
+        </div>
+
+    </div>
+
+</fieldset>
+
+                        <fieldset class="mb-5">
+
+    <h4 class="form-section-header">
+        <i class="bi bi-mortarboard-fill me-2"></i>
+        Step 2 : Contact & Academic Information
+    </h4>
+
+    <div class="row g-4">
+
+        <!-- Email -->
+
+        <div class="col-lg-6">
+
+            <label class="form-label form-label-custom">
+                Email Address
+                <span class="text-danger">*</span>
+            </label>
+
+            <div class="input-group">
+
+                <span class="input-group-text bg-light">
+                    <i class="bi bi-envelope-fill"></i>
+                </span>
+
+                <input
+                    type="email"
+                    name="email"
+                    class="form-control form-control-lg input-focus-custom"
+                    placeholder="example@gmail.com"
+                    required>
+
+            </div>
+
+        </div>
+
+        <!-- Phone -->
+
+        <div class="col-lg-6">
+
+            <label class="form-label form-label-custom">
+                Mobile Number
+                <span class="text-danger">*</span>
+            </label>
+
+            <div class="input-group">
+
+                <span class="input-group-text bg-light">
+                    <i class="bi bi-telephone-fill"></i>
+                </span>
+
+                <input
+                    type="tel"
+                    name="phone"
+                    class="form-control form-control-lg input-focus-custom"
+                    maxlength="10"
+                    placeholder="Enter Mobile Number"
+                    required>
+
+            </div>
+
+        </div>
+
+        <!-- Qualification -->
+
+        <div class="col-lg-6">
+
+            <label class="form-label form-label-custom">
+                Highest Qualification
+                <span class="text-danger">*</span>
+            </label>
+
+            <select
+                name="qualification"
+                class="form-select form-select-lg input-focus-custom"
+                required>
+
+                <option value="">Select Qualification</option>
+
+                <option>10th</option>
+
+                <option>12th</option>
+
+                <option>Diploma</option>
+
+                <option>BCA</option>
+
+                <option>B.Sc</option>
+
+                <option>B.Tech</option>
+
+                <option>BA</option>
+
+                <option>B.Com</option>
+
+                <option>MCA</option>
+
+                <option>M.Sc</option>
+
+                <option>Other</option>
+
+            </select>
+
+        </div>
+
+        <!-- Percentage -->
+
+        <div class="col-lg-6">
+
+            <label class="form-label form-label-custom">
+                Percentage / CGPA
+                <span class="text-danger">*</span>
+            </label>
+
+            <div class="input-group">
+
+                <span class="input-group-text bg-light">
+                    %
+                </span>
+
+                <input
+                    type="number"
+                    step="0.01"
+                    min="0"
+                    max="100"
+                    name="percentage"
+                    class="form-control form-control-lg input-focus-custom"
+                    placeholder="Example : 82.50"
+                    required>
+
+            </div>
+
+        </div>
+
+        <!-- Course -->
+
+        <div class="col-12">
+
+            <label class="form-label form-label-custom">
+                Select Programme
+                <span class="text-danger">*</span>
+            </label>
+
+            <select
+                name="course_name"
+                class="form-select form-select-lg input-focus-custom"
+                required>
+
+                <option value="">
+                    Select Programme
+                </option>
+
+                {% for course in courses %}
+
+                <option value="{{ course['course_name'] }}">
+                    {{ course['course_name'] }}
+                </option>
+
+                {% endfor %}
+
+            </select>
+
+            <small class="text-muted mt-2 d-block">
+                Choose the academic programme for which you are applying.
+            </small>
+
+        </div>
+
+    </div>
+
+</fieldset>
+
+<fieldset class="mb-5">
+
+    <h4 class="form-section-header">
+        <i class="bi bi-geo-alt-fill me-2"></i>
+        Step 3 : Address Information
+    </h4>
+
+    <div class="row g-4">
+
+        <!-- Complete Address -->
+
+        <div class="col-12">
+
+            <label class="form-label form-label-custom">
+                Permanent Address
+                <span class="text-danger">*</span>
+            </label>
+
+            <textarea
+                name="address"
+                rows="4"
+                class="form-control input-focus-custom"
+                placeholder="House No., Street, Area, Landmark"
+                required></textarea>
+
+        </div>
+
+        <!-- City -->
+
+        <div class="col-md-4">
+
+            <label class="form-label form-label-custom">
+                City
+                <span class="text-danger">*</span>
+            </label>
+
+            <input
+                type="text"
+                name="city"
+                class="form-control form-control-lg input-focus-custom"
+                placeholder="Enter City"
+                required>
+
+        </div>
+
+        <!-- State -->
+
+        <div class="col-md-4">
+
+            <label class="form-label form-label-custom">
+                State
+                <span class="text-danger">*</span>
+            </label>
+
+            <input
+                type="text"
+                name="state"
+                class="form-control form-control-lg input-focus-custom"
+                placeholder="Enter State"
+                required>
+
+        </div>
+
+        <!-- Pincode -->
+
+        <div class="col-md-4">
+
+            <label class="form-label form-label-custom">
+                PIN Code
+                <span class="text-danger">*</span>
+            </label>
+
+            <input
+                type="text"
+                name="pincode"
+                maxlength="6"
+                pattern="[0-9]{6}"
+                class="form-control form-control-lg input-focus-custom"
+                placeholder="Enter PIN Code"
+                required>
+
+            <small class="text-muted">
+                Enter a valid 6-digit PIN Code.
+            </small>
+
+        </div>
+
+    </div>
+
+</fieldset>
+
+                       <fieldset class="mb-4">
+
+    <h4 class="form-section-header">
+        <i class="bi bi-shield-check me-2"></i>
+        Step 4 : Declaration & Final Submission
+    </h4>
+
+    <div class="alert alert-primary border-start border-4 border-primary">
+
+        <h5 class="fw-bold mb-3">
+            <i class="bi bi-info-circle-fill me-2"></i>
+            Applicant Declaration
+        </h5>
+
+        <p class="mb-2 text-muted" style="line-height:1.8;">
+
+            I hereby declare that all the information provided in this
+            application form is true and correct to the best of my
+            knowledge. I understand that if any information is found
+            incorrect or misleading, Maurya International University of
+            Technology & Management reserves the right to reject my
+            admission application at any stage.
+
+        </p>
+
+        <p class="mb-0 text-muted" style="line-height:1.8;">
+
+            I also agree to follow all university rules, regulations,
+            admission policies, examination guidelines and disciplinary
+            procedures issued by the university from time to time.
+
+        </p>
+
+    </div>
+
+    <div class="card border shadow-sm mt-4">
+
+        <div class="card-header bg-light">
+
+            <h5 class="mb-0 fw-bold">
+
+                <i class="bi bi-file-earmark-lock-fill text-primary me-2"></i>
+
+                Consent & Verification
+
+            </h5>
+
+        </div>
+
+        <div class="card-body">
+
+            <div class="form-check mb-3">
+
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="agree1"
+                    required>
+
+                <label class="form-check-label" for="agree1">
+
+                    I certify that all academic qualifications,
+                    marks and personal details entered are genuine.
+
+                </label>
+
+            </div>
+
+            <div class="form-check mb-3">
+
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="agree2"
+                    required>
+
+                <label class="form-check-label" for="agree2">
+
+                    I authorize MIUTM to verify my educational
+                    records whenever required.
+
+                </label>
+
+            </div>
+
+            <div class="form-check">
+
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="agree3"
+                    required>
+
+                <label class="form-check-label" for="agree3">
+
+                    I agree with the Privacy Policy,
+                    Admission Rules and Terms &
+                    Conditions of the University.
+
+                </label>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="alert alert-warning mt-4">
+
+        <h6 class="fw-bold">
+
+            <i class="bi bi-exclamation-triangle-fill me-2"></i>
+
+            Important Instructions
+
+        </h6>
+
+        <ul class="mb-0">
+
+            <li>Verify all information before submission.</li>
+
+            <li>Your Application Number will be generated automatically.</li>
+
+            <li>Application status will initially remain <strong>Pending</strong>.</li>
+
+            <li>You can later search, edit or delete your application from the Admission Management Panel.</li>
+
+            <li>Keep your generated Application Number safe for future reference.</li>
+
+        </ul>
+
+    </div>
+
+    <div class="row mt-5">
+
+        <div class="col-lg-6 mb-3">
+
+            <button
+                type="reset"
+                class="btn btn-outline-secondary btn-lg w-100">
+
+                <i class="bi bi-arrow-counterclockwise me-2"></i>
+
+                Reset Form
+
+            </button>
+
+        </div>
+
+        <div class="col-lg-6">
+
+            <button
+                type="submit"
+                class="btn btn-primary btn-lg w-100 fw-bold">
+
+                <i class="bi bi-send-check-fill me-2"></i>
+
+                Submit Admission Application
+
+            </button>
+
+        </div>
+
+    </div>
+
+</fieldset>
+                    </form>
+                </div>
+
+                <div class="col-xl-4 col-lg-12 text-start">
+
+    <!-- Admission Help Desk -->
+
+    <div class="card shadow-sm border-0 mb-4">
+
+        <div class="card-header bg-primary text-white">
+
+            <h5 class="mb-0">
+                <i class="bi bi-headset me-2"></i>
+                Admission Help Desk
+            </h5>
+
+        </div>
+
+        <div class="card-body">
+
+            <p class="mb-3 text-muted">
+
+                Our admission counselors are available to guide you throughout
+                the admission process.
+
+            </p>
+
+            <p class="mb-2">
+                <i class="bi bi-telephone-fill text-primary me-2"></i>
+                +91-1800-123-4567
+            </p>
+
+            <p class="mb-2">
+                <i class="bi bi-envelope-fill text-primary me-2"></i>
+                admissions@miutm.edu.in
+            </p>
+
+            <p class="mb-0">
+                <i class="bi bi-clock-fill text-primary me-2"></i>
+                Monday - Saturday (09:00 AM - 05:00 PM)
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- Required Documents -->
+
+    <div class="card shadow-sm border-0 mb-4">
+
+        <div class="card-header bg-success text-white">
+
+            <h5 class="mb-0">
+
+                <i class="bi bi-folder-check me-2"></i>
+
+                Required Documents
+
+            </h5>
+
+        </div>
+
+        <div class="card-body">
+
+            <ul class="small mb-0">
+
+                <li>10th Marksheet</li>
+
+                <li>12th / Graduation Marksheet</li>
+
+                <li>Transfer Certificate</li>
+
+                <li>Migration Certificate (If Applicable)</li>
+
+                <li>Aadhaar Card</li>
+
+                <li>Passport Size Photograph</li>
+
+                <li>Category Certificate (If Applicable)</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Scholarship -->
+
+    <div class="card shadow-sm border-0 mb-4">
+
+        <div class="card-header bg-warning">
+
+            <h5 class="mb-0">
+
+                <i class="bi bi-award-fill me-2"></i>
+
+                Scholarships
+
+            </h5>
+
+        </div>
+
+        <div class="card-body">
+
+            <ul class="small mb-0">
+
+                <li>Merit Scholarship</li>
+
+                <li>Sports Scholarship</li>
+
+                <li>Economically Weaker Section Support</li>
+
+                <li>Girl Child Scholarship</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Important Dates -->
+
+    <div class="card shadow-sm border-0">
+
+        <div class="card-header bg-danger text-white">
+
+            <h5 class="mb-0">
+
+                <i class="bi bi-calendar-event me-2"></i>
+
+                Important Dates
+
+            </h5>
+
+        </div>
+
+        <div class="card-body">
+
+            <table class="table table-sm align-middle mb-0">
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Application Starts</td>
+
+                        <td><strong>01 July 2026</strong></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Last Date</td>
+
+                        <td><strong>31 August 2026</strong></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Merit List</td>
+
+                        <td><strong>05 Sept 2026</strong></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Counselling</td>
+
+                        <td><strong>10 Sept 2026</strong></td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+    </main>
+
+    <section class="py-5 bg-light border-top border-bottom">
+
+    <div class="container-fluid px-5">
+
+        <div class="text-center mb-5">
+
+            <span class="badge bg-primary px-3 py-2 mb-3">
+                Admission Journey
+            </span>
+
+            <h2 class="fw-bold"
+                style="font-family:Georgia,serif;color:var(--miutm-primary);">
+
+                Admission Process Timeline
+
+            </h2>
+
+            <p class="text-muted">
+
+                Follow these steps to complete your admission successfully.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4">
+
+                <div class="card border-0 shadow h-100">
+
+                    <div class="card-body text-center">
+
+                        <div class="display-5 text-primary mb-3">
+
+                            <i class="bi bi-pencil-square"></i>
+
+                        </div>
+
+                        <h5 class="fw-bold">
+
+                            Step 1
+
+                        </h5>
+
+                        <h6 class="text-primary">
+
+                            Online Registration
+
+                        </h6>
+
+                        <p class="text-muted">
+
+                            Complete the online application form with accurate
+                            personal, academic and contact information.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="card border-0 shadow h-100">
+
+                    <div class="card-body text-center">
+
+                        <div class="display-5 text-success mb-3">
+
+                            <i class="bi bi-file-earmark-check"></i>
+
+                        </div>
+
+                        <h5 class="fw-bold">
+
+                            Step 2
+
+                        </h5>
+
+                        <h6 class="text-success">
+
+                            Document Verification
+
+                        </h6>
+
+                        <p class="text-muted">
+
+                            Submitted documents will be verified by the
+                            admission office.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="card border-0 shadow h-100">
+
+                    <div class="card-body text-center">
+
+                        <div class="display-5 text-warning mb-3">
+
+                            <i class="bi bi-list-check"></i>
+
+                        </div>
+
+                        <h5 class="fw-bold">
+
+                            Step 3
+
+                        </h5>
+
+                        <h6 class="text-warning">
+
+                            Merit List
+
+                        </h6>
+
+                        <p class="text-muted">
+
+                            Eligible applicants will appear in the merit list
+                            according to university admission policy.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="card border-0 shadow h-100">
+
+                    <div class="card-body text-center">
+
+                        <div class="display-5 text-info mb-3">
+
+                            <i class="bi bi-credit-card"></i>
+
+                        </div>
+
+                        <h5 class="fw-bold">
+
+                            Step 4
+
+                        </h5>
+
+                        <h6 class="text-info">
+
+                            Fee Payment
+
+                        </h6>
+
+                        <p class="text-muted">
+
+                            Selected candidates must pay the admission fee
+                            before the deadline.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="card border-0 shadow h-100">
+
+                    <div class="card-body text-center">
+
+                        <div class="display-5 text-danger mb-3">
+
+                            <i class="bi bi-patch-check"></i>
+
+                        </div>
+
+                        <h5 class="fw-bold">
+
+                            Step 5
+
+                        </h5>
+
+                        <h6 class="text-danger">
+
+                            Admission Confirmation
+
+                        </h6>
+
+                        <p class="text-muted">
+
+                            Your admission will be confirmed after successful
+                            verification and fee payment.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="card border-0 shadow h-100">
+
+                    <div class="card-body text-center">
+
+                        <div class="display-5 text-secondary mb-3">
+
+                            <i class="bi bi-mortarboard-fill"></i>
+
+                        </div>
+
+                        <h5 class="fw-bold">
+
+                            Step 6
+
+                        </h5>
+
+                        <h6 class="text-secondary">
+
+                            Welcome to MIUTM
+
+                        </h6>
+
+                        <p class="text-muted">
+
+                            Receive your enrollment number and begin your
+                            academic journey at MIUTM.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <section class="py-5 bg-white border-top">
+
+    <div class="container-fluid px-5">
+
+        <div class="text-center mb-5">
+
+            <span class="badge bg-primary px-3 py-2 mb-3">
+
+                Frequently Asked Questions
+
+            </span>
+
+            <h2 class="fw-bold"
+                style="font-family:Georgia,serif;color:var(--miutm-primary);">
+
+                Admission FAQs
+
+            </h2>
+
+            <p class="text-muted">
+
+                Find answers to the most commonly asked admission related questions.
+
+            </p>
+
+        </div>
+
+        <div class="accordion shadow" id="faqAccordion">
+
+            <!-- FAQ 1 -->
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button"
+
+                        type="button"
+
+                        data-bs-toggle="collapse"
+
+                        data-bs-target="#faq1">
+
+                        How do I apply for admission?
+
+                    </button>
+
+                </h2>
+
+                <div id="faq1"
+
+                     class="accordion-collapse collapse show"
+
+                     data-bs-parent="#faqAccordion">
+
+                    <div class="accordion-body">
+
+                        Complete the online admission form, upload the required
+                        information, and submit your application. An Application
+                        Number will be generated automatically.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- FAQ 2 -->
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed"
+
+                        type="button"
+
+                        data-bs-toggle="collapse"
+
+                        data-bs-target="#faq2">
+
+                        What documents are required?
+
+                    </button>
+
+                </h2>
+
+                <div id="faq2"
+
+                     class="accordion-collapse collapse"
+
+                     data-bs-parent="#faqAccordion">
+
+                    <div class="accordion-body">
+
+                        10th Marksheet, 12th/Graduation Marksheet,
+                        Aadhaar Card, Passport Size Photograph,
+                        Transfer Certificate and other documents,
+                        if applicable.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- FAQ 3 -->
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed"
+
+                        type="button"
+
+                        data-bs-toggle="collapse"
+
+                        data-bs-target="#faq3">
+
+                        Can I edit my application after submission?
+
+                    </button>
+
+                </h2>
+
+                <div id="faq3"
+
+                     class="accordion-collapse collapse"
+
+                     data-bs-parent="#faqAccordion">
+
+                    <div class="accordion-body">
+
+                        Yes. Before final admission confirmation,
+                        authorized administrators can update application
+                        details whenever required.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- FAQ 4 -->
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed"
+
+                        type="button"
+
+                        data-bs-toggle="collapse"
+
+                        data-bs-target="#faq4">
+
+                        How can I check my application status?
+
+                    </button>
+
+                </h2>
+
+                <div id="faq4"
+
+                     class="accordion-collapse collapse"
+
+                     data-bs-parent="#faqAccordion">
+
+                    <div class="accordion-body">
+
+                        Use your generated Application Number to check
+                        your admission status through the Admission Portal.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- FAQ 5 -->
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed"
+
+                        type="button"
+
+                        data-bs-toggle="collapse"
+
+                        data-bs-target="#faq5">
+
+                        Are scholarships available?
+
+                    </button>
+
+                </h2>
+
+                <div id="faq5"
+
+                     class="accordion-collapse collapse"
+
+                     data-bs-parent="#faqAccordion">
+
+                    <div class="accordion-body">
+
+                        Yes. Merit-based, Sports,
+                        Girl Student and Financial Assistance
+                        scholarships are available as per university policy.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- FAQ 6 -->
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed"
+
+                        type="button"
+
+                        data-bs-toggle="collapse"
+
+                        data-bs-target="#faq6">
+
+                        When will classes begin?
+
+                    </button>
+
+                </h2>
+
+                <div id="faq6"
+
+                     class="accordion-collapse collapse"
+
+                     data-bs-parent="#faqAccordion">
+
+                    <div class="accordion-body">
+
+                        The academic session will commence according to
+                        the official university academic calendar after
+                        completion of the admission process.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <section class="py-5 bg-light border-top border-bottom">
+
+    <div class="container-fluid px-5">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-10">
+
+                <div class="alert alert-warning border-start border-5 border-warning shadow-sm p-4">
+
+                    <div class="d-flex align-items-start">
+
+                        <i class="bi bi-exclamation-triangle-fill display-6 text-warning me-3"></i>
+
+                        <div>
+
+                            <h4 class="fw-bold mb-3"
+                                style="font-family:Georgia,serif;">
+
+                                Important Admission Notice
+
+                            </h4>
+
+                            <p class="mb-2 text-muted">
+
+                                Submission of the online application form does
+                                not guarantee admission to the University.
+                                Admission is strictly subject to eligibility
+                                criteria, document verification, seat
+                                availability, and approval by the Admission
+                                Committee.
+
+                            </p>
+
+                            <p class="mb-2 text-muted">
+
+                                Applicants are advised to carefully review all
+                                information before submitting the application.
+                                Any incorrect, incomplete, or misleading
+                                information may result in rejection or
+                                cancellation of the application.
+
+                            </p>
+
+                            <p class="mb-0 text-muted">
+
+                                The University reserves the right to modify,
+                                cancel, or revise admission rules, eligibility,
+                                fee structure, and academic policies without
+                                prior notice.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <footer class="text-white" style="background:#001F4D;border-top:5px solid var(--miutm-gold);">
+
+    <div class="container-fluid px-5 py-5">
+
+        <div class="row gy-5">
+
+            <!-- University -->
+
+            <div class="col-lg-4">
+
+                <h4 class="text-warning fw-bold mb-3"
+                    style="font-family:Georgia,serif;">
+
+                    Maurya International University
+
+                </h4>
+
+                <p class="text-white-50">
+
+                    Maurya International University of Technology &
+                    Management (MIUTM) is committed to academic excellence,
+                    innovation, research and industry-oriented education.
+
+                </p>
+
+                <<div class="mt-4 d-flex flex-wrap gap-2">
+
+    <a href="https://github.com/Nitin765kumar"
+       target="_blank"
+       class="btn btn-outline-light btn-sm"
+       title="GitHub">
+
+        <i class="bi bi-github"></i>
+
+    </a>
+
+    <a href="https://www.linkedin.com/in/nitinkumar25"
+       target="_blank"
+       class="btn btn-outline-light btn-sm"
+       title="LinkedIn">
+
+        <i class="bi bi-linkedin"></i>
+
+    </a>
+
+    <a href="https://www.youtube.com/@nitinkumar8487"
+       target="_blank"
+       class="btn btn-outline-light btn-sm"
+       title="YouTube">
+
+        <i class="bi bi-youtube"></i>
+
+    </a>
+
+    <a href="/contact"
+       class="btn btn-warning btn-sm fw-bold">
+
+        Contact Us
+
+    </a>
+
+</div>
+
+            </div>
+
+            <!-- Quick Links -->
+
+            <div class="col-lg-2">
+
+                <h5 class="text-warning mb-3">
+
+                    Quick Links
+
+                </h5>
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-2">
+                        <a href="/" class="text-white-50 text-decoration-none">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="/about" class="text-white-50 text-decoration-none">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="/courses" class="text-white-50 text-decoration-none">
+                            Courses
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="/admission" class="text-white-50 text-decoration-none">
+                            Admission
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/contact" class="text-white-50 text-decoration-none">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Admission Office -->
+
+            <div class="col-lg-3">
+
+                <h5 class="text-warning mb-3">
+
+                    Admission Office
+
+                </h5>
+
+                <p class="text-white-50 mb-2">
+
+                    <i class="bi bi-geo-alt-fill me-2"></i>
+
+                    MIUTM Campus,
+                    Ayodhya,
+                    Uttar Pradesh,
+                    India
+
+                </p>
+
+                <p class="text-white-50 mb-2">
+
+                    <i class="bi bi-telephone-fill me-2"></i>
+
+                    +91 9876543210
+
+                </p>
+
+                <p class="text-white-50 mb-2">
+
+                    <i class="bi bi-envelope-fill me-2"></i>
+
+                    admission@miutm.edu.in
+
+                </p>
+
+                <p class="text-white-50">
+
+                    <i class="bi bi-clock-fill me-2"></i>
+
+                    Mon - Sat : 9:00 AM - 5:00 PM
+
+                </p>
+
+            </div>
+
+            <!-- Help -->
+
+            <div class="col-lg-3">
+
+                <h5 class="text-warning mb-3">
+
+                    Student Help
+
+                </h5>
+
+                <div class="card bg-dark border-secondary">
+
+                    <div class="card-body">
+
+                        <p class="small text-white-50 mb-3">
+
+                            Need help with admission?
+
+                        </p>
+
+                        <a href="/contact"
+                           class="btn btn-warning w-100 fw-bold">
+
+                            Contact Admission Cell
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="border-top border-secondary">
+
+        <div class="container-fluid px-5 py-3">
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <small class="text-white-50">
+
+                        © 2026 Maurya International University of Technology &
+                        Management. All Rights Reserved.
+
+                    </small>
+
+                </div>
+
+                <div class="col-md-6 text-md-end mt-2 mt-md-0">
+
+                    <a href="#"
+                       class="text-white-50 text-decoration-none me-3">
+
+                        Privacy Policy
+
+                    </a>
+
+                    <a href="#"
+                       class="text-white-50 text-decoration-none me-3">
+
+                        Terms
+
+                    </a>
+
+                    <a href="#"
+                       class="text-white-50 text-decoration-none">
+
+                        Accessibility
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

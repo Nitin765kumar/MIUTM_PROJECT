@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Track Admission | MIUTM</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="/">
+            MIUTM University
+        </a>
+
+    </div>
+
+</nav>
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <div class="card shadow-lg border-0 rounded-4">
+
+                    <div class="card-body p-5">
+
+                        <h2 class="text-center mb-3">
+
+                            <i class="bi bi-search"></i>
+
+                            Track Admission
+
+                        </h2>
+
+                        <p class="text-center text-muted mb-4">
+
+                            Enter your Application Number to check admission status.
+
+                        </p>
+
+                        <form method="POST">
+
+                            <div class="input-group mb-4">
+
+                                <input
+                                    type="text"
+                                    class="form-control form-control-lg"
+                                    name="application_no"
+                                    placeholder="Example : MIUTM-2026-123456"
+                                    required
+                                >
+
+                                <button class="btn btn-primary btn-lg">
+
+                                    <i class="bi bi-search"></i>
+
+                                    Track
+
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                        {% with messages = get_flashed_messages(with_categories=true) %}
+
+                            {% if messages %}
+
+                                {% for category, message in messages %}
+
+                                    <div class="alert alert-{{ category }}">
+
+                                        {{ message }}
+
+                                    </div>
+
+                                {% endfor %}
+
+                            {% endif %}
+
+                        {% endwith %}
+
+                        {% if admission %}
+
+                        <div class="card border-success mt-4">
+
+                            <div class="card-header bg-success text-white">
+
+                                Admission Details
+
+                            </div>
+
+                            <div class="card-body">
+
+                                <table class="table table-bordered">
+
+                                    <tr>
+
+                                        <th width="35%">
+
+                                            Application No.
+
+                                        </th>
+
+                                        <td>
+
+                                            {{ admission.application_no }}
+
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <th>
+
+                                            Student Name
+
+                                        </th>
+
+                                        <td>
+
+                                            {{ admission.full_name }}
+
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <th>
+
+                                            Course
+
+                                        </th>
+
+                                        <td>
+
+                                            {{ admission.course_name }}
+
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <th>
+
+                                            Email
+
+                                        </th>
+
+                                        <td>
+
+                                            {{ admission.email }}
+
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <th>
+
+                                            Phone
+
+                                        </th>
+
+                                        <td>
+
+                                            {{ admission.phone }}
+
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <th>
+
+                                            Status
+
+                                        </th>
+
+                                        <td>
+
+                                            {% if admission.status=="Approved" %}
+
+                                            <span class="badge bg-success">
+
+                                                Approved
+
+                                            </span>
+
+                                            {% elif admission.status=="Rejected" %}
+
+                                            <span class="badge bg-danger">
+
+                                                Rejected
+
+                                            </span>
+
+                                            {% elif admission.status=="Under Review" %}
+
+                                            <span class="badge bg-warning text-dark">
+
+                                                Under Review
+
+                                            </span>
+
+                                            {% else %}
+
+                                            <span class="badge bg-secondary">
+
+                                                Pending
+
+                                            </span>
+
+                                            {% endif %}
+
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <th>
+
+                                            Remarks
+
+                                        </th>
+
+                                        <td>
+
+                                            {{ admission.remarks }}
+
+                                        </td>
+
+                                    </tr>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+
+</html>

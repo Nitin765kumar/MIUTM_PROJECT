@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>{% block title %}MIUTM Portal{% endblock %}</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <style>
+        .university-blue { background-color: #0b2240; }
+        .text-university-gold { color: #ffc107 !important; }
+        .bg-university-gold { background-color: #ffc107; }
+        
+        .hero-banner {
+            background: linear-gradient(rgba(11, 34, 64, 0.85), rgba(11, 34, 64, 0.9)), url("{{ url_for('static', filename='hero-bg.png') }}") no-repeat center center;
+            background-size: cover;
+            color: #ffffff;
+            padding: 60px 15px;
+        }
+        
+        .logo-circle-container {
+            width: 65px;
+            height: 65px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            overflow: hidden;
+            padding: 3px;
+            flex-shrink: 0;
+        }
+        .logo-circle-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .feature-card { transition: transform 0.2s; border-radius: 8px; border: 1px solid #e3e8ee; }
+        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important; }
+        .footer-link { text-decoration: none; color: #a0aec0; transition: color 0.2s; }
+        .footer-link:hover { color: #ffc107; }
+        .legal-scroll-box { max-height: 400px; overflow-y: auto; background-color: #f8f9fa; border: 1px solid #dee2e6; padding: 15px; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <div class="university-blue text-white py-2 px-3 px-md-4 small d-flex flex-column flex-md-row justify-content-between align-items-center text-center gap-1 border-bottom border-warning">
+        <div class="small"><span class="badge bg-warning text-dark fw-bold me-2">LIVE BULLETIN</span> Admission portal entries and document verification counters are operational for 2026.</div>
+        <div class="font-monospace small opacity-75">Console Clock: 2026-06-30</div>
+    </div>
+
+    <header class="bg-white py-3 px-3 px-md-4 shadow-sm border-bottom">
+        <div class="container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+            <div class="d-flex align-items-center gap-2 gap-sm-3 text-center text-md-start flex-column flex-sm-row">
+                <div class="logo-circle-container">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="MIUTM Insignia Emblem">
+                </div>
+                <div>
+                    <h2 class="fw-bold m-0 tracking-tight" style="color: #0b2240;">MIUTM</h2>
+                    <small class="text-secondary fw-bold font-monospace tracking-wider d-block lh-sm">MAURYA INTERNATIONAL UNIVERSITY OF TECHNOLOGY & MANAGEMENT</small>
+                </div>
+            </div>
+            
+            <div class="bg-light border p-2 rounded text-center text-md-end font-monospace small shadow-sm w-100 w-md-auto">
+                {% if session.get('user_logged_in') %}
+                    <div>Identity Profile: <strong class="text-primary">{{ session['username'] }}</strong></div>
+                    <div>Clearance: <span class="badge bg-dark text-capitalize">{{ session.get('role', 'Student') }}</span></div>
+                {% else %}
+                    <div class="text-muted">Session Profile: <strong class="text-danger">Guest / Anonymous</strong></div>
+                    <div>System Status: <span class="badge bg-secondary">Unauthorized</span></div>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark p-0 shadow-sm" style="background-color: #0b2240;">
+        <div class="container-fluid px-3">
+            <a class="navbar-brand d-lg-none font-monospace small text-warning fw-bold" href="#">CAMPUS NAVIGATION</a>
+            
+            <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#miutmGlobalNavbarControl" aria-controls="miutmGlobalNavbarControl" aria-expanded="false" aria-label="Toggle Navigation Options">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="miutmGlobalNavbarControl">
+                <div class="navbar-nav w-100 py-2 py-lg-0 gap-1 font-monospace text-center text-lg-start small">
+                    {% if session.get('role')|lower == 'admin' %}
+                        <a class="nav-link px-3 {% if request.path == '/admin/dashboard' %}active text-warning fw-bold{% endif %}" href="{{ url_for('admin_dashboard') }}">Home Console</a>
+                    {% elif session.get('role')|lower == 'student' %}
+                        <a class="nav-link px-3 {% if request.path == '/student/dashboard' %}active text-warning fw-bold{% endif %}" href="{{ url_for('student_dashboard') }}">Home Console</a>
+                    {% else %}
+                        <a class="nav-link px-3 {% if request.path == '/' %}active text-warning fw-bold{% endif %}" href="/">Home Console</a>
+                    {% endif %}
+
+                    <a class="nav-link px-3 {% if request.path == '/about' %}active text-warning fw-bold{% endif %}" href="/about">About Charter</a>
+                    <a class="nav-link px-3 {% if request.path == '/courses' %}active text-warning fw-bold{% endif %}" href="/courses">Academic Programs</a>
+                    <a class="nav-link px-3 {% if request.path == '/admission' %}active text-warning fw-bold{% endif %}" href="/admission">Admission Desk</a>
+                    <a class="nav-link px-3 {% if request.path == '/contact' %}active text-warning fw-bold{% endif %}" href="/contact">Contact Support</a>
+                    
+                    {% if session.get('user_logged_in') %}
+                        <a class="btn btn-sm btn-danger fw-bold ms-lg-auto my-2 my-lg-0 px-4 text-white align-self-center shadow-sm" href="/logout">Logout Portal</a>
+                    {% else %}
+                        <a class="btn btn-sm btn-warning fw-bold ms-lg-auto my-2 my-lg-0 px-4 text-dark align-self-center shadow-sm" href="{{ url_for('gate_terminal') }}">Login Gateway</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3 px-3">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} text-center fw-bold shadow-sm small">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    <main class="container my-3 my-md-4 flex-grow-1 px-3">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="text-white pt-5 pb-3 mt-auto border-top border-warning" style="background-color: #0b2240;">
+        <div class="container px-3">
+            <div class="row g-4 font-monospace small">
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="fw-bold text-warning text-uppercase mb-3">MIUTM Operations Core</h6>
+                    <p class="text-white-50 lh-base small">Central institutional web hub managing multi-step program intakes, file streaming data responses, and secure session authorization perimeter checkpoints natively inside a relational SQL layer.</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold text-warning text-uppercase mb-3">Admission Guidelines</h6>
+                    <ul class="list-unstyled text-white-50 small d-flex flex-column gap-2">
+                        <li><a href="#" class="footer-link" data-bs-toggle="modal" data-bs-target="#admissionModal">1. Entry Requirement Check</a></li>
+                        <li><a href="#" class="footer-link" data-bs-toggle="modal" data-bs-target="#admissionModal">2. Complete Multi-Step Form</a></li>
+                        <li><a href="#" class="footer-link" data-bs-toggle="modal" data-bs-target="#admissionModal">3. Ascending Unique ID Lock</a></li>
+                        <li><a href="#" class="footer-link" data-bs-toggle="modal" data-bs-target="#admissionModal">4. Document Status Audits</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold text-warning text-uppercase mb-3">Legal Registry</h6>
+                    <ul class="list-unstyled text-white-50 small d-flex flex-column gap-2">
+                        <li><a href="#" class="footer-link" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link" data-bs-toggle="modal" data-bs-target="#termsModal">Terms of Service</a></li>
+                        <li><a href="#" class="footer-link" data-bs-toggle="modal" data-bs-target="#faqModal">Campus FAQs Desk</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold text-warning text-uppercase mb-3">System Cluster Log</h6>
+                    <ul class="list-unstyled text-white-50 small d-flex flex-column encoding-details-list gap-1">
+                        <li>Persistent Storage: <strong class="text-white">SQLite Engine Core</strong></li>
+                        <li>Data Isolation Model: <strong class="text-white">ACID Row Locking</strong></li>
+                        <li>Network Session Guard: <strong class="text-success">Active Secure</strong></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4 border-secondary opacity-25">
+            <div class="text-center small text-white-50 font-monospace" style="font-size: 0.75rem;">
+                © 2026 Maurya International University of Technology & Management (MIUTM). Central Engine System. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade text-dark" id="privacyModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header university-blue text-white">
+                    <h5 class="modal-title fw-bold text-university-gold">MIUTM Institutional Privacy & Information Security Policy</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="legal-scroll-box small text-secondary lh-base">
+                        <p class="fw-bold text-dark">Effective Date: Academic Session 2026/2027</p>
+                        <h6>1. Scope of Policy</h6>
+                        <p>This comprehensive statement defines data collection, storage architecture, processing models, and distribution protection guidelines managed across all digital domains of Maurya International University of Technology & Management (MIUTM). This privacy framework complies fully with statutory digital data preservation provisions and international institutional information protection parameters.</p>
+                        
+                        <h6>2. Data Accumulation Categories</h6>
+                        <p>MIUTM maintains system logs containing specific identity profiles, academic transcripts, performance assessments, contact records, relational transaction hashes, and systemic browser tracking vectors. These parameters are acquired securely through enrollment interfaces and stored inside our unified relational data clusters.</p>
+                        
+                        <h6>3. Database Engineering & Security Control Architecture</h6>
+                        <p>All sensitive information collected through web application endpoints is written directly onto database storage disk blocks executing isolated row-locking models under continuous monitoring protocols. Academic records are locked behind session verification guards to neutralize external vector cross-site contamination threats.</p>
+                        
+                        <h6>4. Disclosure and Distribution Restrictions</h6>
+                        <p>MIUTM strictly maintains an analytical privacy silo policy. Information arrays are never authorized for commercial utilization or distributed outside authorized governance systems unless explicitly commanded by verified institutional litigation or formal statutory orders.</p>
+                        
+                        <h6>5. System Rights and User Correction Clearances</h6>
+                        <p>Enrolled personnel possess authorized capabilities to verify their operational session state parameters and audit current transcript validation milestones via the Student Access Portal. Modification requests regarding structural discrepancies must be addressed directly to the Registrar Desk.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade text-dark" id="termsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header university-blue text-white">
+                    <h5 class="modal-title fw-bold text-university-gold">System Terms and Conditions of Campus Resource Utilization</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="legal-scroll-box small text-secondary lh-base">
+                        <p class="fw-bold text-dark">Document Identifier: TERMS-REVISION-2026.1</p>
+                        <h6>1. Acknowledgement of System Rules</h6>
+                        <p>By authenticating your identity session profile within the MIUTM internal terminal grid network framework, you explicitly consent to obey all operational parameters, code of conduct requirements, and network structural access controls outlined by the institution's information technology department.</p>
+                        
+                        <h6>2. User Authentication Silo Accounts</h6>
+                        <p>Every active student and administrator profile corresponds to an isolated database index mapping password arrays securely. Users are completely responsible for shielding their credentials against data exposure vectors. Unauthorized password sharing or exploiting access paths constitutes a material breach of discipline.</p>
+                        
+                        <h6>3. Acceptable Use and Network Resource Integrity</h6>
+                        <p>The academic tools, curriculum documentation files, tracking grids, and streaming data services accessible on this platform are reserved exclusively for education management routines. Automated scanning tools, penetration tracking, structural injection arrays, or attempts to force SQLite constraint exception states will trigger an automatic security lock and account termination.</p>
+                        
+                        <h6>4. Limitation of Service Availability</h6>
+                        <p>MIUTM provides this platform utilizing secure relational database persistence engines. However, uninterrupted live performance remains dependent on physical cloud computing arrays and continuous server operations. Maintenance rollbacks, data updates, and diagnostic checks may occasionally cycle service status states to 'Offline'.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade text-dark" id="faqModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header university-blue text-white">
+                    <h5 class="modal-title fw-bold text-university-gold">MIUTM Central FAQ System & Operational Desk</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="accordion" id="faqMasterAccordion">
+                        
+                        <div class="alert alert-dark fw-bold py-1 px-2 font-monospace small mb-2">CATEGORY: ADMISSIONS & INTAKE PROCEDURES</div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="faqHead1">
+                                <button class="accordion-button collapsed py-2 small fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol1">
+                                    Q1: How do I complete my admissions form configuration?
+                                </button>
+                            </h2>
+                            <div id="faqCol1" class="accordion-collapse collapse" data-bs-parent="#faqMasterAccordion">
+                                <div class="accordion-body text-muted small">Open the Admission Desk link, supply your identity attributes in Panel 1, and proceed directly to Panel 2 to input your science streams and previous aggregate exam percentages.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="faqHead2">
+                                <button class="accordion-button collapsed py-2 small fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol2">
+                                    Q2: What files can be streamed to the validation matrix?
+                                </button>
+                            </h2>
+                            <div id="faqCol2" class="accordion-collapse collapse" data-bs-parent="#faqMasterAccordion">
+                                <div class="accordion-body text-muted small">You can stream high-resolution transcript verification items, personal certificates, and identity files directly into our verification matrix slots.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="faqHead3">
+                                <button class="accordion-button collapsed py-2 small fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol3">
+                                    Q3: What do the different status flags inside my tracker mean?
+                                </button>
+                            </h2>
+                            <div id="faqCol3" class="accordion-collapse collapse" data-bs-parent="#faqMasterAccordion">
+                                <div class="accordion-body text-muted small">'Pending Audit' implies your data records are safely on disc waiting for manual verification; 'Verified' confirms successful processing by the administration.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="faqHead4">
+                                <button class="accordion-button collapsed py-2 small fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol4">
+                                    Q4: Can I alter my selected course choices once written to disk?
+                                </button>
+                            </h2>
+                            <div id="faqCol4" class="accordion-collapse collapse" data-bs-parent="#faqMasterAccordion">
+                                <div class="accordion-body text-muted small">No, once a data form entry transaction is successfully committed to the database array, further updates are locked to maintain systemic integrity.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="faqHead5">
+                                <button class="accordion-button collapsed py-2 small fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol5">
+                                    Q5: How long does the administrative document audit loop take?
+                                </button>
+                            </h2>
+                            <div id="faqCol5" class="accordion-collapse collapse" data-bs-parent="#faqMasterAccordion">
+                                <div class="accordion-body text-muted small">The automated ledger distribution system routes your files immediately, but structural manual audits are completed within 3-5 operational business days.</div>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-dark fw-bold py-1 px-2 font-monospace small mb-2">CATEGORY: DIGITAL CLEARANCE & INFRASTRUCTURE LOGS</div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="faqHead6">
+                                <button class="accordion-button collapsed py-2 small fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol6">
+                                    Q6: Why am I hitting an access path error when entering specific tabs?
+                                </button>
+                            </h2>
+                            <div id="faqCol6" class="accordion-collapse collapse" data-bs-parent="#faqMasterAccordion">
+                                <div class="accordion-body text-muted small">Every core interface uses strict parameter monitoring filters. If your account token context does not hold matching administrative or student flags, access is instantly denied.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="faqHead7">
+                                <button class="accordion-button collapsed py-2 small fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol7">
+                                    Q7: How can I safely clear my operational session data context?
+                                </button>
+                            </h2>
+                            <div id="faqCol7" class="accordion-collapse collapse" data-bs-parent="#faqMasterAccordion">
+                                <div class="accordion-body text-muted small">Clicking 'Logout Portal' inside your navigation row clears your active tracking tokens, closes database communication handles, and locks security parameters.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="faqHead8">
+                                <button class="accordion-button collapsed py-2 small fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol8">
+                                    Q8: Does the server use cookies to retain my authentication profile?
+                                </button>
+                            </h2>
+                            <div id="faqCol8" class="accordion-collapse collapse" data-bs-parent="#faqMasterAccordion">
+                                <div class="accordion-body text-muted small">Yes, Flask uses signed cryptographically secure cookie frameworks to persist identity status across web operations safely.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="faqHead9">
+                                <button class="accordion-button collapsed py-2 small fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol9">
+                                    Q9: What happens if I attempt to register an identical existing username?
+                                </button>
+                            </h2>
+                            <div id="faqCol9" class="accordion-collapse collapse" data-bs-parent="#faqMasterAccordion">
+                                <div class="accordion-body text-muted small">The database engine catches an explicit constraint validation error, stops the write transaction, and flashes an alert that the username is claimed.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="faqHead10">
+                                <button class="accordion-button collapsed py-2 small fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol10">
+                                    Q10: Is my student interaction activity tracking data encrypted?
+                                </button>
+                            </h2>
+                            <div id="faqCol10" class="accordion-collapse collapse" data-bs-parent="#faqMasterAccordion">
+                                <div class="accordion-body text-muted small">All session attributes travel inside secure protocols and remain isolated inside institutional server nodes to prevent third-party vector interception.</div>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-dark fw-bold py-1 px-2 font-monospace small mb-2">CATEGORY: CURRICULUM ARCHITECTURE & TROUBLESHOOTING</div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="faqHead11">
+                                <button class="accordion-button collapsed py-2 small fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol11">
+                                    Q11: Where can I review the complete structural academic curriculum arrays?
+                                </button>
+                            </h2>
+                            <div id="faqCol11" class="accordion-collapse collapse" data-bs-parent="#faqMasterAccordion">
+                                <div class="accordion-body text-muted small">The Academic Programs link directly pulls all rows from the active server courses catalog block layout, displaying complete course details.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="faqHead12">
+                                <button class="accordion-button collapsed py-2 small fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol12">
+                                    Q12: How do I report interface rendering errors or missing texts?
+                                </button>
+                            </h2>
+                            <div id="faqCol12" class="accordion-collapse collapse" data-bs-parent="#faqMasterAccordion">
+                                <div class="accordion-body text-muted small">Please head over to the Contact Support page and send a detailed operational alert log to our technical desk team.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="faqHead13">
+                                <button class="accordion-button collapsed py-2 small fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol13">
+                                    Q13: Why is my dashboard failing to show my active profile variables?
+                                </button>
+                            </h2>
+                            <div id="faqCol13" class="accordion-collapse collapse" data-bs-parent="#faqMasterAccordion">
+                                <div class="accordion-body text-muted small">This occurs if your profile records are not tied properly to your exact registration name in the relational database mapping logic.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="faqHead14">
+                                <button class="accordion-button collapsed py-2 small fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol14">
+                                    Q14: Does this console platform feature mobile application integrations?
+                                </button>
+                            </h2>
+                            <div id="faqCol14" class="accordion-collapse collapse" data-bs-parent="#faqMasterAccordion">
+                                <div class="accordion-body text-muted small">Yes, the layout uses standard responsive design elements, sizing perfectly down to mobile parameters and tablets.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="faqHead15">
+                                <button class="accordion-button collapsed py-2 small fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol15">
+                                    Q15: What structural database driver powers MIUTM's persistence clusters?
+                                </button>
+                            </h2>
+                            <div id="faqCol15" class="accordion-collapse collapse" data-bs-parent="#faqMasterAccordion">
+                                <div class="accordion-body text-muted small">The system relies on an embedded SQLite 3 relational micro-engine configured to run secure ACID storage queries.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="faqHead16">
+                                <button class="accordion-button collapsed py-2 small fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol16">
+                                    Q16: How do administrators clear system execution audit cache logs?
+                                </button>
+                            </h2>
+                            <div id="faqCol16" class="accordion-collapse collapse" data-bs-parent="#faqMasterAccordion">
+                                <div class="accordion-body text-muted small">Authorized roots can fire cache truncation scripts directly via the core control dashboard panel engines.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="faqHead17">
+                                <button class="accordion-button collapsed py-2 small fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol17">
+                                    Q17: Is it possible to submit multiple applications simultaneously?
+                                </button>
+                            </h2>
+                            <div id="faqCol17" class="accordion-collapse collapse" data-bs-parent="#faqMasterAccordion">
+                                <div class="accordion-body text-muted small">The database schema limits each identity mapping to one single unique entry track to block registration flooding.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="faqHead18">
+                                <button class="accordion-button collapsed py-2 small fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol18">
+                                    Q18: What is the system recovery blueprint if transaction states fail mid-transit?
+                                </button>
+                            </h2>
+                            <div id="faqCol18" class="accordion-collapse collapse" data-bs-parent="#faqMasterAccordion">
+                                <div class="accordion-body text-muted small">SQLite automatically invokes transaction rollbacks to revert relational files back to their stable pre-fault state checkpoint.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="faqHead19">
+                                <button class="accordion-button collapsed py-2 small fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol19">
+                                    Q19: Who holds legal custody over submitted academic documentation packages?
+                                </button>
+                            </h2>
+                            <div id="faqCol19" class="accordion-collapse collapse" data-bs-parent="#faqMasterAccordion">
+                                <div class="accordion-body text-muted small">All records fall strictly under MIUTM institutional jurisdiction controls, as managed by our compliance guidelines.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHead20">
+                                <button class="accordion-button collapsed py-2 small fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol20">
+                                    Q20: How frequently do system metrics recalculate row integers?
+                                </button>
+                            </h2>
+                            <div id="faqCol20" class="accordion-collapse collapse" data-bs-parent="#faqMasterAccordion">
+                                <div class="accordion-body text-muted small">The backend counts system metrics dynamically using live SQL aggregate expressions every single time an administrator initiates the console layout.</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade text-dark" id="admissionModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header university-blue text-white">
+                    <h5 class="modal-title fw-bold text-university-gold">Official Admission Intake Guidelines (2026)</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 small">
+                    <h6 class="fw-bold text-primary">Step 1: Curriculum Exploration</h6>
+                    <p class="text-muted mb-3">Navigate to the <em>Programs Catalog</em> portal page to evaluate active academic streams.</p>
+                    <h6 class="fw-bold text-primary">Step 2: Enrollment Submission</h6>
+                    <p class="text-muted mb-3">Open the <em>Admission Desk</em> workspace. Panel 1 captures structural contact parameters. Select proceed to unlock Panel 2 where secondary aggregate percentage marks are registered.</p>
+                    <h6 class="fw-bold text-primary">Step 3: Unique Code Assignment</h6>
+                    <p class="text-muted mb-3">Upon submitting the configuration, the backend generates an alphanumeric sequential tracking number written instantly into database records.</p>
+                    <h6 class="fw-bold text-primary">Step 4: Registry Auditing</h6>
+                    <p class="text-muted m-0">The application status fields default to 'Pending'. Examiners and site administrators can audit database tables manually to authorize admission lists.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

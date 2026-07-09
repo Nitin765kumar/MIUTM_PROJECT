@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Admission | MIUTM</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        body{
+            background:#eef2f7;
+            font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+        }
+
+        .page-header{
+            background:#003366;
+            color:white;
+            padding:20px;
+        }
+
+        .form-card{
+            background:white;
+            border-radius:12px;
+            box-shadow:0 6px 18px rgba(0,0,0,.08);
+            padding:35px;
+        }
+
+        .section-title{
+            color:#003366;
+            font-weight:bold;
+            border-bottom:2px solid #003366;
+            padding-bottom:10px;
+            margin-bottom:25px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="page-header">
+
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h2 class="mb-0">
+
+                    Edit Admission Record
+
+                </h2>
+
+                <small>
+
+                    Student Admission Management System
+
+                </small>
+
+            </div>
+
+            <a href="/admissions"
+               class="btn btn-light">
+
+                <i class="bi bi-arrow-left"></i>
+
+                Back
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container my-5">
+
+<div class="form-card">
+
+<form method="POST">
+
+<h4 class="section-title">
+
+Personal Information
+
+</h4>
+
+<div class="row">
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+
+Full Name
+
+</label>
+
+<input
+type="text"
+name="full_name"
+class="form-control"
+value="{{ admission.full_name }}"
+required>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+
+Father Name
+
+</label>
+
+<input
+type="text"
+name="father_name"
+class="form-control"
+value="{{ admission.father_name }}"
+required>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+
+Mother Name
+
+</label>
+
+<input
+type="text"
+name="mother_name"
+class="form-control"
+value="{{ admission.mother_name }}"
+required>
+
+</div>
+
+<div class="col-md-3 mb-3">
+
+<label class="form-label">
+
+Gender
+
+</label>
+
+<select
+name="gender"
+class="form-select">
+
+<option {% if admission.gender=="Male" %}selected{% endif %}>Male</option>
+
+<option {% if admission.gender=="Female" %}selected{% endif %}>Female</option>
+
+<option {% if admission.gender=="Other" %}selected{% endif %}>Other</option>
+
+</select>
+
+</div>
+
+<div class="col-md-3 mb-3">
+
+<label class="form-label">
+
+Date of Birth
+
+</label>
+
+<input
+type="date"
+name="dob"
+class="form-control"
+value="{{ admission.dob }}">
+
+</div>
+
+</div>
+<!-- ========================================================= -->
+<!-- CONTACT & ACADEMIC INFORMATION -->
+<!-- ========================================================= -->
+
+<h4 class="section-title mt-4">
+
+    Contact & Academic Information
+
+</h4>
+
+<div class="row">
+
+    <div class="col-md-6 mb-3">
+
+        <label class="form-label">
+
+            Email Address
+
+        </label>
+
+        <input
+            type="email"
+            name="email"
+            class="form-control"
+            value="{{ admission.email }}"
+            required>
+
+    </div>
+
+    <div class="col-md-6 mb-3">
+
+        <label class="form-label">
+
+            Mobile Number
+
+        </label>
+
+        <input
+            type="text"
+            name="phone"
+            class="form-control"
+            value="{{ admission.phone }}"
+            required>
+
+    </div>
+
+    <div class="col-md-4 mb-3">
+
+        <label class="form-label">
+
+            Category
+
+        </label>
+
+        <select
+            name="category"
+            class="form-select">
+
+            <option value="General"
+            {% if admission.category=="General" %}selected{% endif %}>
+            General
+            </option>
+
+            <option value="OBC"
+            {% if admission.category=="OBC" %}selected{% endif %}>
+            OBC
+            </option>
+
+            <option value="SC"
+            {% if admission.category=="SC" %}selected{% endif %}>
+            SC
+            </option>
+
+            <option value="ST"
+            {% if admission.category=="ST" %}selected{% endif %}>
+            ST
+            </option>
+
+            <option value="EWS"
+            {% if admission.category=="EWS" %}selected{% endif %}>
+            EWS
+            </option>
+
+        </select>
+
+    </div>
+
+    <div class="col-md-4 mb-3">
+
+        <label class="form-label">
+
+            Nationality
+
+        </label>
+
+        <input
+            type="text"
+            name="nationality"
+            class="form-control"
+            value="{{ admission.nationality }}">
+
+    </div>
+
+    <div class="col-md-4 mb-3">
+
+        <label class="form-label">
+
+            Qualification
+
+        </label>
+
+        <input
+            type="text"
+            name="qualification"
+            class="form-control"
+            value="{{ admission.qualification }}"
+            required>
+
+    </div>
+
+    <div class="col-md-4 mb-3">
+
+        <label class="form-label">
+
+            Percentage
+
+        </label>
+
+        <input
+            type="number"
+            step="0.01"
+            name="percentage"
+            class="form-control"
+            value="{{ admission.percentage }}"
+            required>
+
+    </div>
+
+    <div class="col-md-8 mb-3">
+
+        <label class="form-label">
+
+            Selected Course
+
+        </label>
+
+        <select
+            name="course_name"
+            class="form-select"
+            required>
+
+            {% for course in courses %}
+
+            <option
+                value="{{ course.course_name }}"
+                {% if admission.course_name == course.course_name %}selected{% endif %}>
+
+                {{ course.course_name }}
+
+            </option>
+
+            {% endfor %}
+
+        </select>
+
+    </div>
+
+</div>
+
+<!-- ========================================================= -->
+<!-- ADDRESS INFORMATION -->
+<!-- ========================================================= -->
+
+<h4 class="section-title mt-4">
+
+    Address Information
+
+</h4>
+
+<div class="row">
+
+    <div class="col-12 mb-3">
+
+        <label class="form-label">
+
+            Full Address
+
+        </label>
+
+        <textarea
+            name="address"
+            class="form-control"
+            rows="3"
+            required>{{ admission.address }}</textarea>
+
+    </div>
+
+    <div class="col-md-4 mb-3">
+
+        <label class="form-label">
+
+            City
+
+        </label>
+
+        <input
+            type="text"
+            name="city"
+            class="form-control"
+            value="{{ admission.city }}"
+            required>
+
+    </div>
+
+    <div class="col-md-4 mb-3">
+
+        <label class="form-label">
+
+            State
+
+        </label>
+
+        <input
+            type="text"
+            name="state"
+            class="form-control"
+            value="{{ admission.state }}"
+            required>
+
+    </div>
+
+    <div class="col-md-4 mb-4">
+
+        <label class="form-label">
+
+            PIN Code
+
+        </label>
+
+        <input
+            type="text"
+            name="pincode"
+            class="form-control"
+            value="{{ admission.pincode }}"
+            required>
+
+    </div>
+
+</div>
+
+
+
+<!-- ========================================================= -->
+<!-- ADMIN SECTION -->
+<!-- ========================================================= -->
+
+<h4 class="section-title mt-4">
+
+    Admission Status & Remarks
+
+</h4>
+
+<div class="row">
+
+    <div class="col-md-6 mb-4">
+
+        <label class="form-label">
+
+            Admission Status
+
+        </label>
+
+        <select
+            name="status"
+            class="form-select">
+
+            <option value="Pending"
+                {% if admission.status=="Pending" %}selected{% endif %}>
+                Pending
+            </option>
+
+            <option value="Under Review"
+                {% if admission.status=="Under Review" %}selected{% endif %}>
+                Under Review
+            </option>
+
+            <option value="Approved"
+                {% if admission.status=="Approved" %}selected{% endif %}>
+                Approved
+            </option>
+
+            <option value="Rejected"
+                {% if admission.status=="Rejected" %}selected{% endif %}>
+                Rejected
+            </option>
+
+        </select>
+
+    </div>
+
+    <div class="col-md-6 mb-4">
+
+        <label class="form-label">
+
+            Administrator Remarks
+
+        </label>
+
+        <textarea
+            name="remarks"
+            class="form-control"
+            rows="3"
+            placeholder="Enter remarks...">{{ admission.remarks }}</textarea>
+
+    </div>
+
+</div>
+
+
+
+<hr class="my-4">
+
+<div class="d-flex justify-content-between flex-wrap gap-3">
+
+    <a
+        href="/admission/view/{{ admission.id }}"
+        class="btn btn-secondary">
+
+        <i class="bi bi-arrow-left-circle"></i>
+
+        Cancel
+
+    </a>
+
+    <button
+        type="submit"
+        class="btn btn-success px-5">
+
+        <i class="bi bi-check-circle-fill"></i>
+
+        Update Admission
+
+    </button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+<footer class="bg-dark text-white text-center py-4 mt-5">
+
+    <div class="container">
+
+        <h6 class="mb-2">
+
+            Maurya International University of Technology & Management
+
+        </h6>
+
+        <small>
+
+            Student Admission Management System • Edit Admission Module • 2026
+
+        </small>
+
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

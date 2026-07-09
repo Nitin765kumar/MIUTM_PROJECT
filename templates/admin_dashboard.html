@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% block title %}MIUTM - Administrative Control Center{% endblock %}
+
+{% block content %}
+<div class="p-4 bg-dark text-white rounded shadow-sm mb-4 border-start border-5 border-danger">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div>
+            <span class="badge bg-danger mb-2 font-monospace fw-bold">ROOT SECURITY LEVEL: ADMIN</span>
+            <h1 class="fw-bold tracking-tight m-0">System Infrastructure Management Console</h1>
+            <p class="text-white-50 small font-monospace m-0 mt-1">Welcome back, Administrator. Monitoring live transaction states across relational database arrays.</p>
+        </div>
+        <div class="text-md-end font-monospace">
+            <span class="badge bg-success p-2"><span class="spinner-grow spinner-grow-sm me-1" role="status"></span> LIVE STREAMING RUNTIME</span>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 mb-4">
+    <div class="col-md-3 col-sm-6">
+        <div class="card shadow-sm border-0 bg-white p-3 h-100">
+            <div class="card-body p-2">
+                <h6 class="text-muted font-monospace text-uppercase small">Total Active Courses</h6>
+                <h2 class="fw-bold text-primary m-0 mt-1">{{ total_courses }}</h2>
+                <small class="text-muted font-monospace border-top d-block mt-2 pt-1" style="font-size: 0.75rem;">Active blocks on disc</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <div class="card shadow-sm border-0 bg-white p-3 h-100">
+            <div class="card-body p-2">
+                <h6 class="text-muted font-monospace text-uppercase small">Applied Students</h6>
+                <h2 class="fw-bold text-dark m-0 mt-1">{{ total_students }}</h2>
+                <small class="text-muted font-monospace border-top d-block mt-2 pt-1" style="font-size: 0.75rem;">Total registered profile index</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <div class="card shadow-sm border-0 bg-white p-3 h-100">
+            <div class="card-body p-2">
+                <h6 class="text-muted font-monospace text-uppercase small">Pending Applications</h6>
+                <h2 class="fw-bold text-warning m-0 mt-1">{{ pending_applications }}</h2>
+                <small class="text-muted font-monospace border-top d-block mt-2 pt-1" style="font-size: 0.75rem;">Awaiting verification checks</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <div class="card shadow-sm border-0 bg-white p-3 h-100">
+            <div class="card-body p-2">
+                <h6 class="text-muted font-monospace text-uppercase small">System Integrity</h6>
+                <h2 class="fw-bold text-success m-0 mt-1">100%</h2>
+                <small class="text-muted font-monospace border-top d-block mt-2 pt-1" style="font-size: 0.75rem;">ACID SQLite cluster pool state</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-lg-8">
+        <div class="card bg-white border rounded shadow-sm h-100">
+            <div class="card-header bg-light fw-bold font-monospace small d-flex justify-content-between align-items-center py-3">
+                <span>RECENT APPLICATION INTAKE STREAM</span>
+                <span class="badge bg-secondary font-monospace">{{ applicants|length }} Listed</span>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle m-0 small font-monospace">
+                        <thead class="table-light">
+                            <tr>
+                                <th class="px-3">Tracking Hash ID</th>
+                                <th>Student Full Name</th>
+                                <th>Applied Stream</th>
+                                <th>Status Flag</th>
+                                <th class="text-end px-3">System Key</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for applicant in applicants %}
+                            <tr>
+                                <td class="px-3 fw-bold text-secondary">#{{ applicant['id'] }}</td>
+                                <td class="fw-bold text-dark">{{ applicant['name'] }}</td>
+                                <td>{{ applicant['course'] or applicant['stream'] or 'General Science/Tech' }}</td>
+                                <td>
+                                    {% if applicant['status']|lower == 'pending' %}
+                                        <span class="badge bg-warning text-dark px-2 py-1">Pending Audit</span>
+                                    {% elif applicant['status']|lower == 'verified' or applicant['status']|lower == 'approved' %}
+                                        <span class="badge bg-success px-2 py-1">Verified</span>
+                                    {% else %}
+                                        <span class="badge bg-secondary px-2 py-1">{{ applicant['status'] }}</span>
+                                    {% endif %}
+                                </td>
+                                <td class="text-end px-3">
+                                    <button class="btn btn-sm btn-dark font-monospace py-0 px-2" style="font-size: 0.75rem;">View Row</button>
+                                </td>
+                            </tr>
+                            {% else %}
+                            <tr>
+                                <td colspan="5" class="text-center text-muted py-4 font-monospace">
+                                    No records logged within active database tables.
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card bg-white border rounded shadow-sm h-100">
+            <div class="card-header bg-light fw-bold font-monospace small py-3">CORE UTILITY ENGINES</div>
+            <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                    <p class="text-muted small lh-base font-monospace">Execute relational storage queries or audit isolation rows manually inside your cluster system.</p>
+                    <div class="alert alert-info py-2 px-3 border-0 rounded small font-monospace mb-4">
+                        <small class="fw-bold d-block mb-1">Engine Information Logging:</small>
+                        <span style="font-size: 0.75rem; display:block;" class="text-secondary">Driver: SQLite 3.x Engine</span>
+                        <span style="font-size: 0.75rem; display:block;" class="text-secondary">Isolation State: ACID Secure</span>
+                    </div>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-outline-danger font-monospace fw-bold py-2">Clear Audit Memory</button>
+                    <button class="btn btn-sm btn-outline-dark font-monospace fw-bold py-2">Mutate Academic Grids</button>
+                    <button class="btn btn-sm btn-primary font-monospace fw-bold py-2">Run Security Diagnostics</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

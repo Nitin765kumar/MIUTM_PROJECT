@@ -1,0 +1,3307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Board & Communications | MIUTM Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root { --miutm-primary: #003366; --miutm-gold: #D4AF37; --miutm-dark: #001F4D; }
+        body { background-color: #f4f6f9; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        
+        /* NAVBAR LOGO FIX */
+        .nav-logo { height: 60px; width: 60px; object-fit: cover; border-radius: 50%; border: 2px solid var(--miutm-gold); margin-right: 15px; }
+        
+        /* HERO */
+        /* =====================================================
+CONTACT PAGE HERO
+===================================================== */
+
+.hero-section{
+    position:relative;
+    min-height:72vh;
+    display:flex;
+    align-items:center;
+    background:
+        linear-gradient(
+            rgba(0,28,65,.82),
+            rgba(0,35,80,.82)
+        ),
+        url("/static/images/campus.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    overflow:hidden;
+}
+
+.hero-section::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle at top right,
+    rgba(212,175,55,.18),
+    transparent 35%);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    color:#fff;
+}
+
+.hero-badge{
+
+display:inline-flex;
+align-items:center;
+gap:10px;
+
+padding:10px 22px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:50px;
+
+font-weight:600;
+
+margin-bottom:25px;
+
+}
+
+.hero-content h1{
+
+font-size:4rem;
+
+font-weight:800;
+
+line-height:1.15;
+
+margin-bottom:25px;
+
+font-family:Georgia,serif;
+
+}
+
+.hero-content h1 span{
+
+color:#FFD54A;
+
+}
+
+.hero-content p{
+
+font-size:1.15rem;
+
+line-height:1.9;
+
+max-width:720px;
+
+color:#f2f2f2;
+
+margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+}
+
+.hero-buttons .btn{
+
+padding:14px 34px;
+
+border-radius:40px;
+
+font-weight:700;
+
+}
+
+.hero-info{
+
+margin-top:60px;
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+}
+
+.hero-info div{
+
+background:rgba(255,255,255,.10);
+
+backdrop-filter:blur(10px);
+
+padding:22px;
+
+border-radius:18px;
+
+border:1px solid rgba(255,255,255,.15);
+
+}
+
+.hero-info strong{
+
+display:block;
+
+margin-top:8px;
+
+font-size:1rem;
+
+}
+
+.hero-info small{
+
+opacity:.85;
+
+}
+
+@media(max-width:992px){
+
+.hero-section{
+
+min-height:650px;
+
+}
+
+.hero-content{
+
+text-align:center;
+
+}
+
+.hero-content h1{
+
+font-size:2.7rem;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.hero-info{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:576px){
+
+.hero-content h1{
+
+font-size:2rem;
+
+}
+
+.hero-info{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* =====================================================
+QUICK CONTACT CARDS
+===================================================== */
+
+.quick-contact-card{
+
+background:#ffffff;
+
+padding:35px 28px;
+
+border-radius:22px;
+
+text-align:center;
+
+height:100%;
+
+transition:.35s;
+
+border:1px solid #e9eef5;
+
+box-shadow:0 12px 35px rgba(0,0,0,.06);
+
+}
+
+.quick-contact-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 40px rgba(0,51,102,.15);
+
+border-color:#D4AF37;
+
+}
+
+.contact-icon{
+
+width:85px;
+
+height:85px;
+
+margin:auto auto 25px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:2rem;
+
+background:linear-gradient(135deg,#003366,#0059b3);
+
+color:#FFD54A;
+
+box-shadow:0 12px 25px rgba(0,51,102,.20);
+
+}
+
+.quick-contact-card h4{
+
+font-weight:700;
+
+margin-bottom:18px;
+
+color:#003366;
+
+}
+
+.quick-contact-card p{
+
+color:#666;
+
+line-height:1.8;
+
+margin:0;
+
+font-size:.96rem;
+
+}
+
+@media(max-width:768px){
+
+.quick-contact-card{
+
+padding:28px;
+
+}
+
+}
+/* ==========================================
+CONTACT FORM
+========================================== */
+
+.contact-main-section{
+
+background:#f7f9fc;
+
+}
+
+.contact-form-card{
+
+background:#fff;
+
+padding:45px;
+
+border-radius:25px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.section-label{
+
+display:inline-block;
+
+background:#003366;
+
+color:#FFD54A;
+
+padding:8px 20px;
+
+border-radius:40px;
+
+font-size:.85rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+.contact-form-card h2{
+
+font-weight:800;
+
+color:#003366;
+
+font-family:Georgia,serif;
+
+}
+
+.contact-form-card .form-control,
+
+.contact-form-card .form-select{
+
+border-radius:12px;
+
+padding:14px 18px;
+
+}
+
+.contact-form-card .form-control:focus,
+
+.contact-form-card .form-select:focus{
+
+border-color:#003366;
+
+box-shadow:0 0 0 .2rem rgba(0,51,102,.15);
+
+}
+
+.campus-card{
+
+background:#fff;
+
+padding:25px;
+
+border-radius:25px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.campus-card h3{
+
+color:#003366;
+
+font-weight:700;
+
+margin-bottom:15px;
+
+}
+
+.campus-info-card{
+
+background:#003366;
+
+color:white;
+
+padding:35px;
+
+border-radius:25px;
+
+}
+
+.info-item{
+
+display:flex;
+
+gap:18px;
+
+margin-bottom:30px;
+
+}
+
+.info-item:last-child{
+
+margin-bottom:0;
+
+}
+
+.info-item i{
+
+font-size:1.6rem;
+
+color:#FFD54A;
+
+margin-top:4px;
+
+}
+
+.info-item strong{
+
+display:block;
+
+margin-bottom:5px;
+
+}
+
+.info-item span{
+
+display:block;
+
+opacity:.9;
+
+line-height:1.7;
+
+}
+
+@media(max-width:992px){
+
+.contact-form-card{
+
+padding:30px;
+
+}
+
+.campus-info-card{
+
+margin-top:20px;
+
+}
+
+}
+/* ==========================================
+DEPARTMENT DIRECTORY
+========================================== */
+
+.department-section{
+
+background:#ffffff;
+
+}
+
+.department-title{
+
+font-size:2.7rem;
+
+font-weight:800;
+
+font-family:Georgia,serif;
+
+color:#003366;
+
+margin-bottom:15px;
+
+}
+
+.department-subtitle{
+
+max-width:760px;
+
+margin:auto;
+
+color:#666;
+
+line-height:1.9;
+
+}
+
+.department-card{
+
+background:#fff;
+
+padding:35px 28px;
+
+border-radius:22px;
+
+height:100%;
+
+text-align:center;
+
+transition:.35s;
+
+border:1px solid #edf1f7;
+
+box-shadow:0 10px 25px rgba(0,0,0,.05);
+
+}
+
+.department-card:hover{
+
+transform:translateY(-10px);
+
+background:#003366;
+
+}
+
+.department-card:hover h4,
+
+.department-card:hover p,
+
+.department-card:hover span{
+
+color:white;
+
+}
+
+.department-card:hover .department-icon{
+
+background:#FFD54A;
+
+color:#003366;
+
+}
+
+.department-icon{
+
+width:90px;
+
+height:90px;
+
+margin:auto auto 25px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+border-radius:50%;
+
+font-size:2rem;
+
+background:#003366;
+
+color:#FFD54A;
+
+transition:.35s;
+
+}
+
+.department-card h4{
+
+font-weight:700;
+
+margin-bottom:18px;
+
+color:#003366;
+
+}
+
+.department-card p{
+
+color:#666;
+
+line-height:1.8;
+
+min-height:110px;
+
+}
+
+.department-card span{
+
+display:block;
+
+margin-top:18px;
+
+font-weight:700;
+
+color:#003366;
+
+font-size:.92rem;
+
+word-break:break-word;
+
+}
+
+@media(max-width:768px){
+
+.department-title{
+
+font-size:2rem;
+
+}
+
+.department-card{
+
+padding:28px;
+
+}
+
+.department-card p{
+
+min-height:auto;
+
+}
+
+}
+/* ==========================================
+CAMPUS LOCATION
+========================================== */
+
+.campus-location-section{
+
+background:#f7f9fc;
+
+}
+
+.location-title{
+
+font-size:2.7rem;
+
+font-family:Georgia,serif;
+
+font-weight:800;
+
+color:#003366;
+
+margin-bottom:15px;
+
+}
+
+.location-subtitle{
+
+max-width:760px;
+
+margin:auto;
+
+color:#666;
+
+line-height:1.9;
+
+}
+
+.map-card{
+
+background:white;
+
+padding:15px;
+
+border-radius:25px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.map-card iframe{
+
+width:100%;
+
+height:520px;
+
+border:none;
+
+border-radius:18px;
+
+}
+
+.visit-card{
+
+background:#003366;
+
+color:white;
+
+padding:40px;
+
+border-radius:25px;
+
+height:100%;
+
+}
+
+.visit-card h3{
+
+margin-bottom:35px;
+
+font-weight:700;
+
+}
+
+.visit-item{
+
+display:flex;
+
+gap:18px;
+
+margin-bottom:28px;
+
+align-items:flex-start;
+
+}
+
+.visit-item:last-child{
+
+margin-bottom:0;
+
+}
+
+.visit-item i{
+
+font-size:1.7rem;
+
+color:#FFD54A;
+
+}
+
+.visit-item strong{
+
+display:block;
+
+margin-bottom:6px;
+
+}
+
+.visit-item span{
+
+display:block;
+
+opacity:.9;
+
+line-height:1.7;
+
+}
+
+.visit-card .btn{
+
+font-weight:700;
+
+border-radius:40px;
+
+padding:14px;
+
+}
+
+@media(max-width:992px){
+
+.map-card iframe{
+
+height:400px;
+
+}
+
+.visit-card{
+
+margin-top:25px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.location-title{
+
+font-size:2rem;
+
+}
+
+.map-card iframe{
+
+height:300px;
+
+}
+
+.visit-card{
+
+padding:30px;
+
+}
+
+}
+/* ==========================================
+FAQ SECTION
+========================================== */
+
+.faq-section{
+
+background:#ffffff;
+
+}
+
+.faq-title{
+
+font-size:2.7rem;
+
+font-weight:800;
+
+font-family:Georgia,serif;
+
+color:#003366;
+
+margin-bottom:15px;
+
+}
+
+.faq-subtitle{
+
+max-width:760px;
+
+margin:auto;
+
+color:#666;
+
+line-height:1.9;
+
+margin-bottom:50px;
+
+}
+
+.custom-faq .accordion-item{
+
+border:none;
+
+margin-bottom:18px;
+
+border-radius:18px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+}
+
+.custom-faq .accordion-button{
+
+padding:22px 25px;
+
+font-size:1.05rem;
+
+font-weight:700;
+
+background:#ffffff;
+
+color:#003366;
+
+box-shadow:none;
+
+}
+
+.custom-faq .accordion-button:not(.collapsed){
+
+background:#003366;
+
+color:#FFD54A;
+
+}
+
+.custom-faq .accordion-body{
+
+padding:22px 25px;
+
+font-size:.98rem;
+
+line-height:1.8;
+
+color:#555;
+
+background:#f9fbfd;
+
+}
+
+.custom-faq .accordion-button:focus{
+
+box-shadow:none;
+
+}
+
+@media(max-width:768px){
+
+.faq-title{
+
+font-size:2rem;
+
+}
+
+}
+/* ==========================================
+FINAL CTA
+========================================== */
+
+.contact-cta-section{
+
+padding:80px 0;
+
+background:#f7f9fc;
+
+}
+
+.cta-box{
+
+background:
+linear-gradient(
+135deg,
+#003366 0%,
+#00509d 100%
+);
+
+border-radius:30px;
+
+padding:70px;
+
+overflow:hidden;
+
+position:relative;
+
+color:white;
+
+box-shadow:0 25px 50px rgba(0,51,102,.18);
+
+}
+
+.cta-box::before{
+
+content:"";
+
+position:absolute;
+
+width:420px;
+
+height:420px;
+
+background:rgba(255,255,255,.05);
+
+border-radius:50%;
+
+top:-180px;
+
+right:-120px;
+
+}
+
+.cta-tag{
+
+display:inline-block;
+
+padding:9px 22px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(10px);
+
+border-radius:40px;
+
+font-size:.85rem;
+
+font-weight:700;
+
+margin-bottom:22px;
+
+letter-spacing:1px;
+
+}
+
+.cta-box h2{
+
+font-size:3rem;
+
+font-weight:800;
+
+font-family:Georgia,serif;
+
+margin-bottom:20px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.cta-box h2 span{
+
+color:#FFD54A;
+
+}
+
+.cta-box p{
+
+font-size:1.08rem;
+
+line-height:1.9;
+
+opacity:.95;
+
+max-width:760px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.cta-buttons{
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.cta-buttons .btn{
+
+padding:15px 28px;
+
+border-radius:50px;
+
+font-weight:700;
+
+font-size:1rem;
+
+transition:.35s;
+
+}
+
+.cta-buttons .btn:hover{
+
+transform:translateY(-4px);
+
+}
+
+@media(max-width:992px){
+
+.cta-box{
+
+padding:45px;
+
+text-align:center;
+
+}
+
+.cta-box h2{
+
+font-size:2.3rem;
+
+}
+
+.cta-buttons{
+
+margin-top:35px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.cta-box{
+
+padding:35px 25px;
+
+}
+
+.cta-box h2{
+
+font-size:1.9rem;
+
+}
+
+}
+/* ==========================================
+FOOTER
+========================================== */
+
+.footer-section{
+
+background:#001F4D;
+
+color:#d9d9d9;
+
+padding:80px 0 25px;
+
+border-top:5px solid #FFD54A;
+
+position:relative;
+
+}
+
+.footer-logo{
+
+width:80px;
+
+height:80px;
+
+border-radius:50%;
+
+border:3px solid #FFD54A;
+
+object-fit:cover;
+
+}
+
+.footer-section h4{
+
+font-weight:700;
+
+color:white;
+
+margin-bottom:20px;
+
+font-size:1.4rem;
+
+}
+
+.footer-section h5{
+
+color:#FFD54A;
+
+font-weight:700;
+
+margin-bottom:25px;
+
+}
+
+.footer-section p{
+
+line-height:1.9;
+
+color:#d7d7d7;
+
+}
+
+.footer-section ul{
+
+padding:0;
+
+margin:0;
+
+list-style:none;
+
+}
+
+.footer-section ul li{
+
+margin-bottom:14px;
+
+}
+
+.footer-section ul li a{
+
+text-decoration:none;
+
+color:#d7d7d7;
+
+transition:.3s;
+
+}
+
+.footer-section ul li a:hover{
+
+color:#FFD54A;
+
+padding-left:6px;
+
+}
+
+.social-links{
+
+display:flex;
+
+gap:14px;
+
+}
+
+.social-links a{
+
+width:42px;
+
+height:42px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.08);
+
+color:white;
+
+font-size:18px;
+
+transition:.35s;
+
+text-decoration:none;
+
+}
+
+.social-links a:hover{
+
+background:#FFD54A;
+
+color:#003366;
+
+transform:translateY(-5px);
+
+}
+
+.footer-contact i{
+
+color:#FFD54A;
+
+margin-right:10px;
+
+}
+
+.footer-bottom{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+flex-wrap:wrap;
+
+padding-top:15px;
+
+font-size:.92rem;
+
+}
+
+.footer-bottom a{
+
+color:#d7d7d7;
+
+text-decoration:none;
+
+margin:0 6px;
+
+}
+
+.footer-bottom a:hover{
+
+color:#FFD54A;
+
+}
+
+.footer-section hr{
+
+border-color:rgba(255,255,255,.12);
+
+margin:50px 0 25px;
+
+}
+
+/* Back To Top */
+
+#backToTop{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:52px;
+
+height:52px;
+
+border:none;
+
+border-radius:50%;
+
+background:#FFD54A;
+
+color:#003366;
+
+font-size:22px;
+
+font-weight:700;
+
+cursor:pointer;
+
+display:none;
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+transition:.35s;
+
+z-index:999;
+
+}
+
+#backToTop:hover{
+
+transform:translateY(-5px);
+
+}
+
+@media(max-width:768px){
+
+.footer-bottom{
+
+text-align:center;
+
+justify-content:center;
+
+gap:12px;
+
+}
+
+.footer-section{
+
+padding-top:60px;
+
+}
+
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-xl navbar-dark shadow-sm" style="background-color: var(--miutm-primary);">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img src="/static/images/logo.png" class="nav-logo" alt="MIUTM Logo">
+                <span class="fw-bold">MIUTM PORTAL</span>
+            </a>
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav ms-auto text-uppercase fw-bold small">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/courses">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/admission">Admissions</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+CONTACT HERO
+========================================== -->
+
+<section class="hero-section">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="hero-badge">
+
+<i class="bi bi-buildings-fill"></i>
+
+MIUTM • Contact & Support
+
+</div>
+
+<h1>
+
+Let's <span>Connect</span><br>
+
+With MIUTM
+
+</h1>
+
+<p>
+
+Whether you are a prospective student, parent, researcher,
+industry partner, or alumni, our university team is ready to
+assist you. Reach out to the appropriate department for fast,
+professional and reliable support.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="/admission" class="btn btn-warning">
+
+Apply Now
+
+</a>
+
+<a href="#contact-form"
+
+class="btn btn-outline-light">
+
+Send Enquiry
+
+</a>
+
+</div>
+
+<div class="hero-info">
+
+<div>
+
+<i class="bi bi-geo-alt-fill fs-3 text-warning"></i>
+
+<strong>Ayodhya Campus</strong>
+
+<small>Uttar Pradesh, India</small>
+
+</div>
+
+<div>
+
+<i class="bi bi-clock-history fs-3 text-warning"></i>
+
+<strong>Office Hours</strong>
+
+<small>Mon – Sat | 9:00 AM – 5:00 PM</small>
+
+</div>
+
+<div>
+
+<i class="bi bi-envelope-fill fs-3 text-warning"></i>
+
+<strong>Email Support</strong>
+
+<small>support@miutm.edu.in</small>
+
+</div>
+
+<div>
+
+<i class="bi bi-headset fs-3 text-warning"></i>
+
+<strong>24×7 Helpdesk</strong>
+
+<small>Admissions & IT Assistance</small>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================================
+SECTION 2 : QUICK CONTACT INFORMATION
+========================================== -->
+
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="text-uppercase fw-bold text-warning">
+                Get In Touch
+            </span>
+
+            <h2 class="display-5 fw-bold text-primary mt-2">
+                Contact Information
+            </h2>
+
+            <p class="text-muted col-lg-8 mx-auto">
+
+                Our dedicated departments are available to assist students,
+                parents, researchers and industry partners with admissions,
+                academics and administrative services.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Card 1 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="quick-contact-card h-100">
+
+                    <div class="contact-icon">
+
+                        <i class="bi bi-geo-alt-fill"></i>
+
+                    </div>
+
+                    <h4>Campus Address</h4>
+
+                    <p>
+
+                        MIUTM Campus<br>
+
+                        Riverside Academic Zone<br>
+
+                        Ayodhya, Uttar Pradesh – 224001
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="quick-contact-card h-100">
+
+                    <div class="contact-icon">
+
+                        <i class="bi bi-telephone-fill"></i>
+
+                    </div>
+
+                    <h4>Admissions Office</h4>
+
+                    <p>
+
+                        +91 98765 43210<br>
+
+                        +91 94500 12345
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="quick-contact-card h-100">
+
+                    <div class="contact-icon">
+
+                        <i class="bi bi-envelope-fill"></i>
+
+                    </div>
+
+                    <h4>Email Support</h4>
+
+                    <p>
+
+                        admissions@miutm.edu.in<br>
+
+                        support@miutm.edu.in
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Card 4 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="quick-contact-card h-100">
+
+                    <div class="contact-icon">
+
+                        <i class="bi bi-clock-fill"></i>
+
+                    </div>
+
+                    <h4>Office Hours</h4>
+
+                    <p>
+
+                        Monday – Saturday<br>
+
+                        09:00 AM – 05:00 PM
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==========================================
+SECTION 3 : CONTACT FORM
+========================================== -->
+
+<section class="contact-main-section py-5" id="contact-form">
+
+    <div class="container">
+
+        <div class="row g-5 align-items-start">
+
+            <!-- ========================= -->
+            <!-- LEFT -->
+            <!-- ========================= -->
+
+            <div class="col-lg-7">
+
+                <div class="contact-form-card">
+
+                    <span class="section-label">
+
+                        Send us a Message
+
+                    </span>
+
+                    <h2 class="mb-3">
+
+                        We'd Love to Hear From You
+
+                    </h2>
+
+                    <p class="text-muted mb-4">
+
+                        Complete the form below and our admissions or support
+                        team will respond within 24–48 working hours.
+
+                    </p>
+
+                    <form action="/contact" method="POST">
+
+                        <div class="row g-4">
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+
+                                    Full Name
+
+                                </label>
+
+                                <input
+                                type="text"
+                                class="form-control form-control-lg"
+                                name="name"
+                                required>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+
+                                    Email Address
+
+                                </label>
+
+                                <input
+                                type="email"
+                                class="form-control form-control-lg"
+                                name="email"
+                                required>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+
+                                    Mobile Number
+
+                                </label>
+
+                                <input
+                                type="tel"
+                                class="form-control form-control-lg"
+                                name="phone">
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+
+                                    Department
+
+                                </label>
+
+                                <select
+                                class="form-select form-select-lg"
+                                name="department">
+
+                                    <option>
+
+                                        Admissions Office
+
+                                    </option>
+
+                                    <option>
+
+                                        Examination Cell
+
+                                    </option>
+
+                                    <option>
+
+                                        Registrar Office
+
+                                    </option>
+
+                                    <option>
+
+                                        Placement Cell
+
+                                    </option>
+
+                                    <option>
+
+                                        IT Help Desk
+
+                                    </option>
+
+                                    <option>
+
+                                        Research Office
+
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                            <div class="col-12">
+
+                                <label class="form-label">
+
+                                    Subject
+
+                                </label>
+
+                                <input
+                                type="text"
+                                class="form-control form-control-lg"
+                                name="subject">
+
+                            </div>
+
+                            <div class="col-12">
+
+                                <label class="form-label">
+
+                                    Your Message
+
+                                </label>
+
+                                <textarea
+                                rows="6"
+                                class="form-control form-control-lg"
+                                name="message"
+                                required></textarea>
+
+                            </div>
+
+                            <div class="col-12">
+
+                                <button
+                                class="btn btn-warning btn-lg px-5">
+
+                                    <i class="bi bi-send-fill me-2"></i>
+
+                                    Send Message
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <!-- ========================= -->
+            <!-- RIGHT -->
+            <!-- ========================= -->
+
+            <div class="col-lg-5">
+
+                <div class="campus-card mb-4">
+
+                    <img
+                    src="/static/images/miutm-campus.png"
+                    class="img-fluid rounded-4 mb-4">
+
+                    <h3>
+
+                        MIUTM Ayodhya Campus
+
+                    </h3>
+
+                    <p>
+
+                        Experience a world-class learning environment equipped
+                        with smart classrooms, advanced laboratories,
+                        innovation centres and modern student facilities.
+
+                    </p>
+
+                </div>
+
+                <div class="campus-info-card">
+
+                    <div class="info-item">
+
+                        <i class="bi bi-geo-alt-fill"></i>
+
+                        <div>
+
+                            <strong>
+
+                                Address
+
+                            </strong>
+
+                            <span>
+
+                                MIUTM Campus,
+                                Riverside Academic Zone,
+                                Ayodhya,
+                                Uttar Pradesh – 224001
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="info-item">
+
+                        <i class="bi bi-telephone-fill"></i>
+
+                        <div>
+
+                            <strong>
+
+                                Phone
+
+                            </strong>
+
+                            <span>
+
+                                +91 98765 43210
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="info-item">
+
+                        <i class="bi bi-envelope-fill"></i>
+
+                        <div>
+
+                            <strong>
+
+                                Email
+
+                            </strong>
+
+                            <span>
+
+                                support@miutm.edu.in
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="info-item">
+
+                        <i class="bi bi-clock-fill"></i>
+
+                        <div>
+
+                            <strong>
+
+                                Working Hours
+
+                            </strong>
+
+                            <span>
+
+                                Monday – Saturday
+                                9:00 AM – 5:00 PM
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+ <!-- ==========================================
+SECTION 4 : DEPARTMENT DIRECTORY
+========================================== -->
+
+<section class="department-section py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-label">
+
+                Department Directory
+
+            </span>
+
+            <h2 class="department-title">
+
+                Connect With The Right Department
+
+            </h2>
+
+            <p class="department-subtitle">
+
+                Choose the appropriate department for faster assistance and
+                expert guidance regarding admissions, academics, placements,
+                finance and research.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Admissions -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="department-card">
+
+                    <div class="department-icon">
+
+                        <i class="bi bi-mortarboard-fill"></i>
+
+                    </div>
+
+                    <h4>Admissions Office</h4>
+
+                    <p>
+
+                        Admission guidance, counselling,
+                        eligibility, scholarships and application support.
+
+                    </p>
+
+                    <span>
+
+                        admissions@miutm.edu.in
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- Registrar -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="department-card">
+
+                    <div class="department-icon">
+
+                        <i class="bi bi-building-fill"></i>
+
+                    </div>
+
+                    <h4>Registrar Office</h4>
+
+                    <p>
+
+                        Official documents,
+                        certificates,
+                        student verification
+                        and administration.
+
+                    </p>
+
+                    <span>
+
+                        registrar@miutm.edu.in
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- Examination -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="department-card">
+
+                    <div class="department-icon">
+
+                        <i class="bi bi-journal-check"></i>
+
+                    </div>
+
+                    <h4>Examination Cell</h4>
+
+                    <p>
+
+                        Semester examinations,
+                        admit cards,
+                        result processing
+                        and academic records.
+
+                    </p>
+
+                    <span>
+
+                        exams@miutm.edu.in
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- Placement -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="department-card">
+
+                    <div class="department-icon">
+
+                        <i class="bi bi-briefcase-fill"></i>
+
+                    </div>
+
+                    <h4>Placement Cell</h4>
+
+                    <p>
+
+                        Campus recruitment,
+                        internships,
+                        corporate relations
+                        and career support.
+
+                    </p>
+
+                    <span>
+
+                        placements@miutm.edu.in
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- Finance -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="department-card">
+
+                    <div class="department-icon">
+
+                        <i class="bi bi-cash-stack"></i>
+
+                    </div>
+
+                    <h4>Finance Office</h4>
+
+                    <p>
+
+                        Tuition fees,
+                        scholarships,
+                        refunds
+                        and financial assistance.
+
+                    </p>
+
+                    <span>
+
+                        finance@miutm.edu.in
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- Research -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="department-card">
+
+                    <div class="department-icon">
+
+                        <i class="bi bi-lightbulb-fill"></i>
+
+                    </div>
+
+                    <h4>Research Centre</h4>
+
+                    <p>
+
+                        Innovation,
+                        patents,
+                        funded research
+                        and collaborations.
+
+                    </p>
+
+                    <span>
+
+                        research@miutm.edu.in
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- International -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="department-card">
+
+                    <div class="department-icon">
+
+                        <i class="bi bi-globe-central-south-asia"></i>
+
+                    </div>
+
+                    <h4>International Office</h4>
+
+                    <p>
+
+                        International admissions,
+                        student exchange
+                        and visa assistance.
+
+                    </p>
+
+                    <span>
+
+                        international@miutm.edu.in
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- IT -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="department-card">
+
+                    <div class="department-icon">
+
+                        <i class="bi bi-cpu-fill"></i>
+
+                    </div>
+
+                    <h4>IT Help Desk</h4>
+
+                    <p>
+
+                        Portal login,
+                        technical support,
+                        email issues
+                        and software assistance.
+
+                    </p>
+
+                    <span>
+
+                        itsupport@miutm.edu.in
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==========================================
+SECTION 5 : CAMPUS LOCATION
+========================================== -->
+
+<section class="campus-location-section py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-label">
+
+                Visit Our Campus
+
+            </span>
+
+            <h2 class="location-title">
+
+                Find Us In Ayodhya
+
+            </h2>
+
+            <p class="location-subtitle">
+
+                We welcome prospective students, parents, researchers and
+                industry partners to explore our beautiful campus and
+                world-class academic infrastructure.
+
+            </p>
+
+        </div>
+
+        <div class="row g-5 align-items-center">
+
+            <!-- Google Map -->
+
+            <div class="col-lg-7">
+
+                <div class="map-card">
+
+                    <iframe
+                        src="https://www.google.com/maps?q=Ayodhya,Uttar+Pradesh&output=embed"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+
+                </div>
+
+            </div>
+
+            <!-- Campus Visit Information -->
+
+            <div class="col-lg-5">
+
+                <div class="visit-card">
+
+                    <h3>
+
+                        Campus Visit Information
+
+                    </h3>
+
+                    <div class="visit-item">
+
+                        <i class="bi bi-train-front-fill"></i>
+
+                        <div>
+
+                            <strong>
+
+                                Nearest Railway Station
+
+                            </strong>
+
+                            <span>
+
+                                Ayodhya Dham Junction
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="visit-item">
+
+                        <i class="bi bi-airplane-fill"></i>
+
+                        <div>
+
+                            <strong>
+
+                                Nearest Airport
+
+                            </strong>
+
+                            <span>
+
+                                Maharishi Valmiki International Airport
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="visit-item">
+
+                        <i class="bi bi-bus-front-fill"></i>
+
+                        <div>
+
+                            <strong>
+
+                                Public Transport
+
+                            </strong>
+
+                            <span>
+
+                                City Bus, Taxi & Cab Services Available
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="visit-item">
+
+                        <i class="bi bi-car-front-fill"></i>
+
+                        <div>
+
+                            <strong>
+
+                                Parking
+
+                            </strong>
+
+                            <span>
+
+                                Free Visitor Parking Available
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <a href="/admission"
+                       class="btn btn-warning btn-lg w-100 mt-4">
+
+                        Schedule Campus Visit
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==========================================
+SECTION 6 : FAQ
+========================================== -->
+
+<section class="faq-section py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-label">
+
+                Frequently Asked Questions
+
+            </span>
+
+            <h2 class="faq-title">
+
+                Need More Information?
+
+            </h2>
+
+            <p class="faq-subtitle">
+
+                Find quick answers to the most commonly asked questions about
+                admissions, academics, campus facilities and student services.
+
+            </p>
+
+        </div>
+
+        <div class="accordion custom-faq" id="faqAccordion">
+
+            <!-- FAQ 1 -->
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button"
+
+                            type="button"
+
+                            data-bs-toggle="collapse"
+
+                            data-bs-target="#faq1">
+
+                        How can I apply for admission at MIUTM?
+
+                    </button>
+
+                </h2>
+
+                <div id="faq1"
+
+                     class="accordion-collapse collapse show"
+
+                     data-bs-parent="#faqAccordion">
+
+                    <div class="accordion-body">
+
+                        You can submit your application through our online
+                        admission portal by completing the application form
+                        and uploading the required academic documents.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- FAQ 2 -->
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed"
+
+                            type="button"
+
+                            data-bs-toggle="collapse"
+
+                            data-bs-target="#faq2">
+
+                        Does MIUTM provide hostel facilities?
+
+                    </button>
+
+                </h2>
+
+                <div id="faq2"
+
+                     class="accordion-collapse collapse"
+
+                     data-bs-parent="#faqAccordion">
+
+                    <div class="accordion-body">
+
+                        Yes. Separate hostel accommodation is available for
+                        boys and girls with Wi-Fi, security, dining,
+                        recreational areas and medical assistance.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- FAQ 3 -->
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed"
+
+                            type="button"
+
+                            data-bs-toggle="collapse"
+
+                            data-bs-target="#faq3">
+
+                        Are scholarships available?
+
+                    </button>
+
+                </h2>
+
+                <div id="faq3"
+
+                     class="accordion-collapse collapse"
+
+                     data-bs-parent="#faqAccordion">
+
+                    <div class="accordion-body">
+
+                        Merit-based, need-based and government scholarship
+                        schemes are available for eligible students.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- FAQ 4 -->
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed"
+
+                            type="button"
+
+                            data-bs-toggle="collapse"
+
+                            data-bs-target="#faq4">
+
+                        Can I visit the campus before admission?
+
+                    </button>
+
+                </h2>
+
+                <div id="faq4"
+
+                     class="accordion-collapse collapse"
+
+                     data-bs-parent="#faqAccordion">
+
+                    <div class="accordion-body">
+
+                        Absolutely. You can schedule a campus visit through
+                        the Admissions Office or Contact Page.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- FAQ 5 -->
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed"
+
+                            type="button"
+
+                            data-bs-toggle="collapse"
+
+                            data-bs-target="#faq5">
+
+                        How long does it take to receive a response?
+
+                    </button>
+
+                </h2>
+
+                <div id="faq5"
+
+                     class="accordion-collapse collapse"
+
+                     data-bs-parent="#faqAccordion">
+
+                    <div class="accordion-body">
+
+                        Our admissions and support teams generally respond
+                        within 24–48 working hours after receiving your enquiry.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==========================================
+SECTION 7 : FINAL CTA
+========================================== -->
+
+<section class="contact-cta-section">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <span class="cta-tag">
+
+                        Begin Your Academic Journey
+
+                    </span>
+
+                    <h2>
+
+                        Ready to Join
+                        <span>MIUTM?</span>
+
+                    </h2>
+
+                    <p>
+
+                        Become a part of an innovative learning environment
+                        that empowers future leaders, researchers,
+                        entrepreneurs and technology professionals.
+                        Start your journey with Maurya International
+                        University of Technology & Management today.
+
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+
+                    <div class="cta-buttons">
+
+                        <a href="/admission"
+                           class="btn btn-warning btn-lg">
+
+                            <i class="bi bi-mortarboard-fill me-2"></i>
+
+                            Apply Now
+
+                        </a>
+
+                        <a href="/courses"
+                           class="btn btn-outline-light btn-lg">
+
+                            <i class="bi bi-book-fill me-2"></i>
+
+                            Explore Courses
+
+                        </a>
+
+                        <a href="/about"
+                           class="btn btn-light btn-lg">
+
+                            <i class="bi bi-building me-2"></i>
+
+                            Visit Campus
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+   <!-- ==========================================
+FOOTER
+========================================== -->
+
+<footer class="footer-section">
+
+    <div class="container">
+
+        <div class="row gy-5">
+
+            <!-- University -->
+
+            <div class="col-lg-4">
+
+                <img
+                src="/static/images/logo.png"
+                class="footer-logo mb-3"
+                alt="MIUTM">
+
+                <h4>
+
+                    Maurya International University of
+                    Technology & Management
+
+                </h4>
+
+                <p>
+
+                    MIUTM is committed to academic excellence,
+                    research innovation, industry collaboration and
+                    holistic student development. We prepare future
+                    leaders with world-class education and modern
+                    technology-driven learning.
+
+                </p>
+
+                <div class="social-links mt-4">
+
+    <a href="https://github.com/Nitin765kumar"
+       target="_blank">
+
+        <i class="bi bi-github"></i>
+
+    </a>
+
+    <a href="https://linkedin.com/in/nitinkumar25"
+       target="_blank">
+
+        <i class="bi bi-linkedin"></i>
+
+    </a>
+
+    <a href="#"
+       target="_blank">
+
+        <i class="bi bi-instagram"></i>
+
+    </a>
+
+    <a href="#"
+       target="_blank">
+
+        <i class="bi bi-facebook"></i>
+
+    </a>
+
+    <a href="https://www.youtube.com/@nitinkumar8487"
+       target="_blank">
+
+        <i class="bi bi-youtube"></i>
+
+    </a>
+
+</div>
+
+            </div>
+
+            <!-- Quick Links -->
+
+            <div class="col-lg-2 col-md-6">
+
+                <h5>
+
+                    Quick Links
+
+                </h5>
+
+                <ul>
+
+                    <li><a href="/">Home</a></li>
+
+                    <li><a href="/about">About</a></li>
+
+                    <li><a href="/courses">Courses</a></li>
+
+                    <li><a href="/admission">Admissions</a></li>
+
+                    <li><a href="/contact">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Student Services -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <h5>
+
+                    Student Services
+
+                </h5>
+
+                <ul>
+
+                    <li><a href="/admission">Apply Online</a></li>
+
+                    <li><a href="/courses">Programme Finder</a></li>
+
+                    <li><a href="#">Scholarships</a></li>
+
+                    <li><a href="#">Academic Calendar</a></li>
+
+                    <li><a href="#">Student Portal</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+
+            <div class="col-lg-3">
+
+                <h5>
+
+                    Contact Information
+
+                </h5>
+
+                <div class="footer-contact">
+
+                    <p>
+
+                        <i class="bi bi-geo-alt-fill"></i>
+
+                        MIUTM Campus,
+                        Ayodhya,
+                        Uttar Pradesh – 224001
+
+                    </p>
+
+                    <p>
+
+                        <i class="bi bi-telephone-fill"></i>
+
+                        +91 98765 43210
+
+                    </p>
+
+                    <p>
+
+                        <i class="bi bi-envelope-fill"></i>
+
+                        info@miutm.edu.in
+
+                    </p>
+
+                    <p>
+
+                        <i class="bi bi-clock-fill"></i>
+
+                        Mon – Sat
+                        9:00 AM – 5:00 PM
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 Maurya International University of Technology &
+                Management. All Rights Reserved.
+
+            </p>
+
+            <div>
+
+    <a href="#"
+       data-bs-toggle="modal"
+       data-bs-target="#privacyModal">
+
+        Privacy Policy
+
+    </a>
+
+    |
+
+    <a href="#"
+       data-bs-toggle="modal"
+       data-bs-target="#termsModal">
+
+        Terms & Conditions
+
+    </a>
+
+    |
+
+    <a href="#"
+       data-bs-toggle="modal"
+       data-bs-target="#sitemapModal">
+
+        Sitemap
+
+    </a>
+
+</div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!-- ==========================================
+PRIVACY POLICY MODAL
+========================================== -->
+
+<div class="modal fade"
+     id="privacyModal"
+     tabindex="-1"
+     aria-hidden="true">
+
+    <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered">
+
+        <div class="modal-content privacy-modal">
+
+            <div class="modal-header">
+
+                <h3>
+
+                    <i class="bi bi-shield-lock-fill me-2"></i>
+
+                    Privacy Policy
+
+                </h3>
+
+                <button
+                    type="button"
+                    class="btn-close btn-close-white"
+                    data-bs-dismiss="modal">
+
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <h5>1. Information We Collect</h5>
+
+                <p>
+
+                    Maurya International University of Technology &
+                    Management (MIUTM) collects personal information
+                    submitted through admission forms, enquiry forms,
+                    scholarship applications and other official
+                    communication channels.
+
+                </p>
+
+                <ul>
+
+                    <li>Full Name</li>
+
+                    <li>Email Address</li>
+
+                    <li>Phone Number</li>
+
+                    <li>Academic Qualifications</li>
+
+                    <li>Programme Preferences</li>
+
+                    <li>Documents uploaded during admission</li>
+
+                </ul>
+
+                <hr>
+
+                <h5>2. Purpose of Data Collection</h5>
+
+                <p>
+
+                    Information is collected solely for admission,
+                    counselling, student support, academic management,
+                    examination services and institutional communication.
+
+                </p>
+
+                <hr>
+
+                <h5>3. Data Security</h5>
+
+                <p>
+
+                    MIUTM uses secure database infrastructure and modern
+                    security practices to protect student information.
+                    Personal information is never intentionally disclosed
+                    to unauthorized third parties.
+
+                </p>
+
+                <hr>
+
+                <h5>4. Cookies</h5>
+
+                <p>
+
+                    The university portal may use cookies to improve
+                    navigation, remember preferences and enhance user
+                    experience.
+
+                </p>
+
+                <hr>
+
+                <h5>5. Third-Party Services</h5>
+
+                <p>
+
+                    Certain services such as Google Maps, payment
+                    gateways or analytics platforms may have their own
+                    privacy policies.
+
+                </p>
+
+                <hr>
+
+                <h5>6. Student Rights</h5>
+
+                <ul>
+
+                    <li>Request correction of submitted information.</li>
+
+                    <li>Request deletion where legally applicable.</li>
+
+                    <li>Access institutional records.</li>
+
+                    <li>Contact the university regarding data usage.</li>
+
+                </ul>
+
+                <hr>
+
+                <h5>7. Contact</h5>
+
+                <p>
+
+                    Questions regarding privacy may be directed to
+
+                    <strong>
+
+                        privacy@miutm.edu.in
+
+                    </strong>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- ==========================================
+TERMS & CONDITIONS MODAL
+========================================== -->
+
+<div class="modal fade"
+     id="termsModal"
+     tabindex="-1"
+     aria-hidden="true">
+
+    <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered">
+
+        <div class="modal-content privacy-modal">
+
+            <div class="modal-header">
+
+                <h3>
+
+                    <i class="bi bi-file-earmark-text-fill me-2"></i>
+
+                    Terms & Conditions
+
+                </h3>
+
+                <button
+                    type="button"
+                    class="btn-close btn-close-white"
+                    data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <h5>1. Acceptance of Terms</h5>
+
+                <p>
+
+                    By accessing or using the Maurya International
+                    University of Technology & Management (MIUTM)
+                    website, you acknowledge that you have read,
+                    understood and agreed to comply with these
+                    Terms & Conditions.
+
+                </p>
+
+                <hr>
+
+                <h5>2. Admission Policy</h5>
+
+                <p>
+
+                    Submission of an online application does not
+                    guarantee admission. Admission is strictly based
+                    on eligibility criteria, document verification,
+                    seat availability and the University's admission
+                    regulations.
+
+                </p>
+
+                <hr>
+
+                <h5>3. Accuracy of Information</h5>
+
+                <p>
+
+                    Applicants are responsible for ensuring that all
+                    information submitted is complete, accurate and
+                    authentic. Submission of false or misleading
+                    information may result in rejection of admission
+                    or cancellation of enrollment.
+
+                </p>
+
+                <hr>
+
+                <h5>4. Fee Payment</h5>
+
+                <p>
+
+                    Tuition fees, registration charges and other
+                    institutional payments must be made through
+                    officially approved payment channels.
+                    Fee policies, refund rules and payment schedules
+                    shall be governed by the University's financial
+                    regulations.
+
+                </p>
+
+                <hr>
+
+                <h5>5. Intellectual Property</h5>
+
+                <p>
+
+                    All content available on this website including
+                    text, graphics, logos, photographs, software,
+                    icons and branding materials are the intellectual
+                    property of MIUTM unless otherwise stated.
+                    Unauthorized reproduction or distribution is
+                    prohibited.
+
+                </p>
+
+                <hr>
+
+                <h5>6. Student Conduct</h5>
+
+                <ul>
+
+                    <li>Maintain academic honesty and integrity.</li>
+
+                    <li>Follow all university rules and regulations.</li>
+
+                    <li>Respect faculty, staff and fellow students.</li>
+
+                    <li>Avoid misuse of university digital resources.</li>
+
+                    <li>Comply with examination policies.</li>
+
+                </ul>
+
+                <hr>
+
+                <h5>7. Website Usage</h5>
+
+                <p>
+
+                    Users shall not attempt to compromise the security,
+                    integrity or availability of this website through
+                    unauthorized access, malicious software,
+                    automated attacks or any unlawful activity.
+
+                </p>
+
+                <hr>
+
+                <h5>8. Limitation of Liability</h5>
+
+                <p>
+
+                    While MIUTM makes every effort to ensure the
+                    accuracy of information published on this website,
+                    the University reserves the right to modify,
+                    update or remove any information without prior
+                    notice.
+
+                </p>
+
+                <hr>
+
+                <h5>9. Changes to Terms</h5>
+
+                <p>
+
+                    The University reserves the right to revise these
+                    Terms & Conditions at any time.
+                    Continued use of this website constitutes
+                    acceptance of the revised terms.
+
+                </p>
+
+                <hr>
+
+                <h5>10. Governing Law</h5>
+
+                <p>
+
+                    These Terms & Conditions shall be governed by
+                    the applicable laws of the Republic of India.
+                    Any disputes arising from the use of this website
+                    shall be subject to the jurisdiction of the
+                    competent courts located in Uttar Pradesh.
+
+                </p>
+
+                <hr>
+
+                <h5>11. Contact</h5>
+
+                <p>
+
+                    For any questions regarding these Terms &
+                    Conditions, please contact
+
+                    <strong>
+
+                        legal@miutm.edu.in
+
+                    </strong>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<button id="backToTop">
+
+    <i class="bi bi-arrow-up"></i>
+
+</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,3244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official Institutional Profile, Executive Governance Frameworks, and Statutory Charters of Maurya International University of Technology & Management (MIUTM).">
+    <meta name="author" content="MIUTM Directorate of Information Technology">
+    <title>Institutional Profile, Governance & Charters | MIUTM About Portal</title>
+    <!-- Enterprise UI Typography & Design Framework Dependencies -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --miutm-primary: #003366;
+            --miutm-dark-blue: #001F4D;
+            --miutm-gold: #D4AF37;
+            --miutm-light-bg: #F8F9FA;
+            --miutm-text-dark: #212529;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--miutm-text-dark);
+            overflow-x: hidden;
+            line-height: 1.65;
+        }
+        .text-justify {
+            text-align: justify;
+        }
+        .tracking-wide {
+            letter-spacing: 0.5px;
+        }
+        .tracking-wider {
+            letter-spacing: 1px;
+        }
+        .tracking-widest {
+            letter-spacing: 2px;
+        }
+        .hover-gold:hover {
+            color: var(--miutm-gold) !important;
+            transition: color 0.3s ease;
+        }
+        .academic-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .academic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12) !important;
+        }
+        .founder-img-container {
+            position: relative;
+            display: inline-block;
+        }
+        .founder-img-container::after {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border: 3px dashed var(--miutm-gold);
+            border-radius: 50%;
+            z-index: 1;
+            animation: rotateClockwise 20s linear infinite;
+        }
+        @keyframes rotateClockwise {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .value-card{
+
+        background:white;
+
+        border-radius:12px;
+
+        padding:30px;
+
+        text-align:center;
+
+        height:100%;
+
+        transition:.35s;
+
+        border-top:4px solid var(--miutm-gold);
+
+        box-shadow:0 8px 25px rgba(0,0,0,.15);
+
+        }
+
+        .value-card:hover{
+
+        transform:translateY(-8px);
+
+        box-shadow:0 20px 35px rgba(0,0,0,.25);
+
+        }
+
+        .icon-box{
+
+        width:75px;
+
+        height:75px;
+
+        margin:auto;
+
+        margin-bottom:20px;
+
+        border-radius:50%;
+
+        background:rgba(212,175,55,.12);
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        font-size:30px;
+
+        color:var(--miutm-gold);
+
+        }
+
+        .value-card h5{
+
+        font-family:Georgia,serif;
+
+        font-weight:700;
+
+        color:var(--miutm-primary);
+
+        margin-bottom:15px;
+
+        }
+
+        .value-card p{
+
+        color:#6c757d;
+
+        line-height:1.8;
+
+        font-size:.95rem;
+
+        margin-bottom:0;
+
+        }
+        footer a{
+            transition: all .3s ease;
+        }
+
+        footer a:hover{
+            color: var(--miutm-gold) !important;
+            padding-left:5px;
+        }
+
+        footer .btn-outline-light{
+            transition:.3s;
+        }
+
+        footer .btn-outline-light:hover{
+            background:var(--miutm-gold);
+            color:#000;
+            border-color:var(--miutm-gold);
+        }
+        .navbar .nav-link{
+
+            color:white !important;
+
+            letter-spacing:1px;
+
+            transition:.3s;
+
+        }
+
+        .navbar .nav-link:hover{
+
+            color:#ffc107 !important;
+
+        }
+
+        .navbar .nav-link.active{
+
+            color:#ffc107 !important;
+
+        }
+
+        @media(max-width:992px){
+
+        header h2{
+
+        font-size:1.35rem !important;
+
+        }
+
+        header h6{
+
+        font-size:.75rem;
+
+        letter-spacing:1px !important;
+
+        }
+
+        }
+        .card{
+
+transition:.35s;
+
+border-radius:15px;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 15px 35px rgba(0,0,0,.12)!important;
+
+}
+
+.btn{
+
+border-radius:8px;
+
+}
+
+img{
+
+transition:.5s;
+
+}
+
+img:hover{
+
+transform:scale(1.02);
+
+}
+    /* ==============================
+ABOUT SECTION
+============================== */
+
+.about-section{
+    padding:90px 0;
+}
+
+.about-title{
+    font-family:Georgia,serif;
+    color:var(--miutm-primary);
+    font-weight:700;
+    line-height:1.25;
+}
+
+.about-content{
+    color:#5b6773;
+    line-height:1.9;
+}
+
+.about-image{
+
+    width:100%;
+
+    height:550px;
+
+    object-fit:cover;
+
+    border-radius:22px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+
+}
+
+.about-image:hover{
+
+    transform:none;
+
+}
+
+.about-badge{
+
+    display:inline-block;
+
+    background:#ffc107;
+
+    color:#000;
+
+    padding:8px 18px;
+
+    border-radius:6px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+    </style>
+</head>
+<body>
+
+    <!-- =========================
+     MIUTM PROFESSIONAL HEADER
+========================== -->
+
+<header class="shadow">
+
+    <!-- Brand Header -->
+    <div style="background:#0b3b70; border-bottom:4px solid #d4af37;">
+
+        <div class="container-fluid px-4 py-3">
+
+            <div class="d-flex align-items-center">
+
+                <!-- Logo -->
+                <img src="/static/images/logo.png"
+                     class="rounded-circle border border-warning me-3"
+                     style="width:75px;height:75px;object-fit:cover;">
+
+                <!-- University Name -->
+                <div>
+
+    <h2 class="fw-bold text-white mb-0"
+        style="font-family:Georgia,serif;">
+
+        Maurya International University
+
+    </h2>
+
+    <h5 class="text-warning fw-semibold text-uppercase mt-1 mb-0"
+        style="letter-spacing:2px; font-size:.82rem;">
+
+        Technology & Management
+
+    </h5>
+
+    <small class="text-light opacity-75 d-block"
+           style="font-size:.72rem; letter-spacing:1px;">
+
+        Excellence • Innovation • Research
+
+    </small>
+
+</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Navigation -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark"
+         style="background:#072c55;">
+
+        <div class="container-fluid px-4">
+
+            <button class="navbar-toggler"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse"
+                 id="mainNavbar">
+
+                <ul class="navbar-nav mx-auto gap-lg-4">
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-uppercase"
+                           href="/">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold text-warning text-uppercase"
+                           href="/about">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-uppercase"
+                           href="/courses">
+                            Courses
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-uppercase"
+                           href="/admission">
+                            Admissions
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-uppercase"
+                           href="/contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <!-- Right Button -->
+
+                <a href="/admin"
+                   class="btn btn-warning fw-bold">
+
+                    <i class="bi bi-speedometer2 me-2"></i>
+
+                    Controller Panel
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+<!-- ======================================================
+SECTION 3 : ABOUT MAURYA INTERNATIONAL UNIVERSITY
+====================================================== -->
+
+<section class="about-section py-5 bg-white">
+
+    <div class="container-fluid px-lg-5 px-4">
+
+        <div class="row align-items-start g-5">
+
+            <!-- LEFT CONTENT -->
+
+            <div class="col-lg-6">
+
+                <span class="about-badge">
+                    ABOUT MIUTM
+                </span>
+
+                <h2 class="about-title display-5 mb-4">
+
+                    Maurya International University
+                    <br>
+                    of Technology & Management
+
+                </h2>
+
+                <p class="about-content fs-5">
+
+                    Maurya International University of Technology &
+                    Management (MIUTM) is committed to delivering
+                    excellence in higher education through innovation,
+                    research, academic excellence and practical learning.
+                    Our institution provides students with an environment
+                    where knowledge, creativity and professional development
+                    work together to prepare future industry leaders.
+
+                </p>
+
+                <p class="about-content">
+
+                    MIUTM combines experienced faculty members, advanced
+                    laboratories, digital classrooms, research facilities
+                    and strong industry partnerships to create a modern
+                    learning ecosystem. Students receive both theoretical
+                    knowledge and practical exposure through projects,
+                    internships, innovation labs and career development
+                    initiatives that prepare them for global opportunities.
+
+                </p>
+
+                <p class="about-content mb-4">
+
+                    The university continuously upgrades its curriculum in
+                    accordance with emerging technologies and industrial
+                    requirements, ensuring graduates possess technical
+                    expertise, leadership skills, ethical values and the
+                    confidence required to excel in a rapidly changing world.
+
+                </p>
+                <!-- Quick Highlights -->
+
+<div class="row g-3 my-4">
+
+    <div class="col-6">
+        <div class="d-flex align-items-center">
+            <i class="bi bi-building-fill-check text-primary fs-4 me-2"></i>
+            <div>
+                <strong class="d-block">Established 2026</strong>
+                <small class="text-muted">Growing with Excellence</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="d-flex align-items-center">
+            <i class="bi bi-mortarboard-fill text-warning fs-4 me-2"></i>
+            <div>
+                <strong class="d-block">20+ Programs</strong>
+                <small class="text-muted">Career-Oriented Courses</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="d-flex align-items-center">
+            <i class="bi bi-people-fill text-success fs-4 me-2"></i>
+            <div>
+                <strong class="d-block">Expert Faculty</strong>
+                <small class="text-muted">Experienced Educators</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="d-flex align-items-center">
+            <i class="bi bi-globe2 text-danger fs-4 me-2"></i>
+            <div>
+                <strong class="d-block">Global Vision</strong>
+                <small class="text-muted">Innovation & Research</small>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+            <div class="d-flex flex-wrap gap-3">
+
+                    <a href="/courses"
+                       class="btn btn-primary btn-lg px-4">
+
+                        <i class="bi bi-mortarboard-fill me-2"></i>
+                        Explore Programs
+
+                    </a>
+
+                    <a href="/admission"
+                       class="btn btn-outline-warning btn-lg px-4">
+
+                        <i class="bi bi-pencil-square me-2"></i>
+                        Apply Admission
+
+                    </a>
+
+                </div>
+
+            </div>
+            
+
+            <!-- RIGHT IMAGE -->
+
+            <div class="col-lg-6">
+
+                <div class="about-image-wrapper">
+
+                    <img src="/static/images/about.png"
+                         alt="Maurya International University Campus"
+                         class="about-image">
+
+                </div>
+
+            </div>
+
+        </div>
+        
+
+
+        <!-- ===============================
+        UNIVERSITY HIGHLIGHTS
+        ================================ -->
+
+        <div class="row mt-5 g-4">
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card border-0 shadow-sm text-center h-100 p-4">
+
+                    <i class="bi bi-mortarboard-fill display-5 text-primary mb-3"></i>
+
+                    <h2 class="fw-bold text-primary">
+                        20+
+                    </h2>
+
+                    <p class="mb-0 text-muted">
+                        Academic Programs
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card border-0 shadow-sm text-center h-100 p-4">
+
+                    <i class="bi bi-person-workspace display-5 text-warning mb-3"></i>
+
+                    <h2 class="fw-bold text-primary">
+                        80+
+                    </h2>
+
+                    <p class="mb-0 text-muted">
+                        Expert Faculty Members
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card border-0 shadow-sm text-center h-100 p-4">
+
+                    <i class="bi bi-building display-5 text-success mb-3"></i>
+
+                    <h2 class="fw-bold text-primary">
+                        15+
+                    </h2>
+
+                    <p class="mb-0 text-muted">
+                        Modern Research Labs
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card border-0 shadow-sm text-center h-100 p-4">
+
+                    <i class="bi bi-globe2 display-5 text-danger mb-3"></i>
+
+                    <h2 class="fw-bold text-primary">
+                        30+
+                    </h2>
+
+                    <p class="mb-0 text-muted">
+                        Industry Collaborations
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================================================
+SECTION : OUR FOUNDATION (MISSION • VISION • HISTORY)
+============================================================ -->
+<section class="py-5 bg-light">
+    <div class="container-fluid px-lg-5 px-4">
+
+        <!-- Section Heading -->
+        <div class="text-center mb-5">
+
+            <span class="badge bg-warning text-dark px-3 py-2 mb-3 fw-semibold">
+                OUR FOUNDATION
+            </span>
+
+            <h2 class="fw-bold"
+                style="font-family:Georgia,serif;
+                color:var(--miutm-primary);">
+
+                Building Excellence Through Education,
+                Innovation & Leadership
+
+            </h2>
+
+            <p class="text-muted mx-auto mt-3"
+               style="max-width:750px; line-height:1.8;">
+
+                At MIUTM, our mission, vision, and institutional
+                journey collectively define our commitment to
+                delivering world-class education, fostering
+                innovation, and developing responsible global
+                professionals.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- ================= Mission ================= -->
+
+            <div class="col-lg-4">
+
+                <div class="foundation-card h-100">
+
+                    <div class="foundation-icon bg-primary-subtle text-primary">
+
+                        <i class="bi bi-bullseye"></i>
+
+                    </div>
+
+                    <h3 class="mt-4 mb-3">
+
+                        Our Mission
+
+                    </h3>
+
+                    <p>
+
+                        To provide quality education that combines
+                        academic excellence, practical learning,
+                        research, innovation, and ethical values.
+                        MIUTM prepares students to become skilled
+                        professionals capable of solving real-world
+                        challenges across technology, business, and
+                        management domains.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- ================= Vision ================= -->
+
+            <div class="col-lg-4">
+
+                <div class="foundation-card h-100">
+
+                    <div class="foundation-icon bg-warning-subtle text-warning">
+
+                        <i class="bi bi-eye-fill"></i>
+
+                    </div>
+
+                    <h3 class="mt-4 mb-3">
+
+                        Our Vision
+
+                    </h3>
+
+                    <p>
+
+                        To become a globally recognized university
+                        known for academic excellence, impactful
+                        research, technological advancement, and
+                        leadership development while creating an
+                        environment that inspires lifelong learning
+                        and innovation.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- ================= History ================= -->
+
+            <div class="col-lg-4">
+
+                <div class="foundation-card h-100">
+
+                    <div class="foundation-icon bg-success-subtle text-success">
+
+                        <i class="bi bi-clock-history"></i>
+
+                    </div>
+
+                    <h3 class="mt-4 mb-3">
+
+                        Our Journey
+
+                    </h3>
+
+                    <p>
+
+                        Since its establishment, MIUTM has grown into
+                        a multidisciplinary institution committed to
+                        excellence in education and research. Through
+                        continuous modernization, industry
+                        collaboration, and student-centered learning,
+                        the university continues to shape future-ready
+                        professionals.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+    <!-- SECTION 9 : UNIVERSITY CORE VALUES & ETHICAL FRAMEWORK -->
+<section class="py-5" style="background:linear-gradient(135deg,#001f3f,#002b5c);">
+
+    <div class="container-fluid px-5">
+
+        <div class="text-center mb-5">
+
+            <span class="text-warning fw-bold font-monospace text-uppercase tracking-widest">
+                Institutional Values
+            </span>
+
+            <h2 class="fw-bold text-white mt-2"
+                style="font-family:Georgia,serif;">
+
+                Our Core Values & Ethical Principles
+
+            </h2>
+
+            <p class="text-white-50 mx-auto"
+               style="max-width:900px;line-height:1.8;">
+
+                At Maurya International University of Technology & Management,
+                every academic, research, and administrative decision is guided
+                by strong ethical values, innovation, collaboration, and a
+                commitment to excellence that prepares students for global
+                professional environments.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="value-card h-100">
+
+                    <div class="icon-box">
+
+                        <i class="bi bi-award-fill"></i>
+
+                    </div>
+
+                    <h5>Academic Excellence</h5>
+
+                    <p>
+
+                        We promote high-quality education, continuous learning,
+                        and academic standards that encourage critical thinking,
+                        innovation, and lifelong professional growth.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="value-card h-100">
+
+                    <div class="icon-box">
+
+                        <i class="bi bi-shield-check"></i>
+
+                    </div>
+
+                    <h5>Integrity & Ethics</h5>
+
+                    <p>
+
+                        Transparency, honesty, accountability, and ethical
+                        practices remain the foundation of every academic and
+                        administrative activity.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="value-card h-100">
+
+                    <div class="icon-box">
+
+                        <i class="bi bi-lightbulb-fill"></i>
+
+                    </div>
+
+                    <h5>Innovation</h5>
+
+                    <p>
+
+                        We encourage creative thinking, research,
+                        entrepreneurship, and technological innovation to solve
+                        real-world challenges.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="value-card h-100">
+
+                    <div class="icon-box">
+
+                        <i class="bi bi-people-fill"></i>
+
+                    </div>
+
+                    <h5>Collaboration</h5>
+
+                    <p>
+
+                        Students, faculty, researchers, and industry partners
+                        work together to build knowledge and achieve meaningful
+                        outcomes.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="value-card h-100">
+
+                    <div class="icon-box">
+
+                        <i class="bi bi-globe-central-south-asia"></i>
+
+                    </div>
+
+                    <h5>Global Perspective</h5>
+
+                    <p>
+
+                        We prepare learners with international standards,
+                        multicultural understanding, and globally relevant
+                        professional skills.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="value-card h-100">
+
+                    <div class="icon-box">
+
+                        <i class="bi bi-tree-fill"></i>
+
+                    </div>
+
+                    <h5>Sustainability</h5>
+
+                    <p>
+
+                        Our university promotes responsible resource management,
+                        environmental awareness, and sustainable development
+                        practices across the campus.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================
+SECTION 10 : FOUNDER & CHANCELLOR MESSAGE
+=================================================== -->
+
+<section class="py-5 bg-light">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<span class="badge bg-warning text-dark px-3 py-2 mb-3">
+Leadership
+</span>
+
+<h2 class="fw-bold text-primary"
+style="font-family:Georgia,serif;">
+
+Message From The Founder
+
+</h2>
+
+<p class="text-muted">
+
+Building future innovators through quality education,
+research and technology.
+
+</p>
+
+</div>
+
+<div class="card border-0 shadow-lg overflow-hidden">
+
+<div class="row g-0 align-items-center">
+
+<!-- LEFT -->
+
+<div class="col-lg-4 text-center bg-primary text-white p-5">
+
+<img src="/static/images/founder.jpeg"
+class="rounded-circle border border-5 border-warning shadow"
+style="width:220px;height:220px;object-fit:cover;">
+
+<h3 class="mt-4 mb-1">
+
+Nitin Kumar
+
+</h3>
+
+<p class="text-warning fw-semibold mb-3">
+
+Founder & Jr. Python Developer
+
+</p>
+
+<hr class="border-warning">
+
+<div class="small text-light">
+
+<p class="mb-2">
+
+<i class="bi bi-mortarboard-fill"></i>
+
+Maurya International University
+
+</p>
+
+<p class="mb-2">
+
+<i class="bi bi-geo-alt-fill"></i>
+
+India
+
+</p>
+
+</div>
+
+<div class="d-flex justify-content-center gap-3 mt-4">
+
+<a href="https://github.com/Nitin765kumar"
+target="_blank"
+class="btn btn-outline-light rounded-circle">
+
+<i class="bi bi-github"></i>
+
+</a>
+
+<a href="https://linkedin.com/in/nitinkumar25"
+target="_blank"
+class="btn btn-outline-light rounded-circle">
+
+<i class="bi bi-linkedin"></i>
+
+</a>
+
+<a href="https://youtube.com/@nitinkumar8487"
+target="_blank"
+class="btn btn-outline-light rounded-circle">
+
+<i class="bi bi-youtube"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="col-lg-8 p-5">
+
+<h4 class="text-primary fw-bold mb-4">
+
+Empowering Students Through Innovation &
+Technology
+
+</h4>
+
+<p class="text-muted">
+
+Maurya International University of Technology &
+Management was established with a vision of
+creating an educational ecosystem where
+students develop technical expertise,
+leadership qualities, creativity and
+professional ethics through practical
+learning experiences.
+
+</p>
+
+<p class="text-muted">
+
+Our mission is to bridge the gap between
+academic knowledge and industry requirements
+by providing modern laboratories, research
+facilities, innovative teaching methodologies
+and strong industrial collaborations.
+Every student should graduate with the
+confidence to solve real-world challenges.
+
+</p>
+
+<p class="text-muted mb-4">
+
+We believe education is not only about
+earning a degree, but about creating
+responsible innovators capable of shaping
+the future through technology, research
+and continuous learning.
+
+</p>
+
+<div class="border-top pt-4">
+
+<h5 class="fw-bold text-primary mb-1">
+
+Nitin Kumar
+
+</h5>
+
+<small class="text-muted">
+
+Founder • Maurya International University
+of Technology & Management
+
+</small>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+    <<!-- SECTION 11 : UNIVERSITY GOVERNANCE & LEADERSHIP -->
+<section class="py-5 bg-light border-top border-bottom">
+    <div class="container-fluid px-5">
+
+        <div class="text-center mb-5">
+            <span class="text-uppercase text-primary fw-bold font-monospace tracking-widest">
+                Executive Administration
+            </span>
+
+            <h2 class="fw-bold mt-2 mb-3"
+                style="font-family:Georgia,serif;color:var(--miutm-primary);">
+                University Governance & Leadership Structure
+            </h2>
+
+            <p class="text-muted mx-auto"
+               style="max-width:900px; line-height:1.8;">
+                Maurya International University of Technology & Management follows
+                a structured governance model designed to ensure transparency,
+                academic excellence, research quality, institutional compliance,
+                and efficient administrative decision-making across all schools
+                and departments.
+            </p>
+        </div>
+
+        <div class="table-responsive shadow rounded">
+
+            <table class="table table-hover table-bordered align-middle mb-0">
+
+                <thead style="background:var(--miutm-primary);color:white;">
+
+                    <tr class="text-center">
+
+                        <th>Administrative Body</th>
+
+                        <th>Head of Division</th>
+
+                        <th>Main Responsibilities</th>
+
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            <strong>Academic Council</strong><br>
+
+                            <small class="text-muted">
+                                Curriculum & Academic Planning
+                            </small>
+
+                        </td>
+
+                        <td>
+
+                            Prof. Ananya R. Deshmukh
+
+                            <br>
+
+                            <small class="text-muted">
+                                Chairperson
+                            </small>
+
+                        </td>
+
+                        <td>
+
+                            • Curriculum Development
+
+                            <br>
+
+                            • Academic Quality Assurance
+
+                            <br>
+
+                            • Examination Policies
+
+                        </td>
+
+                        <td class="text-center">
+
+                            <span class="badge bg-success">
+                                Active
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            <strong>Research & Innovation Council</strong>
+
+                            <br>
+
+                            <small class="text-muted">
+                                Research Management
+                            </small>
+
+                        </td>
+
+                        <td>
+
+                            Dr. Marcus Vance Sterling
+
+                            <br>
+
+                            <small class="text-muted">
+                                Director
+                            </small>
+
+                        </td>
+
+                        <td>
+
+                            • Research Funding
+
+                            <br>
+
+                            • Innovation Projects
+
+                            <br>
+
+                            • Laboratory Development
+
+                        </td>
+
+                        <td class="text-center">
+
+                            <span class="badge bg-success">
+
+                                Active
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            <strong>Training & Placement Cell</strong>
+
+                            <br>
+
+                            <small class="text-muted">
+
+                                Career Development
+
+                            </small>
+
+                        </td>
+
+                        <td>
+
+                            Mr. Sanjay K. Mehta
+
+                            <br>
+
+                            <small class="text-muted">
+
+                                Placement Director
+
+                            </small>
+
+                        </td>
+
+                        <td>
+
+                            • Campus Recruitment
+
+                            <br>
+
+                            • Internship Programs
+
+                            <br>
+
+                            • Industry Collaboration
+
+                        </td>
+
+                        <td class="text-center">
+
+                            <span class="badge bg-success">
+
+                                Active
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            <strong>Quality Assurance Cell</strong>
+
+                            <br>
+
+                            <small class="text-muted">
+
+                                Institutional Compliance
+
+                            </small>
+
+                        </td>
+
+                        <td>
+
+                            Dr. Elena Rostova
+
+                            <br>
+
+                            <small class="text-muted">
+
+                                Quality Coordinator
+
+                            </small>
+
+                        </td>
+
+                        <td>
+
+                            • Accreditation
+
+                            <br>
+
+                            • Academic Audits
+
+                            <br>
+
+                            • Policy Monitoring
+
+                        </td>
+
+                        <td class="text-center">
+
+                            <span class="badge bg-success">
+
+                                Active
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            <strong>Information Technology Directorate</strong>
+
+                            <br>
+
+                            <small class="text-muted">
+
+                                Digital Infrastructure
+
+                            </small>
+
+                        </td>
+
+                        <td>
+
+                            Nitin Kumar
+
+                            <br>
+
+                            <small class="text-muted">
+
+                                Director (IT)
+
+                            </small>
+
+                        </td>
+
+                        <td>
+
+                            • University ERP
+
+                            <br>
+
+                            • Cyber Security
+
+                            <br>
+
+                            • Smart Campus Systems
+
+                        </td>
+
+                        <td class="text-center">
+
+                            <span class="badge bg-success">
+
+                                Operational
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- ========================================================= -->
+<!-- SECTION 12 : ACCREDITATION • QUALITY ASSURANCE • COMPLIANCE -->
+<!-- ========================================================= -->
+
+<section class="py-5 bg-white border-top">
+
+<div class="container-fluid px-5">
+
+<div class="text-center mb-5">
+
+<span class="text-uppercase text-primary fw-bold font-monospace tracking-widest">
+
+Institutional Recognition
+
+</span>
+
+<h2 class="fw-bold mt-2"
+
+style="font-family:Georgia,serif;color:var(--miutm-primary);">
+
+Accreditations, Quality Standards & Regulatory Compliance
+
+</h2>
+
+<p class="text-muted mx-auto"
+
+style="max-width:850px;">
+
+MIUTM continuously aligns its academic governance,
+
+research methodologies,
+
+administrative systems,
+
+and institutional policies
+
+with internationally accepted quality assurance standards.
+
+</p>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-3 col-md-6">
+
+<div class="card border-0 shadow-sm h-100 text-center academic-card">
+
+<div class="card-body p-4">
+
+<div class="display-5 text-primary mb-3">
+
+<i class="bi bi-patch-check-fill"></i>
+
+</div>
+
+<h5 class="fw-bold">
+
+National Recognition
+
+</h5>
+
+<p class="small text-muted">
+
+Recognized under national academic guidelines
+
+with structured quality assurance
+
+and institutional governance.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="card border-0 shadow-sm h-100 text-center academic-card">
+
+<div class="card-body p-4">
+
+<div class="display-5 text-success mb-3">
+
+<i class="bi bi-award-fill"></i>
+
+</div>
+
+<h5 class="fw-bold">
+
+ISO Standards
+
+</h5>
+
+<p class="small text-muted">
+
+Administrative procedures follow
+
+ISO quality management practices
+
+to ensure operational excellence.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="card border-0 shadow-sm h-100 text-center academic-card">
+
+<div class="card-body p-4">
+
+<div class="display-5 text-warning mb-3">
+
+<i class="bi bi-globe-central-south-asia"></i>
+
+</div>
+
+<h5 class="fw-bold">
+
+International Collaboration
+
+</h5>
+
+<p class="small text-muted">
+
+Academic collaborations,
+
+industry partnerships,
+
+research exchange,
+
+and global innovation initiatives.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="card border-0 shadow-sm h-100 text-center academic-card">
+
+<div class="card-body p-4">
+
+<div class="display-5 text-danger mb-3">
+
+<i class="bi bi-shield-check"></i>
+
+</div>
+
+<h5 class="fw-bold">
+
+Data Compliance
+
+</h5>
+
+<p class="small text-muted">
+
+Secure digital governance,
+
+privacy protection,
+
+institutional audit trails,
+
+and cyber compliance policies.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================================================= -->
+<!-- SECTION 13 : CENTERS OF EXCELLENCE & RESEARCH ECOSYSTEM -->
+<!-- ========================================================= -->
+
+<section class="py-5 bg-light">
+    <div class="container-fluid px-5">
+
+        <div class="text-center mb-5">
+            <span class="text-uppercase fw-bold text-primary font-monospace tracking-widest">
+                Innovation Ecosystem
+            </span>
+
+            <h2 class="display-6 fw-bold mt-2"
+                style="font-family:Georgia,serif;color:var(--miutm-primary);">
+                Centers of Excellence & Research Laboratories
+            </h2>
+
+            <p class="text-muted mx-auto"
+               style="max-width:900px;line-height:1.8;">
+                MIUTM promotes interdisciplinary research through advanced laboratories,
+                innovation centers, industrial collaborations and practical development
+                environments where students, faculty members and research scholars work
+                together on real-world technological challenges.
+            </p>
+
+            <div class="mx-auto bg-warning mt-3"
+                 style="width:80px;height:4px;border-radius:50px;">
+            </div>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Lab -->
+
+            <div class="col-lg-4">
+
+                <div class="card border-0 shadow-sm h-100 academic-card">
+
+                    <div class="card-body p-4">
+
+                        <div class="mb-3">
+
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex justify-content-center align-items-center"
+                                 style="width:65px;height:65px;">
+
+                                <i class="bi bi-cpu-fill fs-3"></i>
+
+                            </div>
+
+                        </div>
+
+                        <h5 class="fw-bold text-primary">
+                            Artificial Intelligence &
+                            Machine Learning Laboratory
+                        </h5>
+
+                        <p class="text-muted small">
+
+                            Dedicated to intelligent systems,
+                            predictive analytics,
+                            neural network experimentation,
+                            computer vision,
+                            natural language processing,
+                            and modern AI application development.
+
+                        </p>
+
+                        <hr>
+
+                        <small class="text-success fw-semibold">
+
+                            <i class="bi bi-check-circle-fill"></i>
+                            Active Research Programs
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Lab -->
+
+            <div class="col-lg-4">
+
+                <div class="card border-0 shadow-sm h-100 academic-card">
+
+                    <div class="card-body p-4">
+
+                        <div class="mb-3">
+
+                            <div class="bg-success bg-opacity-10 text-success rounded-circle d-inline-flex justify-content-center align-items-center"
+                                 style="width:65px;height:65px;">
+
+                                <i class="bi bi-cloud-fill fs-3"></i>
+
+                            </div>
+
+                        </div>
+
+                        <h5 class="fw-bold text-primary">
+                            Cloud Computing &
+                            Distributed Systems Centre
+                        </h5>
+
+                        <p class="text-muted small">
+
+                            Research focused on scalable backend
+                            architectures,
+                            virtualization,
+                            Kubernetes,
+                            DevOps,
+                            container technologies,
+                            cloud infrastructure,
+                            and enterprise deployment models.
+
+                        </p>
+
+                        <hr>
+
+                        <small class="text-success fw-semibold">
+
+                            <i class="bi bi-check-circle-fill"></i>
+                            Industry Integrated
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Lab -->
+
+            <div class="col-lg-4">
+
+                <div class="card border-0 shadow-sm h-100 academic-card">
+
+                    <div class="card-body p-4">
+
+                        <div class="mb-3">
+
+                            <div class="bg-warning bg-opacity-10 text-warning rounded-circle d-inline-flex justify-content-center align-items-center"
+                                 style="width:65px;height:65px;">
+
+                                <i class="bi bi-bar-chart-fill fs-3"></i>
+
+                            </div>
+
+                        </div>
+
+                        <h5 class="fw-bold text-primary">
+                            Data Analytics &
+                            Business Intelligence Hub
+                        </h5>
+
+                        <p class="text-muted small">
+
+                            Provides advanced research facilities
+                            for data mining,
+                            predictive modelling,
+                            dashboard engineering,
+                            business intelligence,
+                            statistical analysis
+                            and enterprise reporting.
+
+                        </p>
+
+                        <hr>
+
+                        <small class="text-success fw-semibold">
+
+                            <i class="bi bi-check-circle-fill"></i>
+                            Live Data Projects
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Lab -->
+
+            <div class="col-lg-4">
+
+                <div class="card border-0 shadow-sm h-100 academic-card">
+
+                    <div class="card-body p-4">
+
+                        <div class="mb-3">
+
+                            <div class="bg-danger bg-opacity-10 text-danger rounded-circle d-inline-flex justify-content-center align-items-center"
+                                 style="width:65px;height:65px;">
+
+                                <i class="bi bi-shield-lock-fill fs-3"></i>
+
+                            </div>
+
+                        </div>
+
+                        <h5 class="fw-bold text-primary">
+                            Cyber Security &
+                            Digital Forensics Centre
+                        </h5>
+
+                        <p class="text-muted small">
+
+                            Conducts security testing,
+                            penetration analysis,
+                            ethical hacking,
+                            vulnerability assessment,
+                            malware research
+                            and digital investigation studies.
+
+                        </p>
+
+                        <hr>
+
+                        <small class="text-success fw-semibold">
+
+                            <i class="bi bi-check-circle-fill"></i>
+                            Security Research
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Lab -->
+
+            <div class="col-lg-4">
+
+                <div class="card border-0 shadow-sm h-100 academic-card">
+
+                    <div class="card-body p-4">
+
+                        <div class="mb-3">
+
+                            <div class="bg-info bg-opacity-10 text-info rounded-circle d-inline-flex justify-content-center align-items-center"
+                                 style="width:65px;height:65px;">
+
+                                <i class="bi bi-diagram-3-fill fs-3"></i>
+
+                            </div>
+
+                        </div>
+
+                        <h5 class="fw-bold text-primary">
+                            Software Engineering &
+                            Innovation Studio
+                        </h5>
+
+                        <p class="text-muted small">
+
+                            Supports software product
+                            engineering,
+                            agile development,
+                            UI/UX research,
+                            full-stack application
+                            development,
+                            testing,
+                            deployment and innovation.
+
+                        </p>
+
+                        <hr>
+
+                        <small class="text-success fw-semibold">
+
+                            <i class="bi bi-check-circle-fill"></i>
+                            Student Innovation Hub
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Lab -->
+
+            <div class="col-lg-4">
+
+                <div class="card border-0 shadow-sm h-100 academic-card">
+
+                    <div class="card-body p-4">
+
+                        <div class="mb-3">
+
+                            <div class="bg-secondary bg-opacity-10 text-secondary rounded-circle d-inline-flex justify-content-center align-items-center"
+                                 style="width:65px;height:65px;">
+
+                                <i class="bi bi-robot fs-3"></i>
+
+                            </div>
+
+                        </div>
+
+                        <h5 class="fw-bold text-primary">
+                            Robotics &
+                            Embedded Systems Laboratory
+                        </h5>
+
+                        <p class="text-muted small">
+
+                            Advanced research on IoT,
+                            embedded controllers,
+                            robotics,
+                            automation,
+                            sensor systems,
+                            industrial communication
+                            and smart technologies.
+
+                        </p>
+
+                        <hr>
+
+                        <small class="text-success fw-semibold">
+
+                            <i class="bi bi-check-circle-fill"></i>
+                            Prototype Development
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Statistics -->
+
+        <div class="row mt-5 g-4 text-center">
+
+            <div class="col-md-3">
+
+                <div class="bg-white rounded shadow-sm p-4">
+
+                    <h2 class="fw-bold text-primary">12+</h2>
+
+                    <small class="text-muted">
+                        Research Centres
+                    </small>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="bg-white rounded shadow-sm p-4">
+
+                    <h2 class="fw-bold text-success">45+</h2>
+
+                    <small class="text-muted">
+                        Active Research Projects
+                    </small>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="bg-white rounded shadow-sm p-4">
+
+                    <h2 class="fw-bold text-warning">150+</h2>
+
+                    <small class="text-muted">
+                        Publications
+                    </small>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="bg-white rounded shadow-sm p-4">
+
+                    <h2 class="fw-bold text-danger">30+</h2>
+
+                    <small class="text-muted">
+                        Industry Collaborations
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- ========================================================= -->
+<!-- SECTION 14 : SMART GREEN CAMPUS & SUSTAINABILITY -->
+<!-- ========================================================= -->
+
+<section class="py-5 bg-white border-top border-bottom">
+
+    <div class="container-fluid px-5">
+
+        <div class="text-center mb-5">
+
+            <span class="text-uppercase text-success fw-bold font-monospace tracking-widest">
+                Sustainable Development
+            </span>
+
+            <h2 class="display-6 fw-bold mt-2"
+                style="font-family:Georgia,serif;color:var(--miutm-primary);">
+
+                Smart Green Campus Initiative
+
+            </h2>
+
+            <p class="text-muted mx-auto"
+               style="max-width:900px;line-height:1.8;">
+
+                MIUTM is committed to building a sustainable, technology-enabled
+                campus through environmentally responsible practices, smart
+                infrastructure, renewable energy adoption, digital resource
+                management and eco-friendly academic operations.
+
+            </p>
+
+            <div class="bg-warning mx-auto mt-3"
+                 style="width:80px;height:4px;border-radius:50px;">
+            </div>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Card 1 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card border-0 shadow-sm h-100 academic-card">
+
+                    <div class="card-body text-center p-4">
+
+                        <div class="mb-3">
+
+                            <i class="bi bi-tree-fill text-success"
+                               style="font-size:3rem;"></i>
+
+                        </div>
+
+                        <h5 class="fw-bold text-primary">
+                            Green Environment
+                        </h5>
+
+                        <p class="small text-muted">
+
+                            Extensive green landscaping,
+                            tree plantation drives,
+                            biodiversity conservation,
+                            and environmentally
+                            responsible campus planning.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card border-0 shadow-sm h-100 academic-card">
+
+                    <div class="card-body text-center p-4">
+
+                        <div class="mb-3">
+
+                            <i class="bi bi-lightning-charge-fill text-warning"
+                               style="font-size:3rem;"></i>
+
+                        </div>
+
+                        <h5 class="fw-bold text-primary">
+
+                            Renewable Energy
+
+                        </h5>
+
+                        <p class="small text-muted">
+
+                            Solar-powered infrastructure,
+                            smart energy monitoring,
+                            LED campus lighting,
+                            and energy-efficient
+                            building systems.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card border-0 shadow-sm h-100 academic-card">
+
+                    <div class="card-body text-center p-4">
+
+                        <div class="mb-3">
+
+                            <i class="bi bi-droplet-half text-info"
+                               style="font-size:3rem;"></i>
+
+                        </div>
+
+                        <h5 class="fw-bold text-primary">
+
+                            Water Management
+
+                        </h5>
+
+                        <p class="small text-muted">
+
+                            Rainwater harvesting,
+                            wastewater recycling,
+                            smart irrigation systems,
+                            and responsible water
+                            conservation practices.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 4 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card border-0 shadow-sm h-100 academic-card">
+
+                    <div class="card-body text-center p-4">
+
+                        <div class="mb-3">
+
+                            <i class="bi bi-recycle text-success"
+                               style="font-size:3rem;"></i>
+
+                        </div>
+
+                        <h5 class="fw-bold text-primary">
+
+                            Waste Management
+
+                        </h5>
+
+                        <p class="small text-muted">
+
+                            Smart waste segregation,
+                            recycling initiatives,
+                            plastic reduction campaigns
+                            and digital documentation
+                            to minimize paper usage.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Statistics -->
+
+        <div class="row mt-5 text-center g-4">
+
+            <div class="col-md-3">
+
+                <div class="bg-light rounded shadow-sm p-4">
+
+                    <h2 class="fw-bold text-success">
+                        40%
+                    </h2>
+
+                    <small class="text-muted">
+
+                        Renewable Energy Usage
+
+                    </small>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="bg-light rounded shadow-sm p-4">
+
+                    <h2 class="fw-bold text-primary">
+
+                        5,000+
+
+                    </h2>
+
+                    <small class="text-muted">
+
+                        Trees Across Campus
+
+                    </small>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="bg-light rounded shadow-sm p-4">
+
+                    <h2 class="fw-bold text-warning">
+
+                        100%
+
+                    </h2>
+
+                    <small class="text-muted">
+
+                        Digital Administrative Services
+
+                    </small>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="bg-light rounded shadow-sm p-4">
+
+                    <h2 class="fw-bold text-danger">
+
+                        Zero
+
+                    </h2>
+
+                    <small class="text-muted">
+
+                        Single-use Plastic Policy
+
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================================= -->
+<!-- SECTION 15 : CORE LEADERSHIP TEAM -->
+<!-- ========================================================= -->
+
+<section class="py-5 bg-light">
+
+    <div class="container-fluid px-5">
+
+        <div class="text-center mb-5">
+
+            <span class="text-uppercase fw-bold text-primary font-monospace tracking-widest">
+
+                Leadership Team
+
+            </span>
+
+            <h2 class="display-6 fw-bold mt-2"
+                style="font-family:Georgia,serif;color:var(--miutm-primary);">
+
+                Meet Our Core Leadership Team
+
+            </h2>
+
+            <p class="text-muted mx-auto"
+               style="max-width:850px;line-height:1.8;">
+
+                Our leadership team works together to strengthen
+                academic excellence, institutional growth,
+                research initiatives and student success through
+                innovation, collaboration and strategic planning.
+
+            </p>
+
+            <div class="bg-warning mx-auto mt-3"
+                 style="width:80px;height:4px;border-radius:30px;"></div>
+
+        </div>
+
+        <div class="row justify-content-center g-4">
+
+            <!-- Member 1 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card border-0 shadow h-100 academic-card">
+
+                    <div class="card-body text-center p-4">
+
+                        <img src="/static/images/rishikant.jpeg"
+                             class="rounded-circle shadow mb-3"
+                             width="120"
+                             height="120"
+                             style="object-fit:cover;">
+
+                        <h5 class="fw-bold text-primary">
+
+                            Rishikant
+
+                        </h5>
+
+                        <span class="badge bg-primary mb-3">
+
+                            Technical Coordinator
+
+                        </span>
+
+                        <p class="text-muted small">
+
+                            Technology Operations &
+                            Development
+
+                        </p>
+
+                        <hr>
+
+                        <p class="small text-muted">
+
+                            Assists in planning technical
+                            initiatives, project development,
+                            infrastructure management and
+                            innovation activities across the
+                            university.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Member 2 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card border-0 shadow h-100 academic-card">
+
+                    <div class="card-body text-center p-4">
+
+                        <img src="/static/images/anish.jpg"
+                             class="rounded-circle shadow mb-3"
+                             width="120"
+                             height="120"
+                             style="object-fit:cover;">
+
+                        <h5 class="fw-bold text-primary">
+
+                            Anish Bhaskar
+
+                        </h5>
+
+                        <span class="badge bg-success mb-3">
+
+                            Research Coordinator
+
+                        </span>
+
+                        <p class="text-muted small">
+
+                            Research &
+                            Innovation
+
+                        </p>
+
+                        <hr>
+
+                        <p class="small text-muted">
+
+                            Supports research programs,
+                            academic innovation,
+                            interdisciplinary collaboration
+                            and technology-driven learning
+                            initiatives.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Member 3 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card border-0 shadow h-100 academic-card">
+
+                    <div class="card-body text-center p-4">
+
+                        <img src="/static/images/shailendra.jpeg"
+                             class="rounded-circle shadow mb-3"
+                             width="120"
+                             height="120"
+                             style="object-fit:cover;">
+
+                        <h5 class="fw-bold text-primary">
+
+                            Shailendra Pal
+
+                        </h5>
+
+                        <span class="badge bg-warning text-dark mb-3">
+
+                            Administrative Coordinator
+
+                        </span>
+
+                        <p class="text-muted small">
+
+                            Administration &
+                            Student Services
+
+                        </p>
+
+                        <hr>
+
+                        <p class="small text-muted">
+
+                            Coordinates administrative
+                            operations, student support,
+                            institutional communication
+                            and organizational activities.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Leadership Statistics -->
+
+        <div class="row mt-5 text-center g-4">
+
+            <div class="col-md-3">
+
+                <div class="bg-white rounded shadow-sm p-4">
+
+                    <h2 class="fw-bold text-primary">
+
+                        3
+
+                    </h2>
+
+                    <small class="text-muted">
+
+                        Leadership Members
+
+                    </small>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="bg-white rounded shadow-sm p-4">
+
+                    <h2 class="fw-bold text-success">
+
+                        10+
+
+                    </h2>
+
+                    <small class="text-muted">
+
+                        Strategic Initiatives
+
+                    </small>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="bg-white rounded shadow-sm p-4">
+
+                    <h2 class="fw-bold text-warning">
+
+                        25+
+
+                    </h2>
+
+                    <small class="text-muted">
+
+                        Academic Projects
+
+                    </small>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="bg-white rounded shadow-sm p-4">
+
+                    <h2 class="fw-bold text-danger">
+
+                        100%
+
+                    </h2>
+
+                    <small class="text-muted">
+
+                        Commitment
+
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+   <!-- ========================================================= -->
+<!-- SECTION 16 : CONTACT & UNIVERSITY OUTREACH -->
+<!-- ========================================================= -->
+
+<section class="py-5 bg-white border-top">
+
+    <div class="container-fluid px-5">
+
+        <div class="text-center mb-5">
+
+            <span class="text-uppercase text-primary fw-bold font-monospace tracking-widest">
+
+                Connect With MIUTM
+
+            </span>
+
+            <h2 class="display-6 fw-bold mt-2"
+                style="font-family:Georgia,serif;color:var(--miutm-primary);">
+
+                Directorate of Public Relations & Communications
+
+            </h2>
+
+            <p class="text-muted mx-auto"
+               style="max-width:850px;line-height:1.8;">
+
+                Whether you are a prospective student, research collaborator,
+                corporate partner, media representative or alumni member,
+                our communications office is ready to assist you.
+
+            </p>
+
+            <div class="bg-warning mx-auto mt-3"
+                 style="width:80px;height:4px;border-radius:30px;"></div>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Address -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card border-0 shadow-sm h-100 academic-card">
+
+                    <div class="card-body text-center p-4">
+
+                        <i class="bi bi-geo-alt-fill text-primary"
+                           style="font-size:2.7rem;"></i>
+
+                        <h5 class="mt-3 fw-bold">
+
+                            Campus Address
+
+                        </h5>
+
+                        <p class="text-muted small mb-0">
+
+                            Maurya International University
+
+                            <br>
+
+                            Sector 62
+
+                            <br>
+
+                            Noida, Uttar Pradesh
+
+                            <br>
+
+                            India
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Phone -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card border-0 shadow-sm h-100 academic-card">
+
+                    <div class="card-body text-center p-4">
+
+                        <i class="bi bi-telephone-fill text-success"
+                           style="font-size:2.7rem;"></i>
+
+                        <h5 class="mt-3 fw-bold">
+
+                            Telephone
+
+                        </h5>
+
+                        <p class="text-muted small mb-0">
+
+                            +91-98765-43210
+
+                            <br>
+
+                            Mon–Fri
+
+                            <br>
+
+                            9:00 AM – 5:00 PM
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Email -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card border-0 shadow-sm h-100 academic-card">
+
+                    <div class="card-body text-center p-4">
+
+                        <i class="bi bi-envelope-fill text-danger"
+                           style="font-size:2.7rem;"></i>
+
+                        <h5 class="mt-3 fw-bold">
+
+                            Email
+
+                        </h5>
+
+                        <p class="text-muted small mb-0">
+
+                            info@miutm.edu
+
+                            <br>
+
+                            admissions@miutm.edu
+
+                            <br>
+
+                            support@miutm.edu
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Office Hours -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card border-0 shadow-sm h-100 academic-card">
+
+                    <div class="card-body text-center p-4">
+
+                        <i class="bi bi-clock-history text-warning"
+                           style="font-size:2.7rem;"></i>
+
+                        <h5 class="mt-3 fw-bold">
+
+                            Office Hours
+
+                        </h5>
+
+                        <p class="text-muted small mb-0">
+
+                            Monday – Friday
+
+                            <br>
+
+                            09:00 AM – 05:00 PM
+
+                            <br>
+
+                            Saturday
+
+                            <br>
+
+                            09:00 AM – 01:00 PM
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Quick Actions -->
+
+        <div class="text-center mt-5">
+
+            <a href="/contact"
+               class="btn btn-primary px-4 py-2 me-2 mb-2">
+
+                <i class="bi bi-chat-dots-fill"></i>
+
+                Contact Office
+
+            </a>
+
+            <a href="/admission"
+               class="btn btn-warning px-4 py-2 me-2 mb-2">
+
+                <i class="bi bi-mortarboard-fill"></i>
+
+                Apply Now
+
+            </a>
+
+            <a href="/courses"
+               class="btn btn-outline-primary px-4 py-2 me-2 mb-2">
+
+                <i class="bi bi-book-half"></i>
+
+                Explore Courses
+
+            </a>
+
+            <a href="#"
+               class="btn btn-outline-dark px-4 py-2 mb-2">
+
+                <i class="bi bi-download"></i>
+
+                Download Prospectus
+
+            </a>
+
+        </div>
+
+        <!-- Social -->
+
+        <!-- Official Social Media -->
+
+<div class="text-center mt-5">
+
+    <h5 class="fw-bold text-primary mb-4">
+
+        Connect with the Founder
+
+    </h5>
+
+    <div class="d-flex justify-content-center flex-wrap gap-3">
+
+        <!-- GitHub -->
+
+        <a href="https://github.com/Nitin765kumar"
+           target="_blank"
+           class="btn btn-dark px-4 py-2">
+
+            <i class="bi bi-github me-2"></i>
+
+            GitHub
+
+        </a>
+
+        <!-- LinkedIn -->
+
+        <a href="https://www.linkedin.com/in/nitinkumar25"
+           target="_blank"
+           class="btn btn-primary px-4 py-2">
+
+            <i class="bi bi-linkedin me-2"></i>
+
+            LinkedIn
+
+        </a>
+
+        <!-- YouTube -->
+
+        <a href="https://www.youtube.com/@nitinkumar8487"
+           target="_blank"
+           class="btn btn-danger px-4 py-2">
+
+            <i class="bi bi-youtube me-2"></i>
+
+            YouTube
+
+        </a>
+
+    </div>
+
+    <p class="text-muted small mt-4 mb-0">
+
+        Follow the founder for development updates, programming projects,
+        open-source contributions, and educational content.
+
+    </p>
+
+</div>
+
+    </div>
+
+</section>
+   <!-- ========================================================= -->
+<!-- SECTION 17 : PREMIUM UNIVERSITY FOOTER -->
+<!-- ========================================================= -->
+
+<footer class="pt-5 text-white"
+        style="background:linear-gradient(180deg,#001F4D,#001633);border-top:5px solid var(--miutm-gold);">
+
+    <div class="container-fluid px-5">
+
+        <div class="row gy-5">
+
+            <!-- University -->
+
+            <div class="col-xl-3 col-lg-6">
+
+                <img src="/static/images/logo.png"
+                     width="70"
+                     class="rounded-circle border border-warning border-2 mb-3"
+                     alt="MIUTM Logo">
+
+                <h5 class="fw-bold mb-3">
+
+                    Maurya International University
+                    <br>
+                    <small class="text-warning">
+                        of Technology & Management
+                    </small>
+
+                </h5>
+
+                <p class="small text-white-50">
+
+                    MIUTM is committed to delivering world-class education,
+                    industry-oriented training, innovation-driven research,
+                    and technology-enabled learning experiences that prepare
+                    students for global careers.
+
+                </p>
+
+            </div>
+
+            <!-- Quick Links -->
+
+            <div class="col-xl-2 col-lg-6">
+
+                <h5 class="text-warning mb-4">
+
+                    Quick Links
+
+                </h5>
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-2">
+                        <a href="/" class="text-white-50 text-decoration-none">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="/about" class="text-white-50 text-decoration-none">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="/courses" class="text-white-50 text-decoration-none">
+                            Courses
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="/admission" class="text-white-50 text-decoration-none">
+                            Admissions
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="/contact" class="text-white-50 text-decoration-none">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Academics -->
+
+            <div class="col-xl-2 col-lg-6">
+
+                <h5 class="text-warning mb-4">
+
+                    Academics
+
+                </h5>
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-2 text-white-50">
+                        Computer Applications
+                    </li>
+
+                    <li class="mb-2 text-white-50">
+                        Engineering
+                    </li>
+
+                    <li class="mb-2 text-white-50">
+                        Management Studies
+                    </li>
+
+                    <li class="mb-2 text-white-50">
+                        Research & Innovation
+                    </li>
+
+                    <li class="mb-2 text-white-50">
+                        Digital Library
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Student Services -->
+
+            <div class="col-xl-2 col-lg-6">
+
+                <h5 class="text-warning mb-4">
+
+                    Student Services
+
+                </h5>
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-2">
+                        <a href="/student/login"
+                           class="text-white-50 text-decoration-none">
+
+                            Student Portal
+
+                        </a>
+                    </li>
+
+                    <li class="mb-2 text-white-50">
+
+                        Examination Cell
+
+                    </li>
+
+                    <li class="mb-2 text-white-50">
+
+                        Placement Cell
+
+                    </li>
+
+                    <li class="mb-2 text-white-50">
+
+                        Scholarships
+
+                    </li>
+
+                    <li class="mb-2 text-white-50">
+
+                        Downloads
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+
+            <div class="col-xl-3 col-lg-6">
+
+                <h5 class="text-warning mb-4">
+
+                    Contact Us
+
+                </h5>
+
+                <p class="text-white-50 mb-2">
+
+                    <i class="bi bi-geo-alt-fill text-warning me-2"></i>
+
+                    Sector 62, Noida, Uttar Pradesh
+
+                </p>
+
+                <p class="text-white-50 mb-2">
+
+                    <i class="bi bi-telephone-fill text-warning me-2"></i>
+
+                    +91 98765 43210
+
+                </p>
+
+                <p class="text-white-50 mb-4">
+
+                    <i class="bi bi-envelope-fill text-warning me-2"></i>
+
+                    info@miutm.edu
+
+                </p>
+
+                <h6 class="text-warning mb-3">
+
+                    Founder
+
+                </h6>
+
+                <div class="d-flex flex-wrap gap-2">
+
+                    <a href="https://github.com/Nitin765kumar"
+                       target="_blank"
+                       class="btn btn-sm btn-outline-light">
+
+                        <i class="bi bi-github me-1"></i>
+
+                        GitHub
+
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/nitinkumar25"
+                       target="_blank"
+                       class="btn btn-sm btn-outline-light">
+
+                        <i class="bi bi-linkedin me-1"></i>
+
+                        LinkedIn
+
+                    </a>
+
+                    <a href="https://www.youtube.com/@nitinkumar8487"
+                       target="_blank"
+                       class="btn btn-sm btn-outline-light">
+
+                        <i class="bi bi-youtube me-1"></i>
+
+                        YouTube
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr class="border-secondary my-5">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+
+                <p class="small text-white-50 mb-0">
+
+                    © 2026 Maurya International University of Technology & Management.
+                    All Rights Reserved.
+
+                </p>
+
+            </div>
+
+            <div class="col-md-6 text-md-end mt-3 mt-md-0">
+
+                <a href="#" class="text-white-50 text-decoration-none me-3">
+
+                    Privacy Policy
+
+                </a>
+
+                <a href="#" class="text-white-50 text-decoration-none me-3">
+
+                    Terms of Use
+
+                </a>
+
+                <a href="#" class="text-white-50 text-decoration-none me-3">
+
+                    Sitemap
+
+                </a>
+
+                <span class="text-warning">
+
+                    Developed by Nitin Kumar
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <!-- Core Interactive Script Components -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

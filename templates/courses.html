@@ -1,0 +1,2878 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta
+      name="description"
+      content="Explore undergraduate and postgraduate academic programmes offered by Maurya International University of Technology & Management.">
+
+<meta
+      name="keywords"
+      content="MIUTM Courses, BCA, BBA, MCA, MBA, Engineering, Admission">
+
+<meta
+      name="author"
+      content="MIUTM">
+
+<title>
+Academic Programmes | Maurya International University of Technology & Management
+</title>
+
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<style>
+
+:root{
+
+--primary:#003366;
+--secondary:#001B44;
+--gold:#D4AF37;
+--light:#F8F9FA;
+--text:#212529;
+--success:#198754;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+background:#fff;
+color:var(--text);
+overflow-x:hidden;
+
+}
+
+.text-justify{
+
+text-align:justify;
+
+}
+
+.hover-gold:hover{
+
+color:var(--gold)!important;
+transition:.3s;
+
+}
+
+.tracking{
+
+letter-spacing:1px;
+
+}
+
+.hero-section{
+
+min-height:620px;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+rgba(0,31,77,.93),
+
+rgba(0,31,77,.72),
+
+rgba(0,31,77,.45)
+
+),
+
+url("/static/images/course.png");
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+align-items:center;
+
+}
+
+.hero-badge{
+
+font-size:.85rem;
+
+letter-spacing:2px;
+
+padding:10px 18px;
+
+}
+
+.hero-title{
+
+font-size:3.2rem;
+
+font-weight:800;
+
+line-height:1.2;
+
+font-family:Georgia,serif;
+
+}
+
+.hero-text{
+
+font-size:1.15rem;
+
+line-height:1.9;
+
+max-width:760px;
+
+}
+
+.hero-buttons .btn{
+
+padding:14px 30px;
+
+font-weight:600;
+
+}
+
+.hero-card{
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:18px;
+
+padding:28px;
+
+}
+
+.quick-stat{
+
+text-align:center;
+
+}
+
+.quick-stat h3{
+
+font-weight:700;
+
+color:white;
+
+}
+
+.quick-stat small{
+
+color:#ddd;
+
+}
+
+.top-bar{
+
+background:#111;
+
+border-bottom:2px solid var(--gold);
+
+font-size:.88rem;
+
+}
+
+.navbar{
+
+background:var(--primary);
+
+border-bottom:4px solid var(--gold);
+
+}
+
+.nav-link{
+
+font-weight:600;
+
+letter-spacing:.5px;
+
+}
+
+.nav-link:hover{
+
+color:var(--gold)!important;
+
+}
+
+@media(max-width:992px){
+
+.hero-title{
+
+font-size:2.2rem;
+
+}
+
+.hero-section{
+
+min-height:auto;
+
+padding:90px 0;
+
+}
+
+}
+.dept-btn{
+
+padding:10px 22px;
+
+border-radius:30px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.dept-btn.active{
+
+background:#003366;
+
+color:white;
+
+border-color:#003366;
+
+}
+
+.dept-btn:hover{
+
+transform:translateY(-3px);
+
+}
+
+.card{
+
+transition:.35s;
+
+}
+
+.card:hover{
+
+transform:translateY(-5px);
+
+}
+.course-card{
+
+overflow:hidden;
+
+border-radius:18px;
+
+transition:.35s;
+
+}
+
+.course-card img{
+
+height:240px;
+
+object-fit:cover;
+
+transition:.5s;
+
+}
+
+.course-card:hover img{
+
+transform:scale(1.05);
+
+}
+
+.course-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 18px 40px rgba(0,0,0,.18);
+
+}
+
+.list-group-item{
+
+border:none;
+
+padding-left:0;
+
+}
+
+.course-card .badge{
+
+font-size:.8rem;
+
+}
+.course-card,
+.card{
+
+transition:.35s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+.list-group-item{
+
+border:none;
+
+padding-left:0;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- TOP INFORMATION BAR -->
+<!-- ========================= -->
+
+<div class="top-bar py-2 text-white">
+
+<div class="container-fluid px-lg-5">
+
+<div class="d-flex flex-column flex-lg-row justify-content-between align-items-center">
+
+<div>
+
+<i class="bi bi-mortarboard-fill text-warning"></i>
+
+Academic Session 2026–27 Admissions Open
+
+<span class="mx-2 d-none d-lg-inline">|</span>
+
+<i class="bi bi-award-fill text-warning"></i>
+
+UGC & AICTE Curriculum Aligned
+
+</div>
+
+<div class="mt-2 mt-lg-0">
+
+<a
+href="/contact"
+class="text-white text-decoration-none hover-gold me-4">
+
+<i class="bi bi-envelope-fill"></i>
+
+Contact
+
+</a>
+
+<a
+href="/admin"
+class="text-warning text-decoration-none fw-semibold">
+
+<i class="bi bi-speedometer2"></i>
+
+Admin Portal
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- NAVBAR -->
+<!-- ========================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
+
+<div class="container-fluid px-lg-5">
+
+<a
+class="navbar-brand d-flex align-items-center"
+href="/">
+
+<img
+
+src="/static/images/logo.png"
+
+class="rounded-circle border border-warning border-2 me-3"
+
+width="65"
+
+height="65">
+
+<div>
+
+<h5 class="mb-0 fw-bold">
+
+MAURYA INTERNATIONAL UNIVERSITY
+
+</h5>
+
+<small class="text-warning">
+
+Technology & Management
+
+</small>
+
+</div>
+
+</a>
+
+<button
+
+class="navbar-toggler"
+
+type="button"
+
+data-bs-toggle="collapse"
+
+data-bs-target="#navbarCourses">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div
+class="collapse navbar-collapse"
+id="navbarCourses">
+
+<ul class="navbar-nav ms-auto align-items-lg-center">
+
+<li class="nav-item">
+
+<a class="nav-link" href="/">
+
+Home
+
+</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link" href="/about">
+
+About
+
+</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link active text-warning" href="/courses">
+
+Courses
+
+</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link" href="/admission">
+
+Admission
+
+</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link" href="/contact">
+
+Contact
+
+</a>
+
+</li>
+
+<li class="nav-item ms-lg-3">
+
+<a
+
+href="/admission"
+
+class="btn btn-warning px-4 fw-bold">
+
+Apply Now
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- ========================= -->
+<!-- HERO SECTION -->
+<!-- ========================= -->
+
+<section class="hero-section">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-lg-8">
+
+<span class="badge bg-warning text-dark hero-badge mb-4">
+
+Academic Programmes 2026
+
+</span>
+
+<h1 class="hero-title text-white mb-4">
+
+Explore Our Future-Ready Academic Programmes
+
+</h1>
+
+<p class="hero-text text-light mb-5">
+
+MIUTM offers industry-oriented undergraduate and postgraduate
+programmes designed to build strong theoretical foundations,
+practical laboratory experience, research capability,
+innovation mindset and global career readiness.
+
+</p>
+
+<div class="hero-buttons d-flex flex-wrap gap-3">
+
+<a
+href="/admission"
+class="btn btn-warning">
+
+Apply for Admission
+
+</a>
+
+<a
+href="#courseSection"
+class="btn btn-outline-light">
+
+Browse Courses
+
+</a>
+
+</div>
+
+</div>
+
+<div class="col-lg-4 mt-5 mt-lg-0">
+
+<div class="hero-card">
+
+<div class="row g-4">
+
+<div class="col-6 quick-stat">
+
+<h3>
+
+25+
+
+</h3>
+
+<small>
+
+Academic Programmes
+
+</small>
+
+</div>
+
+<div class="col-6 quick-stat">
+
+<h3>
+
+120+
+
+</h3>
+
+<small>
+
+Faculty Members
+
+</small>
+
+</div>
+
+<div class="col-6 quick-stat">
+
+<h3>
+
+95%
+
+</h3>
+
+<small>
+
+Placement Support
+
+</small>
+
+</div>
+
+<div class="col-6 quick-stat">
+
+<h3>
+
+15K+
+
+</h3>
+
+<small>
+
+Students
+
+</small>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================================================= -->
+<!-- SECTION : COURSE SEARCH & QUICK OVERVIEW -->
+<!-- ================================================= -->
+
+<section class="py-5 bg-light" id="courseSection">
+
+<div class="container">
+
+<div class="row mb-5">
+
+<div class="col-lg-8">
+
+<span class="text-uppercase text-primary fw-bold tracking">
+
+Academic Directory
+
+</span>
+
+<h2 class="fw-bold display-6 mt-2">
+
+Find the Right Programme for Your Career
+
+</h2>
+
+<p class="text-muted mt-3">
+
+Browse undergraduate and postgraduate programmes offered by MIUTM.
+Use intelligent search and filters to quickly locate courses based on
+department, degree level and specialization.
+
+</p>
+
+</div>
+
+<div class="col-lg-4 text-lg-end">
+
+<a href="/admission"
+
+class="btn btn-warning btn-lg mt-3">
+
+<i class="bi bi-person-plus-fill"></i>
+
+Apply Today
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Statistics -->
+
+<div class="row g-4 mb-5">
+
+<div class="col-lg-3 col-md-6">
+
+<div class="card border-0 shadow-sm text-center h-100">
+
+<div class="card-body">
+
+<i class="bi bi-book-half display-5 text-primary"></i>
+
+<h2 class="fw-bold mt-3">
+
+25+
+
+</h2>
+
+<p class="text-muted mb-0">
+
+Academic Programmes
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="card border-0 shadow-sm text-center h-100">
+
+<div class="card-body">
+
+<i class="bi bi-building display-5 text-success"></i>
+
+<h2 class="fw-bold mt-3">
+
+10
+
+</h2>
+
+<p class="text-muted mb-0">
+
+Departments
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="card border-0 shadow-sm text-center h-100">
+
+<div class="card-body">
+
+<i class="bi bi-people-fill display-5 text-danger"></i>
+
+<h2 class="fw-bold mt-3">
+
+150+
+
+</h2>
+
+<p class="text-muted mb-0">
+
+Faculty Members
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="card border-0 shadow-sm text-center h-100">
+
+<div class="card-body">
+
+<i class="bi bi-award-fill display-5 text-warning"></i>
+
+<h2 class="fw-bold mt-3">
+
+95%
+
+</h2>
+
+<p class="text-muted mb-0">
+
+Placement Support
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Search -->
+
+<div class="card shadow border-0">
+
+<div class="card-body p-4">
+
+<div class="row g-3">
+
+<div class="col-lg-5">
+
+<label class="form-label fw-semibold">
+
+Search Course
+
+</label>
+
+<div class="input-group">
+
+<span class="input-group-text">
+
+<i class="bi bi-search"></i>
+
+</span>
+
+<input
+
+type="text"
+
+class="form-control"
+
+id="courseSearch"
+
+placeholder="Search BCA, MBA, AI, Python...">
+
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<label class="form-label fw-semibold">
+
+Department
+
+</label>
+
+<select
+
+class="form-select"
+
+id="departmentFilter">
+
+<option value="all">
+
+All Departments
+
+</option>
+
+<option value="computing">
+
+Computing
+
+</option>
+
+<option value="management">
+
+Management
+
+</option>
+
+<option value="engineering">
+
+Engineering
+
+</option>
+
+<option value="science">
+
+Science
+
+</option>
+
+</select>
+
+</div>
+
+<div class="col-lg-2">
+
+<label class="form-label fw-semibold">
+
+Level
+
+</label>
+
+<select
+
+class="form-select"
+
+id="levelFilter">
+
+<option value="all">
+
+All
+
+</option>
+
+<option value="ug">
+
+UG
+
+</option>
+
+<option value="pg">
+
+PG
+
+</option>
+
+<option value="certificate">
+
+Certificate
+
+</option>
+
+</select>
+
+</div>
+
+<div class="col-lg-2 d-grid">
+
+<label class="form-label opacity-0">
+
+Button
+
+</label>
+
+<button
+
+class="btn btn-primary"
+
+id="resetFilter">
+
+<i class="bi bi-arrow-clockwise"></i>
+
+Reset
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Department Quick Buttons -->
+
+<div class="text-center mt-5">
+
+<button class="btn btn-outline-primary m-2 dept-btn active"
+
+data-filter="all">
+
+All
+
+</button>
+
+<button class="btn btn-outline-primary m-2 dept-btn"
+
+data-filter="computing">
+
+Computing
+
+</button>
+
+<button class="btn btn-outline-primary m-2 dept-btn"
+
+data-filter="management">
+
+Management
+
+</button>
+
+<button class="btn btn-outline-primary m-2 dept-btn"
+
+data-filter="engineering">
+
+Engineering
+
+</button>
+
+<button class="btn btn-outline-primary m-2 dept-btn"
+
+data-filter="science">
+
+Science
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+    <!-- SECTION 5: LIVE GLOBAL INDUSTRY SKILL SYNCHRONIZATION TICKER -->
+    <section class="py-3 bg-light text-center border-top border-bottom px-4">
+        <div class="container-fluid">
+            <p class="mb-0 text-secondary font-monospace fw-bold" style="font-size:0.88rem; letter-spacing:0.5px;">
+                <i class="bi bi-arrow-repeat text-primary animation-spin me-2"></i> SKILL DEPLOYMENT TARGETS: Python 3.11+ Core • Flask Micro-Frameworks • Responsive UI (Bootstrap 5) • Relational Engines (SQLite/MySQL) • Real-Time Deep Learning Verification
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION 6: CURRICULUM SEARCH, FILTERING & QUERY CONSOLE UI -->
+    <section class="py-4 bg-white container-fluid px-5">
+        <div class="p-4 rounded shadow-sm border bg-light">
+            <div class="row g-3 align-items-center">
+                <div class="col-xl-4 col-lg-12">
+                    <h5 class="mb-0 text-primary fw-bold" style="font-family:'Georgia', serif;"><i class="bi bi-sliders"></i> Filter Curriculum Records</h5>
+                    <small class="text-muted font-monospace">Refine selection parameters instantly</small>
+                </div>
+                <div class="col-xl-8 col-lg-12 text-xl-end">
+                    <div class="d-flex flex-wrap gap-2 justify-content-xl-end">
+                        <button class="btn btn-sm btn-outline-secondary filter-btn active" onclick="filterSelection('all')">Show All Faculties</button>
+                        <button class="btn btn-sm btn-outline-secondary filter-btn" onclick="filterSelection('comp-sci')">Advanced Computing</button>
+                        <button class="btn btn-sm btn-outline-secondary filter-btn" onclick="filterSelection('ind-auto')">Industrial Automation</button>
+                        <button class="btn btn-sm btn-outline-secondary filter-btn" onclick="filterSelection('corp-mgmt')">Corporate Management</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- ================================================= -->
+<!-- SCHOOL OF ADVANCED COMPUTING SCIENCES -->
+<!-- ================================================= -->
+
+<section class="py-5 bg-white faculty-group computing">
+
+<div class="container">
+
+<div class="row mb-5">
+
+<div class="col-lg-8">
+
+<span class="text-uppercase text-primary fw-bold">
+Faculty of Computing
+</span>
+
+<h2 class="fw-bold mt-2">
+
+School of Advanced Computing Sciences
+
+</h2>
+
+<p class="text-muted">
+
+Industry-oriented computing programmes focusing on software engineering,
+artificial intelligence, cloud computing, web technologies,
+database management and application development.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="row g-4">
+
+<!-- ===================== -->
+<!-- BCA -->
+<!-- ===================== -->
+
+<div class="col-lg-6 course-item"
+
+data-department="computing"
+
+data-level="ug">
+
+<div class="card shadow-sm border-0 h-100 course-card">
+
+<img
+
+src="/static/images/bca.jpg"
+
+class="card-img-top"
+
+alt="BCA">
+
+<div class="card-body d-flex flex-column">
+
+<div class="d-flex justify-content-between mb-3">
+
+<span class="badge bg-primary">
+
+UG Programme
+
+</span>
+
+<span class="badge bg-success">
+
+3 Years
+
+</span>
+
+</div>
+
+<h4 class="fw-bold">
+
+Bachelor of Computer Applications
+
+</h4>
+
+<p class="text-muted">
+
+Develop programming, software engineering,
+database management,
+Python,
+Java,
+web technologies,
+AI fundamentals,
+computer networks and project development skills.
+
+</p>
+
+<div class="row text-center mb-3">
+
+<div class="col-4">
+
+<h6 class="text-primary">
+
+120
+
+</h6>
+
+<small>
+
+Credits
+
+</small>
+
+</div>
+
+<div class="col-4">
+
+<h6 class="text-success">
+
+6
+
+</h6>
+
+<small>
+
+Semesters
+
+</small>
+
+</div>
+
+<div class="col-4">
+
+<h6 class="text-danger">
+
+UG
+
+</h6>
+
+<small>
+
+Level
+
+</small>
+
+</div>
+
+</div>
+
+<ul class="list-group list-group-flush mb-4">
+
+<li class="list-group-item">
+
+<i class="bi bi-check-circle-fill text-success me-2"></i>
+
+Python Programming
+
+</li>
+
+<li class="list-group-item">
+
+<i class="bi bi-check-circle-fill text-success me-2"></i>
+
+Database Management
+
+</li>
+
+<li class="list-group-item">
+
+<i class="bi bi-check-circle-fill text-success me-2"></i>
+
+Web Development
+
+</li>
+
+<li class="list-group-item">
+
+<i class="bi bi-check-circle-fill text-success me-2"></i>
+
+Major Project
+
+</li>
+
+</ul>
+
+<div class="mt-auto">
+
+<div class="d-grid gap-2">
+
+<a
+
+href="/admission"
+
+class="btn btn-primary">
+
+Apply Now
+
+</a>
+
+<button
+
+class="btn btn-outline-primary">
+
+Download Brochure
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ===================== -->
+<!-- PYTHON -->
+<!-- ===================== -->
+
+<div class="col-lg-6 course-item"
+
+data-department="computing"
+
+data-level="certificate">
+
+<div class="card shadow-sm border-0 h-100 course-card">
+
+<img
+
+src="/static/images/python.png"
+
+class="card-img-top"
+
+alt="Python">
+
+<div class="card-body d-flex flex-column">
+
+<div class="d-flex justify-content-between mb-3">
+
+<span class="badge bg-warning text-dark">
+
+Certificate
+
+</span>
+
+<span class="badge bg-success">
+
+1 Semester
+
+</span>
+
+</div>
+
+<h4 class="fw-bold">
+
+Advanced Python Development
+
+</h4>
+
+<p class="text-muted">
+
+Learn Python from fundamentals to advanced backend
+development including Flask,
+SQLite,
+REST APIs,
+automation,
+file handling,
+GUI,
+projects and deployment.
+
+</p>
+
+<div class="row text-center mb-3">
+
+<div class="col-4">
+
+<h6 class="text-primary">
+
+16
+
+</h6>
+
+<small>
+
+Credits
+
+</small>
+
+</div>
+
+<div class="col-4">
+
+<h6 class="text-success">
+
+18+
+
+</h6>
+
+<small>
+
+Projects
+
+</small>
+
+</div>
+
+<div class="col-4">
+
+<h6 class="text-danger">
+
+Lab
+
+</h6>
+
+<small>
+
+Practical
+
+</small>
+
+</div>
+
+</div>
+
+<ul class="list-group list-group-flush mb-4">
+
+<li class="list-group-item">
+
+Python Core
+
+</li>
+
+<li class="list-group-item">
+
+Flask Framework
+
+</li>
+
+<li class="list-group-item">
+
+REST API
+
+</li>
+
+<li class="list-group-item">
+
+Automation Projects
+
+</li>
+
+</ul>
+
+<div class="mt-auto">
+
+<div class="d-grid gap-2">
+
+<a
+
+href="/admission"
+
+class="btn btn-success">
+
+Apply Now
+
+</a>
+
+<button
+
+class="btn btn-outline-success">
+
+Download Brochure
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SCHOOL OF MANAGEMENT & EMERGING TECHNOLOGIES -->
+<!-- ================================================= -->
+
+<section class="py-5 bg-light faculty-group management">
+
+<div class="container">
+
+<div class="row mb-5">
+
+<div class="col-lg-8">
+
+<span class="text-uppercase text-success fw-bold">
+
+Faculty of Management & Emerging Technologies
+
+</span>
+
+<h2 class="fw-bold mt-2">
+
+Professional Degree Programmes
+
+</h2>
+
+<p class="text-muted">
+
+Prepare yourself for leadership, innovation, business management,
+artificial intelligence and advanced computing careers through
+industry-aligned academic programmes.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="row g-4">
+
+<!-- MCA -->
+
+<div class="col-lg-4 course-item"
+
+data-department="computing"
+
+data-level="pg">
+
+<div class="card course-card shadow-sm border-0 h-100">
+
+<img src="/static/images/mca.jpg"
+
+class="card-img-top"
+
+alt="MCA">
+
+<div class="card-body d-flex flex-column">
+
+<div class="d-flex justify-content-between mb-3">
+
+<span class="badge bg-primary">
+
+Postgraduate
+
+</span>
+
+<span class="badge bg-success">
+
+2 Years
+
+</span>
+
+</div>
+
+<h4 class="fw-bold">
+
+Master of Computer Applications
+
+</h4>
+
+<p class="text-muted">
+
+Advanced software engineering,
+AI,
+cloud computing,
+mobile application development,
+cybersecurity and enterprise systems.
+
+</p>
+
+<div class="mt-auto">
+
+<a href="/admission"
+
+class="btn btn-primary w-100 mb-2">
+
+Apply Now
+
+</a>
+
+<button
+
+class="btn btn-outline-primary w-100">
+
+Download Brochure
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- MBA -->
+
+<div class="col-lg-4 course-item"
+
+data-department="management"
+
+data-level="pg">
+
+<div class="card course-card shadow-sm border-0 h-100">
+
+<img src="/static/images/mba.webp"
+
+class="card-img-top"
+
+alt="MBA">
+
+<div class="card-body d-flex flex-column">
+
+<div class="d-flex justify-content-between mb-3">
+
+<span class="badge bg-warning text-dark">
+
+Postgraduate
+
+</span>
+
+<span class="badge bg-success">
+
+2 Years
+
+</span>
+
+</div>
+
+<h4 class="fw-bold">
+
+Master of Business Administration
+
+</h4>
+
+<p class="text-muted">
+
+Finance,
+Marketing,
+Human Resource,
+International Business,
+Business Analytics
+and Entrepreneurship.
+
+</p>
+
+<div class="mt-auto">
+
+<a href="/admission"
+
+class="btn btn-warning w-100 mb-2">
+
+Apply Now
+
+</a>
+
+<button
+
+class="btn btn-outline-warning w-100">
+
+Download Brochure
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- BBA -->
+
+<div class="col-lg-4 course-item"
+
+data-department="management"
+
+data-level="ug">
+
+<div class="card course-card shadow-sm border-0 h-100">
+
+<img src="/static/images/bba.png"
+
+class="card-img-top"
+
+alt="BBA">
+
+<div class="card-body d-flex flex-column">
+
+<div class="d-flex justify-content-between mb-3">
+
+<span class="badge bg-success">
+
+Undergraduate
+
+</span>
+
+<span class="badge bg-info">
+
+3 Years
+
+</span>
+
+</div>
+
+<h4 class="fw-bold">
+
+Bachelor of Business Administration
+
+</h4>
+
+<p class="text-muted">
+
+Business Management,
+Leadership,
+Marketing,
+Finance,
+Accounting,
+Communication Skills
+and Corporate Training.
+
+</p>
+
+<div class="mt-auto">
+
+<a href="/admission"
+
+class="btn btn-success w-100 mb-2">
+
+Apply Now
+
+</a>
+
+<button
+
+class="btn btn-outline-success w-100">
+
+Download Brochure
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- AI & Data Science -->
+
+<div class="col-lg-6 course-item"
+
+data-department="science"
+
+data-level="certificate">
+
+<div class="card course-card shadow-sm border-0 h-100">
+
+<img src="/static/images/ai.png"
+
+class="card-img-top"
+
+alt="AI">
+
+<div class="card-body d-flex flex-column">
+
+<div class="d-flex justify-content-between mb-3">
+
+<span class="badge bg-danger">
+
+Emerging Technology
+
+</span>
+
+<span class="badge bg-dark">
+
+Certificate
+
+</span>
+
+</div>
+
+<h4 class="fw-bold">
+
+Artificial Intelligence & Data Science
+
+</h4>
+
+<p class="text-muted">
+
+Machine Learning,
+Deep Learning,
+Python,
+TensorFlow,
+Pandas,
+Data Visualization,
+Computer Vision
+and AI Projects.
+
+</p>
+
+<div class="mt-auto">
+
+<a href="/admission"
+
+class="btn btn-danger w-100 mb-2">
+
+Apply Now
+
+</a>
+
+<button
+
+class="btn btn-outline-danger w-100">
+
+Download Brochure
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Cyber Security -->
+
+<div class="col-lg-6 course-item"
+
+data-department="engineering"
+
+data-level="certificate">
+
+<div class="card course-card shadow-sm border-0 h-100">
+
+<img src="/static/images/cyber.jpg"
+
+class="card-img-top"
+
+alt="Cyber Security">
+
+<div class="card-body d-flex flex-column">
+
+<div class="d-flex justify-content-between mb-3">
+
+<span class="badge bg-dark">
+
+Professional
+
+</span>
+
+<span class="badge bg-primary">
+
+Certificate
+
+</span>
+
+</div>
+
+<h4 class="fw-bold">
+
+Cyber Security & Ethical Hacking
+
+</h4>
+
+<p class="text-muted">
+
+Network Security,
+Ethical Hacking,
+Digital Forensics,
+Cloud Security,
+Linux,
+Penetration Testing
+and Incident Response.
+
+</p>
+
+<div class="mt-auto">
+
+<a href="/admission"
+
+class="btn btn-dark w-100 mb-2">
+
+Apply Now
+
+</a>
+
+<button
+
+class="btn btn-outline-dark w-100">
+
+Download Brochure
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- PLACEMENT & INDUSTRY PARTNERS -->
+<!-- ================================================= -->
+
+<section class="py-5 bg-white">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<span class="text-uppercase text-primary fw-bold">
+
+Career Development Centre
+
+</span>
+
+<h2 class="fw-bold mt-2">
+
+Placements, Internships & Industry Collaboration
+
+</h2>
+
+<p class="text-muted col-lg-8 mx-auto">
+
+Our Career Development Centre works closely with leading
+technology companies and corporate organizations to provide
+students with internship opportunities, industry exposure,
+professional certifications and campus placements.
+
+</p>
+
+</div>
+
+<!-- Statistics -->
+
+<div class="row g-4 mb-5">
+
+<div class="col-lg-3 col-md-6">
+
+<div class="card shadow-sm border-0 text-center h-100">
+
+<div class="card-body">
+
+<i class="bi bi-briefcase-fill display-4 text-primary"></i>
+
+<h2 class="fw-bold mt-3">
+
+95%
+
+</h2>
+
+<p class="text-muted mb-0">
+
+Placement Assistance
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="card shadow-sm border-0 text-center h-100">
+
+<div class="card-body">
+
+<i class="bi bi-building display-4 text-success"></i>
+
+<h2 class="fw-bold mt-3">
+
+100+
+
+</h2>
+
+<p class="text-muted mb-0">
+
+Recruiting Companies
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="card shadow-sm border-0 text-center h-100">
+
+<div class="card-body">
+
+<i class="bi bi-award-fill display-4 text-warning"></i>
+
+<h2 class="fw-bold mt-3">
+
+300+
+
+</h2>
+
+<p class="text-muted mb-0">
+
+Internship Offers
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="card shadow-sm border-0 text-center h-100">
+
+<div class="card-body">
+
+<i class="bi bi-mortarboard-fill display-4 text-danger"></i>
+
+<h2 class="fw-bold mt-3">
+
+5000+
+
+</h2>
+
+<p class="text-muted mb-0">
+
+Successful Alumni
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Industry Partners -->
+
+<div class="row align-items-center">
+
+<div class="col-lg-6">
+
+<h3 class="fw-bold mb-4">
+
+Industry Collaboration
+
+</h3>
+
+<p class="text-muted">
+
+Students participate in industrial visits,
+expert lectures,
+technical workshops,
+coding competitions,
+innovation challenges
+and internship programmes throughout their academic journey.
+
+</p>
+
+<ul class="list-group list-group-flush">
+
+<li class="list-group-item">
+
+<i class="bi bi-check-circle-fill text-success me-2"></i>
+
+Industrial Training Programmes
+
+</li>
+
+<li class="list-group-item">
+
+<i class="bi bi-check-circle-fill text-success me-2"></i>
+
+Professional Certifications
+
+</li>
+
+<li class="list-group-item">
+
+<i class="bi bi-check-circle-fill text-success me-2"></i>
+
+Campus Recruitment Drives
+
+</li>
+
+<li class="list-group-item">
+
+<i class="bi bi-check-circle-fill text-success me-2"></i>
+
+Startup Incubation Support
+
+</li>
+
+<li class="list-group-item">
+
+<i class="bi bi-check-circle-fill text-success me-2"></i>
+
+Career Counselling Sessions
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="col-lg-6">
+
+<div class="card shadow border-0">
+
+<div class="card-body">
+
+<h4 class="fw-bold mb-4">
+
+Major Recruiters
+
+</h4>
+
+<div class="row g-3 text-center">
+
+<div class="col-4">
+
+<div class="border rounded p-3">
+
+<h6>TCS</h6>
+
+</div>
+
+</div>
+
+<div class="col-4">
+
+<div class="border rounded p-3">
+
+<h6>Infosys</h6>
+
+</div>
+
+</div>
+
+<div class="col-4">
+
+<div class="border rounded p-3">
+
+<h6>Wipro</h6>
+
+</div>
+
+</div>
+
+<div class="col-4">
+
+<div class="border rounded p-3">
+
+<h6>HCL</h6>
+
+</div>
+
+</div>
+
+<div class="col-4">
+
+<div class="border rounded p-3">
+
+<h6>Accenture</h6>
+
+</div>
+
+</div>
+
+<div class="col-4">
+
+<div class="border rounded p-3">
+
+<h6>Tech Mahindra</h6>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- LABORATORIES -->
+<!-- ================================================= -->
+
+<section class="py-5 bg-light">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<span class="text-uppercase text-success fw-bold">
+
+Research Infrastructure
+
+</span>
+
+<h2 class="fw-bold">
+
+Modern Laboratories & Innovation Centers
+
+</h2>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-4">
+
+<div class="card h-100 shadow-sm border-0">
+
+<div class="card-body text-center">
+
+<i class="bi bi-pc-display display-4 text-primary"></i>
+
+<h4 class="mt-3">
+
+Computer Laboratory
+
+</h4>
+
+<p class="text-muted">
+
+High-performance computer systems equipped with
+latest software development tools,
+programming environments
+and internet connectivity.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="card h-100 shadow-sm border-0">
+
+<div class="card-body text-center">
+
+<i class="bi bi-cpu-fill display-4 text-danger"></i>
+
+<h4 class="mt-3">
+
+AI Research Lab
+
+</h4>
+
+<p class="text-muted">
+
+Artificial Intelligence,
+Machine Learning,
+Data Analytics,
+Deep Learning
+and Computer Vision practical laboratory.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="card h-100 shadow-sm border-0">
+
+<div class="card-body text-center">
+
+<i class="bi bi-globe2 display-4 text-success"></i>
+
+<h4 class="mt-3">
+
+Web Development Lab
+
+</h4>
+
+<p class="text-muted">
+
+HTML,
+CSS,
+Bootstrap,
+JavaScript,
+Python Flask,
+Database Management
+and Full Stack Development.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+   <!-- ================================================= -->
+<!-- STUDENT TESTIMONIALS -->
+<!-- ================================================= -->
+
+<section class="py-5 bg-light">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<span class="text-uppercase text-primary fw-bold">
+
+Student Experiences
+
+</span>
+
+<h2 class="fw-bold">
+
+What Our Students Say
+
+</h2>
+
+<p class="text-muted">
+
+Experiences shared by students regarding academics,
+faculty support and campus environment.
+
+</p>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-4">
+
+<div class="card shadow-sm border-0 h-100">
+
+<div class="card-body">
+
+<div class="mb-3 text-warning">
+
+★★★★★
+
+</div>
+
+<p>
+
+"The practical learning approach helped me improve my
+programming and problem-solving skills."
+
+</p>
+
+<hr>
+
+<h6 class="mb-0">
+
+Rahul Sharma
+
+</h6>
+
+<small class="text-muted">
+
+BCA Student
+
+</small>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="card shadow-sm border-0 h-100">
+
+<div class="card-body">
+
+<div class="mb-3 text-warning">
+
+★★★★★
+
+</div>
+
+<p>
+
+"The faculty members are supportive and the laboratories
+provide a great learning environment."
+
+</p>
+
+<hr>
+
+<h6 class="mb-0">
+
+Priya Verma
+
+</h6>
+
+<small class="text-muted">
+
+MCA Student
+
+</small>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="card shadow-sm border-0 h-100">
+
+<div class="card-body">
+
+<div class="mb-3 text-warning">
+
+★★★★★
+
+</div>
+
+<p>
+
+"I gained practical exposure through projects,
+seminars and internship opportunities."
+
+</p>
+
+<hr>
+
+<h6 class="mb-0">
+
+Aman Singh
+
+</h6>
+
+<small class="text-muted">
+
+BBA Student
+
+</small>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+    <!<section class="py-5 bg-white">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<h2 class="fw-bold">
+
+Why Choose MIUTM?
+
+</h2>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-3">
+
+<div class="text-center">
+
+<i class="bi bi-award-fill display-4 text-primary"></i>
+
+<h5 class="mt-3">
+
+Experienced Faculty
+
+</h5>
+
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<div class="text-center">
+
+<i class="bi bi-laptop display-4 text-success"></i>
+
+<h5 class="mt-3">
+
+Modern Labs
+
+</h5>
+
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<div class="text-center">
+
+<i class="bi bi-briefcase-fill display-4 text-danger"></i>
+
+<h5 class="mt-3">
+
+Career Support
+
+</h5>
+
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<div class="text-center">
+
+<i class="bi bi-globe2 display-4 text-warning"></i>
+
+<h5 class="mt-3">
+
+Industry Exposure
+
+</h5>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section class="py-5 text-center text-white"
+
+style="background:#003366;">
+
+<div class="container">
+
+<h2 class="fw-bold">
+
+Ready to Begin Your Academic Journey?
+
+</h2>
+
+<p class="lead">
+
+Admissions are now open for the 2026–27 academic session.
+
+</p>
+
+<a
+
+href="/admission"
+
+class="btn btn-warning btn-lg mt-3">
+
+Apply for Admission
+
+</a>
+
+</div>
+
+</section>
+<!-- ===========================
+     MIUTM FOOTER
+============================ -->
+
+<footer
+class="text-white mt-5"
+style="
+background:#001F4D;
+border-top:5px solid #D4AF37;
+">
+
+<div class="container py-5">
+
+<div class="row g-5">
+
+<!-- University -->
+
+<div class="col-lg-4">
+
+<img
+src="/static/images/logo.png"
+width="70"
+class="mb-3">
+
+<h4 class="fw-bold">
+Maurya International University
+</h4>
+
+<p class="text-light">
+
+MIUTM provides industry-oriented education,
+research opportunities,
+innovation,
+technical excellence
+and career-focused programs designed for
+future professionals.
+
+</p>
+
+</div>
+
+<!-- Quick Links -->
+
+<div class="col-lg-2">
+
+<h5 class="text-warning mb-3">
+Quick Links
+</h5>
+
+<ul class="list-unstyled">
+
+<li class="mb-2">
+<a href="/" class="text-decoration-none text-light">
+Home
+</a>
+</li>
+
+<li class="mb-2">
+<a href="/about" class="text-decoration-none text-light">
+About
+</a>
+</li>
+
+<li class="mb-2">
+<a href="/courses" class="text-decoration-none text-light">
+Courses
+</a>
+</li>
+
+<li class="mb-2">
+<a href="/admission" class="text-decoration-none text-light">
+Admissions
+</a>
+</li>
+
+<li class="mb-2">
+<a href="/contact" class="text-decoration-none text-light">
+Contact
+</a>
+</li>
+
+</ul>
+
+</div>
+
+<!-- Programs -->
+
+<div class="col-lg-3">
+
+<h5 class="text-warning mb-3">
+
+Popular Programs
+
+</h5>
+
+<ul class="list-unstyled">
+
+<li class="mb-2">
+BCA
+</li>
+
+<li class="mb-2">
+B.Tech
+</li>
+
+<li class="mb-2">
+MBA
+</li>
+
+<li class="mb-2">
+Artificial Intelligence
+</li>
+
+<li class="mb-2">
+Data Science
+</li>
+
+<li class="mb-2">
+Cyber Security
+</li>
+
+</ul>
+
+</div>
+
+<!-- Contact -->
+
+<div class="col-lg-3">
+
+<h5 class="text-warning mb-3">
+
+Contact Information
+
+</h5>
+
+<p>
+
+<i class="bi bi-geo-alt-fill text-warning"></i>
+
+MIUTM Campus
+
+Technology Park
+
+India
+
+</p>
+
+<p>
+
+<i class="bi bi-envelope-fill text-warning"></i>
+
+admissions@miutm.edu
+
+</p>
+
+<p>
+
+<i class="bi bi-telephone-fill text-warning"></i>
+
++91-9876543210
+
+</p>
+
+<div class="mt-4">
+
+<a href="#" class="text-warning fs-4 me-3">
+
+<i class="bi bi-facebook"></i>
+
+</a>
+
+<a href="#" class="text-warning fs-4 me-3">
+
+<i class="bi bi-instagram"></i>
+
+</a>
+
+<a href="#" class="text-warning fs-4 me-3">
+
+<i class="bi bi-linkedin"></i>
+
+</a>
+
+<a href="#" class="text-warning fs-4">
+
+<i class="bi bi-youtube"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<hr class="border-secondary my-4">
+
+<div class="row">
+
+<div class="col-md-6">
+
+<p class="mb-0 text-light">
+
+© 2026 Maurya International University of Technology & Management.
+
+All Rights Reserved.
+
+</p>
+
+</div>
+
+<div class="col-md-6 text-md-end">
+
+<p class="mb-0 text-light">
+
+Designed with Bootstrap 5 |
+MIUTM Student Management System
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+    <script>
+
+const search=document.getElementById("courseSearch");
+
+if(search){
+
+search.addEventListener("keyup",function(){
+
+const keyword=this.value.toLowerCase();
+
+document.querySelectorAll(".course-item").forEach(function(card){
+
+const text=card.innerText.toLowerCase();
+
+card.style.display=text.includes(keyword)?"":"none";
+
+});
+
+});
+
+}
+
+const buttons=document.querySelectorAll(".dept-btn");
+
+buttons.forEach(btn=>{
+
+btn.addEventListener("click",function(){
+
+buttons.forEach(b=>b.classList.remove("active"));
+
+this.classList.add("active");
+
+const filter=this.dataset.filter;
+
+document.querySelectorAll(".course-item").forEach(card=>{
+
+if(filter==="all"){
+
+card.style.display="";
+
+}
+
+else{
+
+card.style.display=
+
+card.dataset.department===filter?"":"none";
+
+}
+
+});
+
+});
+
+});
+
+const reset=document.getElementById("resetFilter");
+
+if(reset){
+
+reset.onclick=function(){
+
+location.reload();
+
+};
+
+}
+
+</script>
+</body>
+</html>
