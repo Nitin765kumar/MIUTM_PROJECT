@@ -21,16 +21,16 @@ https://github.com/Nitin765kumar/MIUTM_PROJECT
 > *(Add screenshots of your Home Page, About Page, Courses Page, Admission Page, Contact Page, and Admin Dashboard here.)*
 
 Example:
-<img width="1896" height="910" alt="contact page" src="https://github.com/user-attachments/assets/9ba3a01c-36f5-4101-b835-1d9e82ed171b" />
-<img width="1912" height="917" alt="admission steps" src="https://github.com/user-attachments/assets/747ef369-bc58-4117-a6f0-c83a98753dd6" />
-<img width="1917" height="912" alt="admission page" src="https://github.com/user-attachments/assets/9a6644b0-6161-46b5-a946-16923f96a036" />
-<img width="1896" height="913" alt="about" src="https://github.com/user-attachments/assets/6b3d39d7-0668-40ca-8a9f-f1931cfd228f" />
-<img width="1901" height="918" alt="about page" src="https://github.com/user-attachments/assets/92ddb691-c908-44a4-9a15-512b241dbbf3" />
-<img width="1906" height="906" alt="home" src="https://github.com/user-attachments/assets/8f2d2b4f-9ed3-4b43-9f73-1fdde3076460" />
-<img width="1907" height="913" alt="home page" src="https://github.com/user-attachments/assets/41fb6503-7c39-4adb-8cb9-c80ea3babc4f" />
-<img width="1918" height="915" alt="eligibility" src="https://github.com/user-attachments/assets/d9fce084-4d38-4c9f-9f1f-4d42d5142449" />
-<img width="1897" height="912" alt="courses" src="https://github.com/user-attachments/assets/0b0d0795-e34d-49bc-96b0-c6c317bc9015" />
-<img width="1905" height="910" alt="course page" src="https://github.com/user-attachments/assets/e6000042-eb6f-4bb3-b06c-b46bad1d6332" />
+<img width="1915" height="910" alt="msg" src="https://github.com/user-attachments/assets/e0b1055e-03e7-40b2-bb6a-d011b447cef2" />
+<img width="1917" height="917" alt="contact" src="https://github.com/user-attachments/assets/3268cabb-5216-4b0b-bd2c-447466afe9ba" />
+<img width="1917" height="912" alt="admission page" src="https://github.com/user-attachments/assets/149a7311-dc87-47ac-9cdc-6a17635962c8" />
+<img width="1917" height="912" alt="programs" src="https://github.com/user-attachments/assets/3a1d1f5d-5820-43ba-a1a6-6da96665e578" />
+<img width="1912" height="902" alt="course" src="https://github.com/user-attachments/assets/1fff8a09-efd2-4278-87de-cb4b8115dea0" />
+<img width="1917" height="922" alt="about02" src="https://github.com/user-attachments/assets/819c76af-b343-4655-b109-859f252c2819" />
+<img width="1906" height="922" alt="about" src="https://github.com/user-attachments/assets/b93dfd6e-7bfe-47e4-9dd4-ac455de58d70" />
+<img width="1911" height="927" alt="home01" src="https://github.com/user-attachments/assets/873c461b-b8b8-452c-b9f8-55b140e81bbf" />
+<img width="1917" height="917" alt="home page" src="https://github.com/user-attachments/assets/633ee5f5-1328-4dbe-8a70-71853ef5a4ee" />
+
 
 
 
@@ -162,33 +162,7 @@ Move into project directory
 
 ```bash
 cd MIUTM_PROJECT
-```
-
-Create Virtual Environment
-
-```bash
-python -m venv venv
-```
-
-Activate Environment
-
-### Windows
-
-```bash
-venv\Scripts\activate
-```
-
-### Linux / macOS
-
-```bash
-source venv/bin/activate
-```
-
-Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
+``
 
 Run Application
 
